@@ -1,0 +1,56 @@
+{
+  "env": {
+    "development": {
+      "plugins": [
+        [
+          "transform-runtime",
+          {
+            "helpers": false,
+            "polyfill": false,
+            "regenerator": true,
+            "moduleName": "babel-runtime"
+          }
+        ],
+        "transform-async-to-generator",
+        "transform-strict-mode",
+        "transform-class-properties",
+        "transform-object-assign",
+        "transform-decorators-legacy",
+        "syntax-dynamic-import",
+        "dva-hmr"
+      ]
+    },
+    "production": {
+      "plugins": [
+        [
+          "transform-runtime",
+          {
+            "helpers": false,
+            "polyfill": false,
+            "regenerator": true,
+            "moduleName": "babel-runtime"
+          }
+        ],
+        "transform-async-to-generator",
+        "transform-strict-mode",
+        "transform-class-properties",
+        "transform-object-assign",
+        "transform-decorators-legacy",
+        "syntax-dynamic-import",
+        [
+          "import",
+          {
+            "libraryName": "antd",
+            "libraryDirectory": "es",
+            "style": "css"
+          }
+        ]
+      ]
+    }
+  },
+  "presets": [
+    "react",
+    "env",
+    "stage-0"
+  ]
+}

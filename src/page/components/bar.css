@@ -1,0 +1,10 @@
+.outBody {
+  width: 100%;
+  height: 2px;
+  background-color: #CCD5DB;
+}
+.progress {
+  width: 50%;
+  background-color: #1BC7B1;
+  height: 2px;
+}

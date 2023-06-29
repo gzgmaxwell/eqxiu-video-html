@@ -1,0 +1,86 @@
+.body {
+  position: fixed;
+  z-index: 10;
+  bottom:212px;
+  right: 0;
+  height: 232px !important;
+  width: 50px;
+  .wrap{
+    width:50px;
+    height:50px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0px 8px 0px rgba(0,0,0,0.15);
+    border-radius:2px 0px 0px 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 8px;
+    cursor: pointer;
+    transition: all linear .15s;
+    span{
+      font-size:12px;
+      font-weight:400;
+    }
+    &:hover{
+      background: #1593FF;
+      color: #fff !important;
+      .feedbackIcon{
+        color: #fff;
+      }
+    }
+  }
+  .feedbackBtn{
+    color:rgba(102,102,102,1);
+    span{
+      font-size:12px;
+      font-weight:400;
+    }
+    .feedbackIcon{
+      font-size:22px;
+      color:rgba(102,102,102,1);
+    }
+    &:hover ~ .feedback{
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  .feedback{
+    position: absolute;
+    padding-right: 8px;
+    overflow: hidden;
+    left: -190px;
+    top: 0px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear .2s;
+    &:hover{
+      visibility: visible;
+      opacity: 1;
+    }
+    .wrap{
+      box-shadow:0px 0px 8px 0px rgba(0,0,0,0.15);
+      background: #fff;
+      padding: 16px;
+      width: 182px;
+      height: 300px;
+      border-radius: 3px;
+    }
+  }
+}
+
+.kefuBtn {
+  width: 40px;
+  height: 30px;
+  background-color: #FFFFFF;
+  margin-top: 8px;
+  font-size:12px;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(51,51,51,1);
+  line-height:30px;
+}
+
+.kefuBtn:hover {
+  color: #FFFFFF;
+}

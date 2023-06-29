@@ -1,0 +1,498 @@
+// 移入单出的popover
+@keyframes fade-in {
+  0% {opacity: 0;}/*初始状态 透明度为0*/
+  10% {opacity: 0.1;}/*过渡状态 透明度为0*/
+  20% {opacity: 0.2;}/*过渡状态 透明度为0*/
+  30% {opacity: 0.3;}/*过渡状态 透明度为0*/
+  40% {opacity: 0.4;}/*过渡状态 透明度为0*/
+  50% {opacity: 0.5;}/*过渡状态 透明度为0*/
+  60% {opacity: 0.6;}/*过渡状态 透明度为0*/
+  70% {opacity: 0.7;}/*过渡状态 透明度为0*/
+  80% {opacity: 0.8;}/*过渡状态 透明度为0*/
+  90% {opacity: 0.9;}/*结束状态 透明度为1*/
+  100% {opacity: 1;}/*结束状态 透明度为1*/
+}
+@-webkit-keyframes fade-in {/*针对webkit内核*/
+  0% {opacity: 1;}/*初始状态 透明度为0*/
+  10% {opacity: 0.9;}/*过渡状态 透明度为0*/
+  20% {opacity: 0.8;}/*过渡状态 透明度为0*/
+  30% {opacity: 0.7;}/*过渡状态 透明度为0*/
+  40% {opacity: 0.6;}/*过渡状态 透明度为0*/
+  50% {opacity: 0.5;}/*过渡状态 透明度为0*/
+  60% {opacity: 0.4;}/*过渡状态 透明度为0*/
+  70% {opacity: 0.3;}/*过渡状态 透明度为0*/
+  80% {opacity: 0.2;}/*过渡状态 透明度为0*/
+  90% {opacity: 0.1;}/*结束状态 透明度为1*/
+  100% {opacity: 0;}/*结束状态 透明度为1*/
+}
+/*!*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*!
+::-webkit-scrollbar
+{
+  width: 4px;
+  height: 4px;
+  background-color: #F5F5F5;
+}
+
+!*定义滚动条轨道 内阴影+圆角*!
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 2px rgba(0,0,0,0.3);
+  border-radius: 3px;
+  background-color: #F5F5F5;
+}
+
+!*定义滑块 内阴影+圆角*!
+::-webkit-scrollbar-thumb {
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+  background-color: #555;
+}*/
+.videoMask{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+}
+.videoBox{
+  position: relative;
+  z-index: 99;
+  width: 960px;
+  height: 600px;
+  display: flex;
+  overflow: hidden;
+  z-index: 1;
+}
+.videoLeftBox{
+  width: 176px;
+  height: 100%;
+  background: #212121;
+  position: relative;
+}
+.videoRightBox{
+  width: 784px;
+  height: 100%;
+  background: #fff;
+}
+.videoLeftRowOne{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 18px 0px 17px 28px;
+}
+.videoLeftRowOneTile{
+  font-size: 18px;
+  color: #fff;
+}
+.eqf_info_f{
+  color: #1593FFFF;
+  margin-left: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.videoLeftRowTwo{
+  display: flex;
+  background:rgba(21,147,255,1);
+  justify-content: flex-start;
+  align-items: center;
+  padding: 14px 0px 14px 28px;
+}
+.videoLeftRowTwoTile{
+  font-size: 14px;
+  color: #fff;
+}
+.videoLeftIcon{
+  margin-left: 5px;
+  color: #fff;
+}
+.videoRightHeadBox{
+  height: 60px;
+  width: 100%;
+  padding: 0px 28px;
+  display: flex;
+  flex: 2;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow: 0 6px 6px 0 rgba(0,0,0,.16);
+}
+.videoRightHead{
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  align-items:center;
+}
+.videoRightHeadList{
+  height: 60px;
+  display: flex;
+  justify-content: left;
+  align-items:center;
+  margin-right: 40px;
+  font-size: 14px;
+  color: #333;
+  cursor:pointer
+}
+.videoRightHeadList:hover{
+  color: #1593FF;
+}
+.close{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+.active{
+  border-bottom: 2px solid #1593FF;
+  color: #1593FF;
+}
+.activeElse{
+  color: #1593FF !important;
+}
+.classify{
+  padding: 0px 28px;
+}
+.tagList{
+  margin-top: 16px;
+}
+.tagListBox{
+  height: 36px;
+  display: flex;
+  justify-content: flex-start;
+  justify-items: center;
+}
+.tagDetailList{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height:18px ;
+  font-size: 13px;
+  color: #333;
+  cursor: pointer;
+  border-right: 1px solid #3333336e;
+}
+.tagDetailListNone{
+  display: none;
+}
+.tagDetailListIcon{
+  font-size: 24px;
+}
+.noneBorderRight{
+  border-right:none
+}
+.tagDetailList:hover{
+  color: #1593FF;
+}
+.tagTitle{
+  color: #000;
+  font-size: 13px;
+  display: inline-flex;
+  justify-content:flex-start;
+  align-items: center;
+}
+.tagDetail{
+  height: 36px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.tagDetail>li{
+  padding: 0px 8px;
+}
+.colorList{
+  margin-left: 8px;
+  border-radius: 3px;
+  width:20px;
+  height:20px;
+  background:linear-gradient(147deg,rgba(255,41,106,1) 0%,rgba(253,224,91,1) 23%,rgba(96,231,147,1) 52%,rgba(0,190,255,1) 80%,rgba(92,97,255,1) 100%);
+  display: flex;
+}
+.colorListElse{
+  background:linear-gradient(147deg,rgba(255,41,106,1) 0%,rgba(253,224,91,1) 23%,rgba(96,231,147,1) 52%,rgba(0,190,255,1) 80%,rgba(92,97,255,1) 100%);
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
+  margin-top: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.triangle{
+  width:10px;
+  height:5px;
+  color:rgba(21,147,255,1);
+  margin-left: 8px;
+  cursor: pointer;
+}
+.colorBox{
+  position: relative;
+  margin-left: 52px;
+  display: flex;
+  justify-content:flex-start;
+  align-items: center;
+  cursor: pointer;
+}
+.main{
+  position: relative;
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+// card 的 css----------------
+.cardBox{
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  flex-wrap:wrap;
+  padding: 0px 28px;
+}
+.pation{
+  position: relative;
+  margin-left: 28px;
+  margin-bottom: 20px;
+}
+.popOver {
+  animation: fade-in;/*动画名称*/
+  animation-duration: 0.3s;/*动画持续时间*/
+  -webkit-animation:fade-in 0.3s;/*针对webkit内核*/
+}
+.noneBorderRight{
+  position: relative;
+  height: 30px;
+}
+.noneBorderRight:hover .popOver{
+  display: block;
+}
+.popOver{
+  display: none;
+  position: absolute;
+  width:434px;
+  z-index: 999;
+  top:30px;
+  left: 0;
+  margin-left: -190px;
+  background: #fff;
+  box-shadow: 0px -1px 3px rgba(37, 25, 25, 0.28);
+  border-radius: 3px;
+}
+.popOverTranigle{
+  background: #fff;
+  width: 8.48528137px;
+  height: 8.48528137px;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  z-index: 9998;
+  top:-4px;
+  display: block;
+  border-color: transparent;
+  border-style: solid;
+  left: 50%;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+  box-shadow: 0px -1px 3px rgba(37, 25, 25, 0.28);
+}
+.popOverMain{
+  position: relative;
+  background: #fff;
+  z-index: 99999;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px 6px 20px 20px;
+  border-radius: 3px;
+}
+.popOverMainList{
+  font-size:14px;
+  color:#333333;
+  text-align:left;
+  line-height:14px;
+  padding-right: 14px;
+  padding-top: 12px;
+  cursor: pointer;
+}
+//色系选择css
+.popOverColor{
+  display: none;
+  position: absolute;
+  width:220px;
+  z-index: 999;
+  top:35px;
+  left: 0;
+  margin-left: -40px;
+  background: #fff;
+  box-shadow: 0px -1px 3px rgba(37, 25, 25, 0.28);
+  border-radius: 3px;
+}
+.popOverColor {
+  animation: fade-in;/*动画名称*/
+  animation-duration:.3s;/*动画持续时间*/
+  -webkit-animation:fade-in .3s;/*针对webkit内核*/
+}
+.colorBox:hover .popOverColor{
+  cursor: pointer;
+  display: block;
+}
+.popOverMainColor{
+  position: relative;
+  background: #fff;
+  z-index: 99999;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 8px 8px 20px 20px;
+  border-radius: 3px;
+}
+.popOverMainListColor{
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
+  margin-top: 12px;
+  border-radius: 2px;
+  cursor: pointer;
+}
+.borderStyle{
+  border: 1px solid #1593ff;
+};
+// 第四版开发
+.uploadBox{
+  position: absolute;
+  bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.phoneUploadBtnAll{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.phoneUploadBtn{
+  width: 120px;
+  height: 40px;
+  background: #2EC8B2FF;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.phoneUploadBtnAll:hover{
+  .erqcodeBox{
+    transition: all 0.2s ease;
+    display: block;
+  }
+}
+.eqf_cloudupload_i{
+  color: #fff;
+  font-size: 12px;
+}
+.phoneWord{
+  margin-left: 5px;
+  color: #fff;
+  font-size: 14px;
+}
+.erqcodeBox{
+  display: none;
+  position: absolute;
+  background: #fff;
+  width: 194px;
+  height: 220px;
+  padding: 22px;
+  z-index: 999999;
+  left: 144px;
+  top: -155px;
+  border-radius: 4px;
+}
+.ercodeTriangle{
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  bottom:35px;
+  left: -11px;
+  transform: rotate(45deg);
+  background: #fff;
+}
+.weixin{
+  font-size: 12px;
+  color: #333;
+}
+.erqcodeImg{
+  margin-top: 12px;
+  width: 150px;
+  height: 150px;
+}
+.eqf_why_f{
+  color: #fff;
+  font-size: 16px;
+  position: absolute;
+  right: -22px;
+}
+.accept{
+  margin-left: 5px;
+  font-size: 12px;
+  color:#FFFFFF;
+}
+.acceptEqx{
+  font-size: 12px;
+  color:#1593FFFF;
+}
+.localBox{
+  display: none;
+  position: absolute;
+  background: #fff;
+  width: 334px;
+  height: 199px;
+  z-index: 999999;
+  left: 155px;
+  top: -149px;
+  border-radius: 3px;
+}
+.localTriangle{
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom:25px;
+  left: -5px;
+  transform: rotate(45deg);
+  background: #000;
+}
+.contentWhy{
+  padding: 16px 18px;
+  width: 334px;
+  height: 199px;
+  background: #000;
+  border-radius: 3px;
+}
+.phoneUploadBtn:hover{
+  .localBox{
+    display: block;
+  }
+}
+.contentWhyNotice{
+  font-size: 15px;
+  color: #FFFFFF;
+}
+.contentWhyInfo{
+  font-size: 12px;
+  margin-top: 15px;
+  line-height: 18px;
+  color:#FFFFFF ;
+}
+.mineVideoBox{
+  display:flex ;
+  justify-content: flex-start;
+  margin-left: -13px;
+  flex-wrap: wrap;
+  padding: 0 28px;
+}

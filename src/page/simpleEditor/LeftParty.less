@@ -1,0 +1,481 @@
+@import "../editor/leftCommon";
+
+.functionButton {
+    height: 38px;
+    line-height: 38px;
+    font-size: 12px;
+    display: flex;
+    background: #FAFAFA;
+    justify-content: center;
+    border-bottom: 1px #e6ebed solid;
+}
+
+.functionButton > span {
+    display: inline-block;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.functionButton > span:hover {
+    color: #f0f0f0;
+    background: #1593FF;
+}
+
+.tempListDiv {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.partyUl {
+    overflow-y: auto;
+    padding-top: 12px;
+}
+
+.index {
+    height: 40px;
+    font-size: 14px;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: rgba(118, 131, 143, 1);
+    line-height: 40px;
+    text-align: center;
+}
+
+.typesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    height: 162px;
+    overflow-y: auto;
+    margin-top: 16px;
+
+    & > div {
+        width: 65px;
+        height: 30px;
+        border-radius: 3px;
+        border: 1px solid rgba(230, 235, 237, 1);
+        line-height: 30px;
+        text-align: center;
+        margin-bottom: 8px;
+        cursor: pointer;
+    }
+
+    & > div:not(:nth-child(3n+3)) {
+        margin-right: 8px;
+    }
+
+    .activeType {
+        border: 1px solid #1593ff;
+        color: #1593ff;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.concatPopover {
+    width: 260px;
+    :global {
+        .ant-popover-inner-content {
+            padding: 16px 16px 0;
+        }
+    }
+    .selectContainer {
+        .types {
+            margin-top: 16px;
+            width: 100px;
+
+            .ant-select-open .ant-select-selection {
+                -webkit-box-shadow: none !important;
+                box-shadow: none !important;;
+            }
+
+            :global {
+                .ant-select-focused .ant-select-selection {
+                    -webkit-box-shadow: none !important;
+                    box-shadow: none !important;;
+                }
+            }
+        }
+
+        .concatTitle {
+            height: 18px;
+            font-size: 16px;
+            font-family: PingFangSC-Semibold;
+            font-weight: 600;
+            color: rgba(51, 51, 51, 1);
+            line-height: 18px;
+        }
+
+        .time {
+            margin-top: 16px;
+            border: 1px solid #ccd5db;
+            margin-right: 10px;
+            border-radius: 3px;
+            width: 225px;
+            text-align: center;
+            line-height: 30px;
+            height: 30px;
+            font-size: 14px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 1);
+            display: flex;
+
+            & > div {
+                width: 75px;
+                cursor: pointer;
+            }
+
+            & > div:first-child {
+                border-radius: 3px 0 0 3px;
+                border-right: 1px solid #ccd5db;
+            }
+
+            & > div:last-child {
+                border-radius: 0 3px 3px 0;
+                border-left: 1px solid #ccd5db;
+            }
+        }
+
+        .play {
+            margin-top: 16px;
+            width: 250px;
+            height: 62px;
+            text-align: center;
+            color: #fff;
+            border: unset;
+            cursor: pointer;
+            background: #f8f8fe!important;
+            margin-left: -16px;
+
+            &:hover {
+                i {
+                    background: #1593ff;
+                }
+            }
+
+            i {
+                width: 34px;
+                height: 34px;
+                background: #333333;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 18px;
+                line-height: 62px;
+                padding: 8px;
+            }
+        }
+
+        .checked {
+            border: 1px solid #1593FF !important;
+            color: #1593FF;
+        }
+    }
+}
+
+.partyUl > li, .sortingDiv {
+    width: 100%;
+    cursor: pointer;
+
+    .container {
+        padding-bottom: 10px;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        .concat {
+            text-align: center;
+            padding-bottom: 10px;
+
+            img {
+                width: 16px;
+            }
+        }
+
+        .partyPre {
+            position: relative;
+            margin: 0 auto;
+            box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.1);
+            border-radius: 3px;
+            .partyLi {
+                position: relative;
+                overflow: hidden;
+                border-radius: 3px;
+
+                * {
+                    pointer-events: none !important;
+                }
+
+                > .background {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+
+                    > .videoBackgroundPic {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        left: 0;
+                        right: 0;
+                    }
+                }
+            }
+
+            .mask {
+                display: none;
+                width: 20px;
+                height: 48px;
+                position: absolute;
+                z-index: 2;
+                top: 4px;
+                right: -28px;
+            }
+
+            .icons {
+                position: absolute;
+                bottom: 0;
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                font-size: 16px;
+                align-items: center;
+                .iconContainer {
+                    text-align: center;
+                    line-height: 20px;
+                    margin-bottom: 6px;
+                    cursor: pointer;
+                    border-radius: 3px;
+                    width: 20px;
+                    height: 20px;
+                    box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.1);
+                    top: 1px;
+                    i {
+                        font-size: 10px;
+                    }
+
+                    > img {
+                        margin-bottom: 2px;
+                        width: 14px;
+                        height: 14px;
+                    }
+                }
+
+                > .iconContainer:not(:first-child) {
+                    &:hover {
+                        color: #1593FF;
+                    }
+                }
+
+                > .iconContainer:first-child:hover {
+                    color: #FF296A;
+                }
+            }
+        }
+    }
+}
+
+.partyUl > li:hover, .sortingDiv:hover {
+    .mask {
+        display: block!important;
+    }
+
+    .circle {
+        background-color: #1593ff;
+        color: #fff;
+    }
+}
+
+.partyUl > li:hover, li.active {
+    //background-color: rgba(236,238,240,1);
+    .container {
+        //border: 1px solid #1593ff;
+    }
+}
+
+li.active {
+    .partyPre {
+        box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16) !important;
+    }
+}
+
+.circle {
+    width: 18px;
+    height: 18px;
+    border-radius: 12px;
+    color: #666666;
+    font-family: "Helvetica Neue";
+    text-align: center;
+    font-size: 12px;
+    line-height: 18px;
+    background-color: #EEEEEE;
+    display: inline-block;
+    float: left;
+    margin-bottom: 8px;
+
+}
+
+.partyUl > li, .sortingDiv {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.partyUl > li.active .circle, .sortingDiv .circle {
+    background-color: #1593ff;
+    color: #fff;
+}
+
+
+.liTitle {
+    float: left;
+    max-width: 135px;
+    min-width: 75px;
+    font-size: 14px;
+    line-height: 24px;
+    color: #333333;
+    margin-left: 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
+}
+
+.liTitle.activeInput {
+    overflow: visible;
+}
+
+.liTitle input {
+    margin-top: -12px;
+    max-width: 135px;
+    min-width: 75px;
+    height: 36px;
+    border-radius: 3px;
+    padding: 11px;
+    border: 1px #ccd5db solid;
+}
+
+.liTitle input:focus {
+    border-color: #1593FF;
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 2px rgba(21, 147, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(21, 147, 255, 0.2);
+    border-right-width: 1px !important;
+}
+
+.liTitle input::selection {
+    background-color: #1593FF;
+}
+
+.liTime {
+    width: 60px;
+    height: 20px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10px;
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    text-align: center;
+    line-height: 20px;
+    z-index: 1000;
+}
+
+.menuButton {
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+.sortingDiv {
+    z-index: 900;
+    background-color: #EEEEEE;
+}
+
+.line {
+    width: 136px;
+    height: 1px;
+    background: rgba(204, 213, 219, 1);
+    border-radius: 1px;
+    margin: 12px auto;
+}
+
+.insertDiv {
+    height: 54px;
+    width: 100%;
+    display: flex;
+    font-size: 14px;
+    flex: 1;
+    justify-content: center;
+    margin-bottom: -28px;
+
+    i {
+        margin-right: 4px !important;
+    }
+}
+
+.insertDiv .insertButton, .transition {
+    width: 90px;
+    height: 36px;
+    border-radius: 3px;
+    font: 14px/400 PingFangSC-Regular #fff;
+}
+
+.transition {
+    width: 48px;
+    border-radius: 3px;
+    border: 1px solid rgba(204, 213, 219, 1);
+    color: #666666;
+    background: #fff;
+}
+
+.transition:hover {
+    border: 1px solid #198Ae7;
+    color: #198Ae7;
+    background-color: #ffffff;
+}
+
+.disabled {
+    cursor: not-allowed !important;
+    color: rgba(204, 213, 219, 1) !important;
+    background: #FFFFFF !important;
+    &:hover {
+        i {
+            background: #333333!important;
+        }
+    }
+}
+
+.insertButton:hover {
+    background-color: #198Ae7;
+}
+
+.speedInfo {
+    color: #1bc7b1;
+    font-size: 12px;
+    font-family: HelveticaNeue;
+    line-height: 12px;
+}
+
+.userVideoTag {
+    font-size: 10px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    margin-left: 30px;
+    color: rgba(21, 147, 255, 1);
+    line-height: 14px;
+}
+
+.highSpeed {
+    color: #ff2a6a;
+}
+
+//.tooltip {
+//    & > div > div:first-child {
+//        top: 16px !important;
+//    }
+//}
+
+.notice {
+    padding: 20px 40px;
+}

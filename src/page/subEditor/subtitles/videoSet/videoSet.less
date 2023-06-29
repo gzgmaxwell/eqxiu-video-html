@@ -1,0 +1,120 @@
+@activeText: #666666;
+@noActiveText: #999999;
+.body{
+    width: 308px;
+    height: 100vh;
+    background-color: #FFFFFF;
+    position: fixed;
+    overflow-y: auto;
+    right: 0;
+    top: 0;
+    z-index: 52;
+    padding: 30px 39px;
+    transition: all ease-in .3s;
+    transform: translateX(380px);
+}
+.header{
+    height: 20px;
+    margin-bottom: 21px;
+}
+
+.header>.title{
+    font-size: 14px;
+    line-height: 20px;
+    font-family: PingFngSc-Semibold;
+    font-weight: 600;
+    color: #333333;
+}
+.header>.closeIcon{
+    display: block;
+    float: right;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 13px;
+    cursor: pointer;
+}
+.videoCover{
+    text-align: center;
+    position: relative;
+}
+.videoCover img{
+    max-height: 224px;
+    max-width: 228px;
+    cursor: pointer;
+}
+.videoCover>.changeCover {
+    cursor: pointer;
+    position: absolute;
+    bottom: 14px;
+    left: 34%;
+    width: 72px;
+    height: 24px;
+    line-height: 19px;
+    padding: 2px 8px;
+    color: #f0f0f0;
+    border-radius: 3px;
+    background-color: #000;
+    opacity: .5968;
+}
+.inputDiv {
+    margin-top: 20px;
+}
+
+.inputDiv label {
+    margin-bottom: 9px;
+    display: block;
+}
+
+.inputDiv :global(.ant-input-suffix) {
+    top: -16px
+}
+.inputDiv :global(.ant-input){
+    padding-right: .8em!important;
+}
+
+.inputDiv input {
+    border-radius: 3px;
+}
+
+.inputDiv textarea {
+    width: 228px;
+    border-radius: 3px;
+}
+
+.inputDiv>.rotate{
+    margin-left: 20px;
+    font-size: 14px;
+    color: @noActiveText;
+    line-height: 36px;
+    cursor: not-allowed;
+}
+.inputDiv>.rotate.active{
+    color: @activeText;
+    cursor: pointer;
+}
+.inputDiv i {
+    margin-right: 7px;
+}
+
+.errorSpan {
+    padding-left: 20px;
+    font-size: 12px;
+    color: red;
+}
+.tips{
+    font-size: 12px;
+    line-height: 20px;
+    color: #666666;
+}
+.saveBox{
+    margin-top: 20px;
+}
+.saveBtn{
+    width:80px;
+    height:36px;
+}
+.cancelBtn{
+    margin-left: 20px;
+    width:80px;
+    height:36px;
+}

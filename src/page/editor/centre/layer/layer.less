@@ -1,0 +1,135 @@
+.layer_body {
+  position: fixed;
+  top: 80px;
+  left: 400px;
+  background: #F0F1F8;
+  width: 194px;
+  height: 340px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  z-index: 10;
+
+  .header {
+    width: 194px;
+    height: 40px;
+    border-radius: 3px;
+    padding: 0 12px;
+    line-height: 40px;
+    text-align: left;
+    color: #666666;
+    vertical-align: middle;
+    cursor: move;
+    user-select: none;
+    > i {
+      float: right;
+      line-height: 40px;
+      cursor: pointer;
+    }
+  }
+}
+
+.layer__set {
+  display: flex;
+  justify-content: space-between;
+  height: 36px;
+  background: #FAFAFA;
+  font-size: 12px;
+  font-weight: 400;
+  color: #666666;
+  margin-bottom: 1px;
+  line-height: 36px;
+  padding: 0px 10px;
+  webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .layer__name__div, .layer__name__input {
+    border: 0;
+    border-radius: 3px;
+    flex: 1;
+    padding: 0 5px;
+    line-height: 28px;
+    width: 100px;
+    margin-top: 1px;
+  }
+  .layer__name__div {
+    text-align: left;
+    overflow: hidden;
+  }
+
+  .layer__name__input {
+    border: 1px solid #1593ff;
+    color: #333333;
+  }
+
+  .layer__option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #666666;
+    i {
+      line-height: 1;
+      font-size: 12px;
+      cursor: pointer;
+      margin-left: 15px;
+    }
+    i:last-child {
+      font-size: 14px;
+    }
+    i:hover {
+      color: #1593FF;
+    }
+    .disabled {
+      color: #666666;
+    }
+  }
+}
+
+body > .layer__set {
+  z-index: 100;
+}
+
+.emptyBox {
+  width: 160px;
+  height: 160px;
+  margin: 0 auto;
+  background: url("../../../static/emptybox.svg");
+}
+
+.emptyBoxText {
+  font-size: 16px;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  line-height: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.layer__set:hover, .layer__active {
+  background: #E0E3F4;
+  .layer__name__div, .layer__name__input, i {
+
+  }
+}
+
+.groupUl {
+  > li {
+    padding-left: 24px;
+  }
+}
+
+.groupRow {
+  .openBtn {
+    font-size: 24px;
+    vertical-align: middle;
+  }
+}
+
+.tooltip {
+  & > div > div:first-child {
+  }
+}

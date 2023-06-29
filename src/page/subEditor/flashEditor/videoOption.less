@@ -1,0 +1,291 @@
+@activeText: #666666;
+@noActiveText: #999999;
+.body {
+  width: 100%;
+  height: 100vh;
+  background-color: #FFFFFF;
+  position: fixed;
+  overflow-y: auto;
+  right: 0;
+  top: 0;
+  z-index: 52;
+  padding: 30px 24px 0 30px;
+  transition: all ease-in .3s;
+  transform: translateY(-380px);
+}
+
+.box {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  height: 20px;
+  margin-bottom: 21px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header > .title {
+  line-height: 20px;
+  font-size: 18px;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: rgba(17, 17, 17, 1);
+}
+
+.header > .closeIcon {
+  display: block;
+  float: right;
+  font-weight: 300;
+  line-height: 22px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  color: #fff;
+  background: #2F3C4D;
+  text-align: center;
+  border-radius: 50%;
+  font-size: 24px;
+  z-index: 1;
+  &:hover {
+    background: #ff2a6a;
+  }
+}
+
+.displayButton {
+  background-color: #cccccc !important;
+  cursor: not-allowed !important;
+}
+
+.headerButtonGroup {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #CCD5DB;
+}
+
+.headerButtonGroup button {
+  width: 96px;
+  height: 36px;
+  margin: 0 6px;
+  font-size: 14px;
+  line-height: 32px;
+  padding: 0 7px;
+}
+
+.videoCover {
+  text-align: center;
+  position: relative;
+
+}
+
+.videoCover img {
+  max-height: 200px;
+  max-width: 200px;
+  cursor: pointer;
+}
+
+.videoCover > .changeCover {
+  cursor: pointer;
+  position: absolute;
+  bottom: 14px;
+  left: calc(50% - 36px);
+  width: 72px;
+  height: 24px;
+  padding: 2px 8px;
+  color: #f0f0f0;
+  border-radius: 3px;
+  background-color: #000;
+  opacity: .5968;
+}
+
+.inputDiv {
+  & textarea {
+    height: 84px !important;
+    width: 100% !important;
+  }
+  & input {
+    width: 100% !important;
+  }
+}
+
+.inputDiv:not(:first-child) {
+  margin-top: 24px;
+}
+
+.inputDiv label {
+  margin-bottom: 8px;
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(17, 17, 17, 1);
+}
+
+.freeTips {
+  margin-left: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #ff5448;
+  height: 16px;
+  display: inline-block;
+  border-radius: 0 4px 0 4px;
+  padding: 0 1px;
+  border: 1px solid #fc544e;
+}
+
+.leftTitle {
+  width: 200px;
+  height: 20px;
+  font-size: 14px;
+  text-align: end;
+  font-family: PingFangSC-Semibold;
+  font-weight: 600;
+  color: #333333;
+  line-height: 22px;
+}
+
+.systemVideo {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  background-color: #292929;
+  overflow: hidden;
+  .videoWrap{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    video{
+      max-height: 100%;
+      max-width: 100%;
+    }
+  }
+  .videoMask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    > i {
+      font-size: 40px;
+      color: #ffffffbb;
+    }
+    > img {
+      width: 53px;
+      height: 60px;
+    }
+  }
+  &:hover .videoMask, .videoMask.hover {
+    visibility: visible;
+  }
+}
+
+.inputDiv :global(.ant-input-suffix) {
+  top: -16px
+}
+
+.inputDiv :global(.ant-input) {
+  padding-right: .8em !important;
+}
+
+.inputDiv input {
+  border-radius: 3px;
+}
+
+.inputDiv textarea {
+  border-radius: 3px;
+}
+
+.inputDiv .errorSpan {
+  margin-top: 10px;
+  color: #FF296A;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  > div {
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .left {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.16);
+  }
+  .right {
+    margin-left: 40px;
+    width: 430px;
+    height: 200px;
+    :global {
+      .ant-radio-group {
+        display: flex;
+      }
+    }
+  }
+  .weixinSet{
+    display: flex;
+    .weixinLeft{
+      width: 200px;
+      text-align: right;
+      font-size:14px;
+      font-weight:600;
+      color:rgba(51,51,51,1);
+    }
+    .weixinRight{
+      width: 430px;
+      margin-left: 40px;
+      text-align: left;
+      font-size:14px;
+      font-weight:400;
+      color:rgba(21,147,255,1);
+      cursor: pointer;
+    }
+  }
+}
+
+.tips {
+  font-size: 12px;
+  line-height: 20px;
+  color: #666666;
+}
+
+.saveBox {
+  margin-top: 20px;
+}
+
+.saveBtn {
+  width: 80px;
+  height: 36px;
+}
+
+.cancelBtn {
+  margin-left: 20px;
+  width: 80px;
+  height: 36px;
+  color: #666666;
+  border: 1px solid rgba(204, 213, 219, 1);
+  &:hover {
+    color: #fff;
+  }
+}

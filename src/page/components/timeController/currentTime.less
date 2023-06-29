@@ -1,0 +1,39 @@
+.currentIco {
+  width: 34px;
+  height: 18px;
+}
+
+.currentMark {
+  position: fixed;
+  .currentIco();
+  z-index: 2001;
+  cursor: ew-resize;
+  transform: translateY(-30px) translateX(-17px);
+  .timeBox {
+    width: 62px;
+    height: 17px;
+    background: rgba(21, 147, 255, 1);
+    border-radius: 3px;
+    background: #1593ff;
+    position: absolute;
+    transform: translate(4px, -10px);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 1);
+    line-height: 17px;
+  }
+  .triangle {
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #1593ff;
+    transform: translateX(9px) translateY(6px);
+  }
+  .line {
+    background-color: #1593ff;
+    height: 47px;
+    width: 2px;
+    transform: translateX(16px) translateY(-3px);
+  }
+}

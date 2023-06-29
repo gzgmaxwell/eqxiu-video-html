@@ -1,0 +1,58 @@
+.elemGroup {
+  .disabled {
+    cursor: not-allowed;
+    color: #ddd;
+  }
+  padding: 15px;
+
+  position: absolute;
+  z-index: 100;
+  background: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  button {
+    width: 100%;
+    color: #666;
+    background: #fff;
+    border: 1px solid #CCD5DB;
+    margin: 8px auto 12px auto;
+  }
+  .elemAlign, .hvEqually, .elemZIndex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 32px;
+    margin-bottom: 12px;
+    border: 1px solid #CCD5DB;
+    i {
+      font-size: 16px;
+      color: #333;
+      cursor: pointer;
+      width: 28px;
+      height: 32px;
+      line-height: 32px;
+      text-align: center;
+      border-radius: 3px;
+      &:hover {
+        background-color: rgba(204, 213, 219, 0.25);
+      }
+    }
+  }
+  .elemZIndex {
+    i {
+      width: 42px;
+    }
+  }
+  .hvEqually {
+    div {
+      cursor: pointer;
+      font-size: 12px;
+      color: #333;
+      i {
+        margin-right: 5px;
+      }
+    }
+  }
+}

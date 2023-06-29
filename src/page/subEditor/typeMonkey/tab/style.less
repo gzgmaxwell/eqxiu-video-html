@@ -1,0 +1,184 @@
+.wrap {
+  padding: 16px 24px;
+  position: relative;
+  height: calc(100vh - 101px);
+  overflow: auto;
+  .title {
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #333;
+  }
+  .animateWrap {
+    margin-top: 12px;
+    margin-left: -16px;
+    display: flex;
+    justify-content: flex-start;
+    .singleBox {
+      position: relative;
+      text-align: center;
+      .list {
+        width: 100px;
+        height: 100px;
+        position: relative;
+        overflow: hidden;
+        background: rgba(216, 216, 216, 1);
+        border-radius: 3px;
+        margin-left: 16px;
+        cursor: pointer;
+        .img {
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        .yesBox {
+          position: absolute;
+          z-index: 1;
+          cursor: pointer;
+          pointer-events: none;
+          top: 0;
+          left: 0;
+          border-color: #159fff transparent transparent #159fff;
+          border-style: solid;
+          border-width: 14px;
+          .eqfYes {
+            font-size: 14px;
+            position: absolute;
+            left: -13px;
+            top: -11px;
+            color: #fff;
+            font-weight: 700;
+          }
+        }
+        .img {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+      }
+      span {
+        display: inline-block;
+        margin-top: 4px;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
+  // 第二排
+  .addColor {
+    margin-top: 16px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #333;
+  }
+  .colorWrap {
+    margin-top: 4px;
+    margin-left: -8px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .list {
+      width: 104px;
+      height: 104px;
+      position: relative;
+      overflow: hidden;
+      background: rgba(216, 216, 216, 1);
+      border-radius: 3px;
+      margin-left: 8px;
+      margin-top: 8px;
+      cursor: pointer;
+      .yesBox {
+        position: absolute;
+        cursor: pointer;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        border-color: #159fff transparent transparent #159fff;
+        border-style: solid;
+        border-width: 14px;
+        .eqfYes {
+          font-size: 14px;
+          position: absolute;
+          left: -13px;
+          top: -11px;
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+
+    }
+  }
+  // 背景图
+  .bgWrap {
+    margin-top: 24px;
+    height: 36px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    .bgTitle {
+      width: 42px;
+    }
+    .upload {
+      margin-left: 24px;
+      width: 80px;
+      height: 36px;
+      line-height: 36px;
+      font-size: 14px;
+      border-radius: 3px;
+      border: 1px solid rgba(204, 213, 219, 1);
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        border: 1px solid #1593FF;
+        color: #1593ff;
+      }
+    }
+    .deleteImg {
+      margin-left: 8px;
+      width: 80px;
+      height: 36px;
+      line-height: 36px;
+      font-size: 14px;
+      border-radius: 3px;
+      border: 1px solid #FF296A;
+      color: #FF296A;
+      text-align: center;
+      cursor: pointer;
+      &:hover {
+        background: #FF296A;
+        color: #fff;
+      }
+    }
+  }
+  .fontWrap {
+    margin-top: 16px;
+    height: 36px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 14px;
+    color: #333;
+    .fontTitle {
+      width: 42px;
+    }
+    .font {
+      margin-left: 24px;
+      width: 161px;
+      height: 36px;
+      display: inline-block;
+      div {
+        font-family: inherit;
+      }
+    }
+  }
+}
+
+.activeAnimate {
+  color: #1593FF !important;
+}
+

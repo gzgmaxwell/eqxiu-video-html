@@ -1,0 +1,40 @@
+.container {
+  width: 292px;
+  overflow: hidden;
+  .titleWrap{
+    width: 292px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 40px;
+    background: #fff;
+    > div {
+      width: 80px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      font-family: PingFangSC-Regular;
+      background: #F7F8F9;
+      font-weight: 400;
+      color: #333333;
+      cursor: pointer;
+      border-radius: 3px;
+      margin-top: 16px;
+      &:hover{
+        background: #eceef0;
+      }
+    }
+    div:nth-child(1){
+      font-size:20px;
+      font-weight:600;
+    }
+    div:nth-child(2){
+      font-size:16px;
+      font-weight:600;
+    }
+    div:nth-child(3){
+      font-size:14px;
+      font-weight:400;
+    }
+  }
+}

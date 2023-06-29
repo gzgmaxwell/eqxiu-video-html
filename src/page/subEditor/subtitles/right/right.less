@@ -1,0 +1,116 @@
+@left-width: 89px;
+@center-width: 80px;
+@right-width: 66px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.toolsBodyOut {
+  display: flex;
+  position: relative;
+  :global {
+    .ant-input-number, .ant-select, .ant-select-selection, .ant-select-selection__rendered, .ant-input, .ant-input-affix-wrapper {
+      height: 32px;
+      line-height: 32px;
+    }
+  }
+}
+
+.toolsEmptyBody {
+  width: 300px;
+}
+
+.toolsBody {
+  right: 0;
+  width: 260px;
+  background: #fff!important;
+  border-left: 1px solid #ccd5db;
+  box-sizing: content-box;
+  z-index: 30;
+}
+
+.contentDiv {
+  position: relative;
+  height: calc(100vh - 263px);
+  padding-bottom: 40px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.title {
+  height: 14px;
+  font-size: 16px;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: #333;
+  line-height: 14px;
+  margin: 17px 0 17px 16px;
+}
+
+.applyAll {
+  margin-left: 16px;
+  .apply__title {
+    height: 36px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #666;
+    line-height: 36px;
+  }
+  .apply__btn {
+    width: 228px;
+    height: 36px;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 3px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 36px;
+    border: 1px solid #1593ff;
+    color: #1593ff;
+  }
+  .apply__btn:hover {
+    background: #1593ff;
+    color: #fff;
+  }
+}
+
+.fonts {
+  display: flex;
+  padding-top: 12px;
+
+  .left {
+    width: @left-width;
+    padding: 10px 16px 10px 16px;
+    font-size: 14px;
+    font-family: @font-family;
+    font-weight: 400;
+    color: #666;
+  }
+  .center {
+    width: @center-width;
+    border-radius: @border-radius;
+  }
+
+  .other {
+    flex: 1;
+    margin-right: 16px;
+    :global {
+      .ant-select {
+        width: 100%;
+      }
+    }
+  }
+}
+
+:global {
+  .ant-input-affix-wrapper > input {
+    padding-right: 2px;
+  }
+  .iconW .eqf-why-f {
+    display: none !important;
+  }
+  .ant-select-dropdown-menu {
+    max-height: 160px !important;
+  }
+}

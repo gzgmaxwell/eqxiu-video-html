@@ -1,0 +1,137 @@
+.wrap {
+  padding: 16px 24px;
+  position: relative;
+  .rhythm {
+    height: 36px;
+    line-height: 36px;
+    color: #333;
+    font-size: 14px;
+  }
+  .voiceSpeedWrap {
+    position: relative;
+    margin-top: 32px;
+    height: 33px;
+    width: 235px;
+    :global {
+      .ant-slider {
+        &:hover .ant-slider-rail {
+          background-color: #f5f5f5;
+        }
+        .ant-slider-mark {
+          top: -21px;
+          font-size: 12px;
+          font-family: PingFangSC;
+          font-weight: 500;
+          color: rgba(51, 51, 51, 1);
+          line-height: 17px;
+        }
+        .ant-slider-handle {
+          background-color: #1593ff;
+          background-color: #1593ff;
+          width: 12px;
+          height: 12px;
+          margin-left: -6px;
+          &:focus {
+            border-color: #1593ff;
+            box-shadow: none !important;
+            outline: none !important;
+          }
+        }
+        .ant-slider-rail {
+          height: 2px;
+          top: 5px;
+        }
+        .ant-slider-dot {
+          top: 0;
+          width: 4px;
+          height: 4px;
+          border: none !important;
+          background-color: #e8e8e8;
+          color:rgba(51,51,51,1);
+          >span:first-child{
+            left: 5px!important;
+          }
+          &.ant-slider-dot-active {
+            border: none !important;
+            background-color: #1593ff;
+          }
+        }
+      }
+    }
+    .axle {
+      width: 240px;
+      height: 2px;
+      background: #E6EBED;
+      position: absolute;
+      top: 26px;
+      left: 0;
+      .box {
+        width: 12px;
+        height: 12px;
+        position: absolute;
+        top: -5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        .dot {
+          width: 4px;
+          height: 4px;
+          background: #E6EBED;
+          border-radius: 2px;
+          position: absolute;
+          top: 4px;
+          left: 0px;
+          cursor: pointer;
+        }
+        .activeDot {
+          width: 12px;
+          height: 12px;
+          background: #1593FF;
+          border-radius: 6px;
+          top: -1px;
+        }
+
+      }
+      .time {
+        width: 25px;
+        height: 17px;
+        position: absolute;
+        font-size: 12px;
+        color: #333;
+        top: -27px;
+      }
+    }
+
+  }
+  .addColor {
+    margin-top: 16px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 14px;
+    color: #333;
+  }
+  .voiceWrap {
+    margin-left: -11px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .voiceList {
+      margin-top: 10px;
+      width: 130px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      border-radius: 3px;
+      border: 1px solid rgba(230, 235, 237, 1);
+      color: #333;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 11px;
+    }
+    .activeVoiceList {
+      border: 1px solid #1593FF;
+      color: #1593FF;
+    }
+  }
+}

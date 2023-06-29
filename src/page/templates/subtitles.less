@@ -1,0 +1,159 @@
+@import "../listCommon";
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    padding: 61px 0;
+    position: relative;
+    flex-wrap: wrap;
+    height: calc(100vh - 213px);
+    background-color: #FFFFFF;
+    .tab {
+        pointer-events: all;
+        cursor: pointer;
+        width:260px;
+        height:110px;
+        background:rgba(255,255,255,1);
+        box-shadow:0 0 4px 0 rgba(0,0,0,0.15);
+        border-radius:3px;
+        margin-right: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 16px 16px 16px 24px;
+        margin-bottom: 20px;
+        position: relative;
+        .hideUpload {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .tab__left {
+            font-size: 40px;
+            display: flex;
+            width: 37px;
+            height: 37px;
+            color: #1593FF;
+            margin-right: 13px;
+        }
+        .eqfPhone {
+            font-size: 45px;
+        }
+        .tab__right {
+            margin-left: 39px;
+            text-align: center;
+            cursor: pointer;
+            width: 64px;
+            height: 64px;
+            border: 1px dashed #999;
+            i {
+                line-height: 64px;
+                font-size: 16px;
+                color: #999999;
+            }
+        }
+        .tab__center {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: center;
+            .tab__title {
+                height:12px;
+                font-size:12px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(102,102,102,1);
+                line-height:12px;
+            }
+            .tab__desc {
+                height:14px;
+                font-size:14px;
+                font-family:PingFangSC-Medium;
+                font-weight:500;
+                color:rgba(51,51,51,1);
+                line-height:14px;
+                margin-top: 8px;
+            }
+        }
+    }
+    .tab:last-child{
+        margin-right: 0px;
+    }
+}
+
+.erqcodeBox{
+    transition: all 0.2s ease;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    border-radius: 4px;
+    width:450px;
+    height:308px;
+    box-shadow:0 0 4px 0 rgba(0,0,0,0.15);
+    .weixin{
+        height:17px;
+        font-size:16px;
+        font-family:PingFangSC-Medium;
+        font-weight:500;
+        color:rgba(51,51,51,1);
+        line-height:16px;
+    }
+    .desc {
+        height:14px;
+        font-size:14px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(102,102,102,1);
+        line-height:14px;
+        margin-top: 16px;
+    }
+    .erqcodeImg{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 24px;
+    }
+    .closeable {
+        position: absolute;
+        top: 0;
+        right: 10px;
+        font-weight: 400;
+        font-size: 24px;
+        cursor: pointer;
+    }
+}
+
+.frameBox{
+    width: 100vw;
+    height: 100vh;
+}
+
+.progress__title {
+    height:28px;
+    font-size:22px;
+    font-family:PingFangSC-Semibold;
+    font-weight:600;
+    color:rgba(21,147,255,1);
+    line-height:28px;
+}
+.progress {
+    margin-top: 40px;
+    margin-bottom: 36px;
+    width:315px;
+    height:4px;
+    background:rgba(204,213,219,1);
+    border-radius:2px;
+}
+
+.inputFile{
+    width: 120px;
+    height: 40px;
+    //visibility: hidden;
+    display: none;
+    position: absolute;
+    z-index: 0;
+}

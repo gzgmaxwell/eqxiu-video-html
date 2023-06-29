@@ -1,0 +1,43 @@
+.menus {
+  margin-top: 8px;
+  width: 292px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  line-height: 40px;
+  > div {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #333333;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+  }
+  .activeMenu {
+    color: #1593FF;
+    div:last-child {
+      position: absolute;
+      bottom: 0px;
+      left: 50%;
+      margin-left: -13px;
+      width: 26px;
+      height: 3px;
+      border-radius: 1.5px;
+      background: #1593ff;
+    }
+  }
+}
+
+.newTag {
+  position: absolute;
+  top: -2px;
+  line-height: initial;
+  color: #FF5448;
+  font-size: 12px;
+  right: -18px;
+  z-index: 1;
+  font-weight: bold;
+}

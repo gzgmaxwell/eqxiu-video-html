@@ -1,0 +1,20 @@
+.adBox{
+  position: absolute;
+  width: 480px;
+  height: 144px;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  .active{
+    display: block;
+    position: relative;
+    height: 100%;
+  }
+  :global{
+    .swiper-button-prev, .swiper-button-next{
+      width: 22px !important;
+      height: 36px !important;
+      background-size: cover;
+    }
+  }
+}

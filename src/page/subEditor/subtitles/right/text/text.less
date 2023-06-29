@@ -1,0 +1,238 @@
+@left-width: 89px;
+@center-width: 80px;
+@right-width: 66px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.text__container {
+  padding: 30px 0;
+  background: #ffffff;
+}
+
+.right__text__set {
+  color: #666;
+  :global{
+    .ant-input-number {
+      width: 100%!important;
+    }
+  }
+  .textStyle {
+    display: flex;
+    justify-content: space-between;
+    margin: 12px 16px 0;
+    font-size: 16px;
+    align-items: center;
+    height: 36px;
+    i {
+      cursor: pointer;
+    }
+
+    .divider {
+      height: 1.5em;
+      background: #d9d9d9;
+      //top: -0.2em;
+      margin: 0 0;
+    }
+  }
+
+  /*共同的样式*/
+  .fontFamily, .textColor, .backgroundColor, .lineHeight, .letterSpacing, .fontSize {
+    display: flex;
+    padding-top: 12px;
+    color: #666;
+    .left {
+      width: @left-width;
+      padding: 10px 16px 10px 16px;
+      font-size: 14px;
+      font-family: @font-family;
+      font-weight: 400;
+      color: #666;
+    }
+
+
+    .center {
+      width: @center-width;
+      border-radius: @border-radius;
+      :global{
+        .ant-input-affix-wrapper .ant-input-suffix {
+          margin-top: 2px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  .fontFamily {
+    .other {
+      flex: 1;
+      margin-right: 16px;
+    }
+    :global {
+      .ant-dropdown {
+        height: auto;
+        max-height: 300px;
+        overflow: hidden;
+        box-shadow: 0 0 16px 0 rgba(0,0,0,.16);
+        li:hover{
+          color: #FFFFFF;
+          background-color: #1593FF;
+        }
+      }
+    }
+  }
+
+  .fontSize {
+    .center {
+      z-index: 1;
+    }
+
+    .right {
+      display: flex;
+      height: 36px;
+      margin-left: 8px;
+      margin-right: 16px;
+      border: 1px solid #d9d9d9;
+      border-radius: @border-radius;
+      color: #666;
+
+      & > div {
+        padding: 8px 8px;
+        cursor: pointer;
+      }
+      & > div:hover {
+        background: #1593ff;
+        color: #fff;
+      }
+
+      & > div:first-child {
+        border-right: 1px solid #d9d9d9;
+      }
+    }
+  }
+
+  /*行高、字距选择部分*/
+
+  .lineHeight, .letterSpacing {
+    display: flex;
+
+    .center {
+      height: @height;
+    }
+
+    :global {
+      .ant-slider-rail {
+        background-color: @border-color;
+      }
+
+      .ant-input-number {
+        width: @right-width;
+      }
+
+      .ant-slider {
+        margin: 12px 0;
+      }
+
+      .ant-slider-handle:focus {
+        border-color: #fff;
+        -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+        outline: none;
+      }
+      .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+        border-color: #fff;
+      }
+    }
+
+    .right {
+      width: 75px;
+      text-align: right;
+      padding-left: 9px;
+    }
+  }
+}
+
+.fontFamilyDropdown {
+  cursor: pointer;
+  border: 1px solid #ccd5db;
+  height: 36px;
+  width: 155px;
+  border-radius: 3px;
+  background-color: #fff;
+  text-align: left;
+  line-height: 36px;
+  color: #828d98;
+  padding-right: 5px;
+  text-indent: 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  i {
+    float: right;
+    line-height: 36px;
+  }
+}
+
+.listItem {
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 36px;
+  height: 36px;
+  padding-right: 5px;
+  text-indent: 10px;
+}
+
+.defaultFont {
+  color: #1593ff;
+}
+
+.activeFont {
+  color: #fff !important;
+  background-color: #1593ff !important;
+}
+
+.moreFont {
+  border-top: 1px solid #ccd5db;
+  height: 56px;
+  text-align: center;
+  padding: 9px 12px;
+  margin-top: 10px;
+  &:hover {
+    background: #fff !important;
+    cursor: unset;
+  }
+  button {
+    width: 100%;
+  }
+}
+
+.preFontFamilyMenu {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+
+.disabled {
+  cursor: not-allowed!important;
+  color: #ddd;
+}
+
+:global {
+  .dropdown {
+    width: calc(@center-width - 4px);
+
+    i {
+      cursor: pointer;
+    }
+
+    z-index: 9999;
+  }
+
+  .icon-checked {
+    color: #ffffff;
+    border-radius: 3px;
+    background: #1593ff;
+  }
+}

@@ -1,0 +1,105 @@
+.tagBox {
+  position: relative;
+
+  .wrap {
+    color: rgba(51, 51, 51, 1);
+
+    .decBox {
+      position: absolute;
+      width: 1px;
+      left: -16px;
+      z-index: 9;
+      // visibility: hidden;
+      opacity: 0;
+      transform-origin: top;
+      transform: scaleY(0);
+      transition: all linear .3s;
+      &:hover {
+        opacity: 1 !important;
+        visibility: visible !important;
+      }
+
+      .tagNameBox {
+        width: 100%;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 292px;
+        padding: 8px 7px;
+
+        .tagName {
+          height: 20px;
+          line-height: 20px;
+          margin: 4px 0;
+          cursor: pointer;
+          font-size: 12px;
+
+          span {
+            margin-left: 9px;
+            margin-right: 9px;
+          }
+
+          &:hover {
+            color: #1593FF;
+          }
+        }
+      }
+    }
+
+    .tagType {
+      display: inline-block;
+      height: 40px;
+      width: 68px;
+      // position: relative;
+      overflow: hidden;
+      line-height: 40px;
+      text-align: center;
+      cursor: pointer !important;
+
+      span {
+        font-size: 12px;
+      }
+
+      &:hover>span,
+      &:hover>i {
+        color: #1593FF;
+      }
+
+      .eqf_down {
+        display: inline-block;
+        transition: all linear 0.2s;
+        margin-left: 8px;
+      }
+
+      &:hover .eqf_down {
+        transform: rotate(180deg);
+      }
+
+      &:hover .decBox {
+        // visibility: visible !important;
+        opacity: 1 !important;
+        z-index: 10;
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+.hover {
+  color: #1593FF;
+}
+
+.ratate_eqf_down {
+  transform: rotate(180deg);
+}
+
+.height {
+  height: 0px !important
+}
+
+.aliginLeft {
+  text-align: left !important;
+}

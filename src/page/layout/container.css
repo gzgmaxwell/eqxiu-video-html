@@ -1,0 +1,8 @@
+.container {
+  width: 1160px;
+  min-height: 50vh;
+  padding: 80px 20px 20px 20px;
+  margin: auto;
+  position: static;
+  top: 60px;
+}

@@ -1,0 +1,374 @@
+@baseBackgroundColor: #FAFAFA;
+@baseColor: #1593FF;
+@solidColor: #CCD5DB;
+@border: @solidColor 1px solid;
+
+.detailBody {
+  //margin-top: -5px;
+    .top__center {
+        height: 56px;
+        width: 120px;
+        position: absolute;
+        top:0;
+        left: calc(50% - 210px);
+        margin: auto;
+        line-height: 56px;
+        text-align: center;
+        display: flex;
+        .top__center__option {
+            display: flex;
+            flex-direction: column;
+            width: 60px;
+            cursor: pointer;
+            color:rgba(51,51,51,1);
+            justify-content: space-around;
+            i {
+                margin-top: 6px;
+            }
+            div{
+                font-size:12px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                line-height: 12px;
+            }
+        }
+        .icon169 {
+            i {
+                margin-top: 8px;
+                font-size: 22px;
+                line-height: 22px;
+            }
+        }
+        .icon916 {
+            i {
+                margin-top: 8px;
+                font-size: 29px;
+                line-height: 29px;
+            }
+        }
+        .active {
+            background: #1593ff;
+            color: #fff;
+        }
+    }
+    .bottom {
+        height: 207px;
+        width: 100%;
+        background: #00B49D;
+    }
+}
+
+.contentWrap{
+    width: 100%;
+    height: calc(100vh - 56px);
+    position: relative;
+    overflow: auto;
+    display: flex;
+    background: #F0F1F8;
+    -ms-user-select: none;
+    user-select: none;
+    .leftSide {
+        width: 68px;
+        height: 100%;
+        background: rgba(255, 255, 255, 1);
+        box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.15);
+        position: relative;
+        z-index: 11;
+        .list {
+            width: 68px;
+            height: 68px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            cursor: pointer;
+            .ver {
+                width: 20px;
+                height: 35px;
+                background: #CCCCCC;
+            }
+            .hoz {
+                width: 35px;
+                height: 20px;
+                background: #CCCCCC;
+            }
+            .size {
+                height: 18px;
+                line-height: 18px;
+                margin-top: 4px;
+                color: #666666;
+            }
+        }
+        .course {
+            position: absolute;
+            bottom: 84px;
+            width: 68px;
+            height: 24px;
+            // background: rgba(21, 147, 255, 1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            // color: #ffffff;
+            /* &:hover {
+               background: #1a89e7;
+             }*/
+            i {
+                margin-right: 4px;
+            }
+        }
+        .bottomButton {
+            position: absolute;
+            height: 72px;
+            padding: 12px 0;
+            bottom: 0;
+            left: 0px;
+            color: #333;
+            border-top: 1px solid #D8D8D8;
+            z-index: 2;
+            .comButton {
+                height: 24px;
+                width: 68px;
+                text-align: center;
+                line-height: 24px;
+                cursor: pointer;
+                &:hover {
+                    background: #1593FF;
+                    color: #FFFFFF !important;
+                }
+                div {
+                    text-align: center;
+                    line-height: 24px;
+                }
+            }
+            .feedbackBtn {
+                width: 69px;
+                &:hover ~ .feedback {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .feedback {
+                position: absolute;
+                padding: 16px 24px;
+                overflow: hidden;
+                // box-shadow:0px 0px 8px 0px rgba(0,0,0,0.15);
+                box-shadow: 0 -2px 8px -1px rgba(0, 0, 0, 0.15); //顶部阴影
+                box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.15); //底部阴影
+                // box-shadow:2px 0 8px -1px rgba(0,0,0,0.15); //右边阴影
+                box-shadow: 3px -3px 9px -1px rgba(0, 0, 0, .15); //右边阴影
+                left: 69px;
+                bottom: 0;
+                background: #fff;
+                visibility: hidden;
+                opacity: 0;
+                transition: all linear .2s;
+                &:hover {
+                    // display: block;
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .welfareBtn {
+                width: 69px;
+                &:hover ~ .welfare {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+            .welfare {
+                position: absolute;
+                padding: 30px 56px;
+                overflow: hidden;
+                // box-shadow:0px 0px 8px 0px rgba(0,0,0,0.15);
+                box-shadow: 0 -2px 8px -1px rgba(0, 0, 0, 0.15); //顶部阴影
+                box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.15); //底部阴影
+                // box-shadow:5px 0 8px -1px rgba(0,0,0,0.15); //右边阴影
+                box-shadow: 3px -3px 9px -1px rgba(0, 0, 0, .15); //右边阴影
+                left: 69px;
+                top: -145px;
+                background: #fff;
+                visibility: hidden;
+                opacity: 0;
+                transition: all linear .2s;
+                &:hover {
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+
+    }
+    .rightBox{
+        display: flex;
+        flex-direction: column;
+        width: calc(100vw - 68px);
+        overflow-x: hidden;
+        .rowBody {
+            display: flex;
+            position: relative;
+            justify-content: flex-start;
+            :global{
+                .slider-enter{
+                    transform: translateX(380px);
+                    opacity: 0;
+                }
+                .slider-enter-active,.slider-enter-done{
+                    transform: translateX(0px);
+                    opacity: 1;
+                }
+                .slider-exit{
+                    z-index: 0;
+                    transform: translateX(380px);
+                    opacity: 0;
+                }
+                .slider-exit-done{
+                    transform: translateX(380px);
+                    opacity: 0;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+}
+.headerFill{
+    width: 100%;
+    height: 56px;
+}
+
+:global {
+    body {
+        background-color: #f6f6f6;
+    }
+}
+
+.previewBody {
+    background-color: #f6f6f6;
+    flex: auto;
+    min-width: 643px;
+    height: calc(100vh - 263px);
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    :global {
+        .video-js {
+            width: 0;
+        }
+    }
+    .container {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .content {
+            width: 100%;
+            height: 100%;
+            //min-height: 354px;
+            /* padding-top: 107px;
+             padding-bottom: 50px;
+             -moz-user-select: -moz-none;
+             -khtml-user-select: none;
+             -webkit-user-select: none;*/
+            display: flex;
+            justify-content: center;
+            position: relative;
+
+            /*
+              Introduced in IE 10.
+              See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+            */
+            -ms-user-select: none;
+            user-select: none;
+        }
+        .playBtn {
+            position: absolute;
+            bottom: 0;
+            height: 66px;
+            text-align: center;
+            margin: 0 auto;
+            i {
+                font-size: 40px;
+                line-height: 66px;
+                color:rgba(21,147,255,1);
+                cursor: pointer;
+            }
+        }
+    }
+    .videoContainer {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #FAFAFA;
+        >div:first-child {
+            display: none;
+        }
+    }
+}
+
+.paddingTop16 {
+    padding-top: 16px;
+}
+
+.paddingTop72 {
+    padding-top: 72px;
+}
+
+// 视频上线新功能提示
+.functionTips{
+    width: 500px;
+    height: 500px;
+    background:rgba(240,243,244,1);
+    text-align: center;
+    overflow: hidden;
+}
+.title{
+    margin-top: 50px;
+    text-align: center;
+    height:32px;
+    font-size:32px;
+    font-family:PingFangSC-Semibold;
+    font-weight:600;
+    color:rgba(51,51,51,1);
+    line-height:32px;
+    letter-spacing:10px;
+}
+.titleS{
+    margin-top: 16px;
+    height:18px;
+    font-size:16px;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+    line-height:18px;
+    letter-spacing:2px;
+}
+.picBox{
+    margin: 24px auto 40px;
+    width:417px;
+    height:249px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 4px 0px rgba(0,0,0,0.05);
+    border-radius:6px;
+    padding: 17px;
+    >img{
+        width: 383px;
+        height: 215px;
+    }
+}
+.TipsBtn{
+    width:120px;
+    height:40px;
+    border-radius:3px;
+}
+.activeTransverse {
+    background: #1593FF !important;
+    .ver, .hoz {
+        background: #fff !important;
+    }
+    .size {
+        color: #fff !important;
+    }
+}

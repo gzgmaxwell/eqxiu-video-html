@@ -1,0 +1,70 @@
+.classify {
+  width: 1200px;
+  margin: 0 auto 24px;
+  position: relative;
+}
+
+.tag-list {
+  background: #fff;
+  padding: 1px 24px 17px;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 24px;
+}
+
+.tag-list:global > li:not(:last-child) {
+}
+
+.tag-list > li > label {
+  display: inline-block;
+  width: 80px;
+  font-size: 12px;
+  font-family: PingFngSc-Semibold;
+  font-weight: 600;
+  color: #111;
+}
+
+.tag-list > li > label, .tag-list .tag-item {
+  float: left;
+  height: 14px;
+  line-height: 14px;
+}
+
+.tag-list .tag-item:hover, .tag-list .tag-item.active {
+  color: #1593FF;
+}
+
+.tag-list:global > li {
+  margin-top: 26px;
+  overflow: hidden;
+  height: 14px;
+}
+
+.tag-list .tag-item {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  cursor: pointer;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333333;
+}
+.tag-list .tag-all{
+  margin-right: 38px;
+}
+
+.tag-list .tag-detail-container {
+  width: 1000px;
+  position: relative;
+  display: inline-block;
+}
+
+.tag-list .tag-detail-container:global > li {
+  float: left;
+  width: auto;
+  margin-right: 36px;
+  margin-bottom: 10px;
+}
+

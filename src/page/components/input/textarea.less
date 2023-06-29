@@ -1,0 +1,148 @@
+.outer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccd5db;
+    padding: 21px 0px;
+    border-radius: 3px;
+    &.styleSelect {
+        padding: 15px 4px 8px 13px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    &.overFlow {
+        border: 1px solid #ff5448;
+
+        .limitContent {
+            color: #ff5448;
+        }
+    }
+
+    &:hover:not(.overFlow) {
+        border: 1px solid rgba(21, 147, 255, 1);
+    }
+
+    &:focus-within:not(.overFlow) {
+        border: 1px solid rgba(21, 147, 255, 1);
+    }
+
+    :global {
+        .ant-input:focus,
+        .ant-input:hover {
+            border: none !important;
+            outline: none !important;
+            box-shadow: none !important;
+        }
+
+        .ant-input,
+        .ant-input-affix-wrapper,
+        .ant-input-number,
+        .ant-select,
+        .ant-select-selection,
+        .ant-select-selection__rendered {
+            border: none;
+            overflow: hidden;
+            resize: none;
+            line-height: 20px;
+        }
+    }
+}
+
+.labelName {
+    position: absolute;
+    left: 8px;
+    top: -8px;
+    background: #fff;
+    padding: 0px 4px;
+    font-size: 12px;
+    color: #999;
+}
+
+.errorInfo {
+    color: #ff5448;
+    font-size: 12px;
+    height: 17px;
+    line-height: 17px;
+    margin-left: 13px;
+}
+
+.limitContent {
+    position: absolute;
+    right: 5px;
+    bottom: 3px;
+    color: #333;
+
+    span {
+        color: #999999;
+    }
+}
+
+.styleImg {
+    max-width: 100px;
+    height: 32px;
+    border-radius: 3px;
+}
+
+.styleSelectIcon {
+    font-size: 18px;
+    font-weight: bold;
+}
+:local {
+    @keyframes flipYIn {
+        from {
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            animation-timing-function: ease-in;
+            opacity: 0;
+        }
+
+        40% {
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            animation-timing-function: ease-in;
+        }
+
+        60% {
+            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            opacity: 1;
+        }
+
+        80% {
+            transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+        }
+
+        to {
+            transform: perspective(400px);
+        }
+    }
+    @keyframes flipYOut {
+        from {
+            transform: perspective(400px);
+        }
+
+        30% {
+            transform: perspective(400px) rotate3d(0, 1, 0, -15deg);
+            opacity: 1;
+        }
+
+        to {
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            opacity: 0;
+        }
+    }
+    .boxNull {
+        opacity: 0;
+        display: none;
+        pointer-events: none;
+    }
+    .boxShow {
+        animation: flipYIn 1000ms both;
+    }
+    // 动画名必须后写
+    .boxHidden {
+        animation: flipYOut 1000ms both;
+        pointer-events: none;
+    }
+}

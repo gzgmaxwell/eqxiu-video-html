@@ -1,0 +1,43 @@
+/*
+* create by Andy
+*镜颜色
+*/
+.wulvjing{
+
+}
+.pailide{
+    -webkit-filter: contrast(126%) brightness(70%) saturate(116%);
+    filter: contrast(126%) brightness(70%) saturate(116%);
+}
+.wangjiao{
+    -webkit-filter: contrast(104%) brightness(74%) saturate(104%);
+    filter: contrast(131%) brightness(73%) saturate(107%);
+}
+.heibai{
+    -webkit-filter: saturate(0%);
+    filter: saturate(0%);
+}
+.niandai{
+    -webkit-filter: contrast(106%) brightness(80%) saturate(133%);
+    filter: contrast(106%) brightness(80%) saturate(133%);
+}
+.jiaqi{
+    -webkit-filter: contrast(101%) brightness(103%) saturate(110%);
+    filter: contrast(101%) brightness(103%) saturate(110%);
+}
+.ziran{
+    -webkit-filter: contrast(105%) brightness(92%) saturate(111%);
+    filter: contrast(105%) brightness(92%) saturate(111%);
+}
+.yinghua{
+    -webkit-filter: contrast(150%) saturate(110%);
+    filter: contrast(150%) saturate(110%);
+}
+.yangguang{
+    -webkit-filter: contrast(140%) brightness(93%) saturate(90%);
+    filter: contrast(140%) brightness(93%) saturate(90%);
+}
+.jinshu{
+    -webkit-filter: contrast(136%) brightness(60%) saturate(43%);
+    filter: contrast(136%) brightness(60%) saturate(43%);
+}

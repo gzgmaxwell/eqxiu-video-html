@@ -1,0 +1,40 @@
+/**
+    旋转
+   */
+:global(.spin_icon) {
+  animation: loadingCircle 1s infinite linear;
+}
+:global * {
+  font-family: PingFangSC-Regular;
+}
+:global video::-internal-media-controls-download-button {
+  display: none;
+}
+:global video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+:global video::-webkit-media-controls-panel {
+  width: calc(130%);
+}
+:global .ant-input-affix-wrapper .ant-input:not(:last-child) {
+  padding-right: 5.2em;
+}
+:global .mainTabDiv {
+  width: 1200px;
+  height: 80px;
+  vertical-align: middle;
+  text-align: right;
+  margin: auto;
+}
+:global .mainTabDiv .mainTab {
+  line-height: 80px;
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 30px;
+}
+:global .mainTabDiv .mainTab:first-child {
+  margin-left: 0;
+}
+:global .mainTab_checked {
+  color: #1593FF;
+}

@@ -1,0 +1,28 @@
+/**
+    旋转
+   */
+:global(.spin_icon) {
+  animation: loadingCircle 1s infinite linear;
+}
+:global * {
+  font-family: PingFangSC-Regular;
+}
+:global video::-internal-media-controls-download-button {
+  display: none;
+}
+:global video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+:global video::-webkit-media-controls-panel {
+  width: calc(130%);
+}
+:global .ant-input-affix-wrapper .ant-input:not(:last-child) {
+  padding-right: 5.2em;
+}
+.outline {
+  border-radius: 3px;
+  background-color: #f0f8fd;
+  border: 1px #a4d1f6 solid;
+  padding: 20px;
+  font-size: 12px;
+}

@@ -1,0 +1,72 @@
+/**
+    旋转
+   */
+:global(.spin_icon) {
+  animation: loadingCircle 1s infinite linear;
+}
+:global * {
+  font-family: PingFangSC-Regular;
+}
+:global video::-internal-media-controls-download-button {
+  display: none;
+}
+:global video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+:global video::-webkit-media-controls-panel {
+  width: calc(130%);
+}
+:global .ant-input-affix-wrapper .ant-input:not(:last-child) {
+  padding-right: 5.2em;
+}
+.useDiv {
+  display: none;
+  height: 76px;
+  text-align: center;
+  padding: 5px;
+  padding-top: 22px;
+  vertical-align: middle;
+}
+.useButton {
+  color: #fff;
+  width: 95px;
+  height: 32px;
+  background: #1593ff;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 20px;
+}
+.useButton a:active {
+  color: #fff;
+}
+.Card:hover .title,
+.Card:hover .info {
+  display: none;
+}
+.Card:hover .useDiv {
+  display: block;
+}
+.title {
+  color: #333333;
+  height: 42px;
+  vertical-align: middle;
+  padding: 14px 12px 14px 12px;
+  border-bottom: #D8D8D8 2px solid;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.info {
+  font-size: 12px;
+  color: #666666;
+  padding: 10px 12px 8px 12px;
+  white-space: nowrap;
+}
+.priceSpan {
+  color: #1593FF;
+  float: left;
+}
+.durationSpan {
+  float: right;
+}

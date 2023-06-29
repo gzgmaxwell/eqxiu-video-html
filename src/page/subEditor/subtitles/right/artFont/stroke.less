@@ -1,0 +1,29 @@
+@import "./artFont";
+@left-width: 89px;
+@center-width: 80px;
+@right-width: 66px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.other {
+  display: flex;
+  height: @height;
+  margin-top: 12px;
+  >div {
+    display: flex;
+    align-items: center;
+  }
+  .left {
+    padding: 10px 16px;
+    width: @left-width;
+  }
+  .center {
+    width: 65px;
+    margin-right: 10px;
+  }
+  .right {
+    width: 80px;
+  }
+}

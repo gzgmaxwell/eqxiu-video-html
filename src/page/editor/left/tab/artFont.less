@@ -1,0 +1,30 @@
+.art__font {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-height: calc(100vh - 180px);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 292px;
+  margin-top: 9px;
+  // margin-bottom: 100px;
+  .art__font__item {
+    width: 124px;
+    height: 56px;
+    line-height: 56px;
+    margin: 8px 7px 8px 15px;
+    border-radius: 3px;
+    transition: all .1s;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #F7F8F9;
+    background: #F7F8F9 50%/contain no-repeat;
+  }
+  .art__font__item:nth-child(2n) {
+    margin-left: 4px;
+  }
+  .art__font__item:hover {
+    box-shadow: 0 0 8px 0 rgba(0,0,0,.4)
+  }
+}

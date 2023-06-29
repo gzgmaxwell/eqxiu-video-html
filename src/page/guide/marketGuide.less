@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-size: 16px;
+    font-family: PingFangSC-Regular, PingFang SC;
+    color: rgba(51, 51, 51, 1);
+    line-height: 16px;
+    background-color: #fff;
+}
+.top__container {
+    background-image: url("../static/timeGuide/top_bg.png");
+    background-repeat: no-repeat;
+    background-size: 90% 100%;
+    background-position: top left;
+    min-height: 600px;
+    margin-bottom: 80px;
+    .top__content {
+        width: 1186px;
+        margin: auto;
+        padding-top: 133px;
+        display: flex;
+        justify-content: space-between;
+        color: #fff;
+        text-align: center;
+        position: relative;
+        h1 {
+            font-size: 52px;
+            font-family: PingFangSC-Semibold, PingFang SC;
+            font-weight: 600;
+            line-height: 73px;
+            margin-bottom: 16px;
+            letter-spacing: 10px;
+            color: #fff;
+        }
+        p {
+            line-height: 44px;
+            font-size: 28px;
+            font-weight: 400;
+        }
+        video {
+            width: 724px;
+            height: 405px;
+            margin-left: 28px;
+        }
+    }
+}
+.body__container {
+    width: 1044px;
+    margin: auto;
+    padding: 15px;
+    .item {
+        padding-bottom: 0;
+        margin-bottom: 120px;
+        position: relative;
+        > div {
+            display: flex;
+            padding-top: 134px;
+            flex-direction: column;
+            margin-bottom: -22px;
+            position: relative;
+            > div {
+                width: 579px;
+                height: 291px;
+                background: rgba(255, 255, 255, 1);
+                box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.04);
+            }
+            i {
+                position: absolute;
+                top: 187px;
+                left: 30px;
+                font-size: 80px;
+                width: 80px;
+                height: 80px;
+                color: #fff;
+                background-color: #50D5E2;
+                border-radius: 50%;
+                font-size: 44px;
+                text-align: center;
+                line-height: 80px;
+                
+            }
+            button {
+                position: absolute;
+                font-size: 12px;
+                width: 108px;
+                line-height: 28px;
+                height: 30px;
+                border-radius: 3px;
+                top: 264px;
+            }
+            .lite {
+                background: rgba(255, 255, 255, 1);
+                border: 1px solid rgba(204, 213, 219, 1);
+                color: #666;
+                left: 134px;
+                &:hover {
+                    border: 1px solid rgba(21, 147, 255, 1);
+                    color: #1593ff;
+                }
+            }
+            .goUse {
+                background: rgba(255, 255, 255, 1);
+                border: 1px solid rgba(21, 147, 255, 1);
+                color: #1593ff;
+                left: 254px;
+                &:hover {
+                    background: rgba(21, 147, 255, 1);
+                    color: #fff;
+                }
+            }
+        }
+        video {
+            width: 350px;
+            height: 622px;
+            background: rgba(255, 255, 255, 1);
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.16);
+            margin: 0 28px;
+        }
+        .end {
+            display: inline-block;
+            width: 100%;
+        }
+        p {
+            font-size: 24px;
+            font-weight: 600;
+            color: rgba(51, 51, 51, 1);
+            margin-bottom: 14px;
+            margin-left: 12px;
+        }
+    }
+    .flexPos {
+        display: flex;
+        justify-content: flex-start;
+    }
+    .flexPoslse {
+        display: flex;
+        justify-content: flex-end;
+    }
+    .left__bg {
+        background-image: url("../static/marketGuide/tranLeft.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top left;
+        width: 167px;
+        height: 532px;
+        position: absolute;
+        top: 757px;
+        right: 0;
+    }
+    .center__bg {
+        background-image: url("../static/marketGuide/center.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top left;
+        width: 304px;
+        height: 400px;
+        position: absolute;
+        top: 1439px;
+        left: 0;
+    }
+    .right__bg {
+        background-image: url("../static/marketGuide/bottom.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        width: 300px;
+        height: 483px;
+        position: absolute;
+        top: 2185px;
+        right: 0;
+    }
+}
+.suggest {
+    width: 200px;
+    height: 42px;
+    display: block;
+    line-height: 42px;
+    background: rgba(21, 147, 255, 1);
+    border-radius: 3px;
+    margin: 100px auto 143px auto;
+}

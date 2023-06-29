@@ -1,0 +1,40 @@
+{
+  "video-html": {
+    "dev": {
+      "buildScript": "yarn && yarn run dev",
+      "output": [
+        {
+          "zipPath": "zip/video.zip",
+          "serverPath": "video/"
+        }
+      ]
+    },
+    "test": {
+      "buildScript": "yarn && yarn run test",
+      "output": [
+        {
+          "zipPath": "zip/video-test.zip",
+          "serverPath": "video/"
+        }
+      ]
+    },
+    "pre": {
+      "buildScript": "yarn && yarn run pre",
+      "output": [
+        {
+          "zipPath": "zip/video-stage.zip",
+          "serverPath": "video/"
+        }
+      ]
+    },
+    "pro": {
+      "buildScript": "yarn && yarn run pro",
+      "output": [
+        {
+          "zipPath": "zip/video-product.zip",
+          "serverPath": "video/"
+        }
+      ]
+    }
+  }
+}

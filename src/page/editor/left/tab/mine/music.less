@@ -1,0 +1,269 @@
+.decorate {
+  flex: 1;
+  width: 100%;
+  height: calc(100vh - 220px);
+  overflow-y: auto;
+  padding: 0 0 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 7px;
+  .musicFormatting {
+    text-align: center;
+    float: left;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 14px;
+    height: 36px;
+    position: relative;
+    line-height: 36px;
+    p{
+      width: 220px;
+      font-size: 12px;
+      color: #1593FF;
+      overflow: hidden;
+      text-overflow:ellipsis;
+      white-space: nowrap;
+      text-align: left;
+    }
+    h1{
+      width: 50px;
+      font-size: 12px;
+      color: #1593FF;
+      text-align: right;
+    }
+  }
+}
+
+.singleBox {
+  text-align: center;
+  float: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 14px;
+  height: 36px;
+  position: relative;
+  line-height: 36px;
+  .line {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 28px);
+    background: #f6f9fa;
+  }
+
+  .checkBox {
+    font-weight: 400;
+    color: rgba(102, 102, 102, 1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transform: scale(0.75);
+    transform-origin: center;
+    margin-right: 8px;
+    :global {
+      .ant-checkbox-checked:after {
+        -webkit-animation: unset;
+        animation: unset;
+        -webkit-animation-fill-mode: unset;
+        animation-fill-mode: unset;
+      }
+      .ant-checkbox-input {
+        margin-right: 0;
+      }
+    }
+  }
+  &:hover {
+    background: #F2F5F7;
+
+    .right {
+      display: none;
+    }
+
+    .right2 {
+      display: flex;
+    }
+  }
+
+  .left {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    overflow: hidden;
+
+    .playing {
+      display: none;
+      margin-right: 8px;
+      width: 14px;
+      height: 12px;
+    }
+
+    .title {
+      height: 18px;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(51, 51, 51, 1);
+      line-height: 17px;
+      white-space: nowrap;
+      flex: 1;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      text-align: left;
+    }
+
+    .logo {
+      margin-left: 8px;
+
+      img {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .price {
+      height: 18px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #1593ff;
+      line-height: 17px;
+      text-decoration: line-through;
+    }
+
+    .vipFree, .free {
+      margin-left: 8px;
+      height: 18px;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(191, 138, 94, 1);
+      line-height: 17px;
+    }
+
+    .free {
+      color: #1593ff;
+    }
+
+    .time {
+      font-size: 12px;
+      font-weight: 400;
+      color: #333333;
+    }
+  }
+
+  .right2 {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+    line-height: 36px;
+    .play, .pause {
+      cursor: pointer;
+      font-size: 18px;
+      &:hover {
+        color: #1593ff;
+      }
+    }
+    .play {
+      font-size: 14px;
+    }
+    .collection {
+      cursor: pointer;
+      font-size: 16px;
+
+      &:hover {
+        color: #FF296A;
+      }
+    }
+
+    .options {
+      position: relative;
+      :global {
+        .ant-popover-inner-content {
+          padding: 0;
+        }
+      }
+      .option_modal {
+        &:before {
+          display: block;
+          position: absolute;
+          top: -6px;
+          right: 0;
+          content: " ";
+          width: 150px;
+          height: 6px;
+          background-color: transparent;
+        }
+        display: flex;
+        width: 150px;
+        height: 106px;
+        background: #fff;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, .08);
+        flex-direction: column;
+        //top: 36px;
+        //position: absolute;
+        //right: -14px;
+        text-align: left;
+        z-index: 2;
+        padding: 8px 0;
+        > div {
+          padding: 0 12px;
+          height: 30px;
+          font-size: 14px;
+          font-weight: 400;
+          color: rgba(51, 51, 51, 1);
+          line-height: 30px;
+          cursor: pointer;
+        }
+        > div:hover {
+          background: #E3F8FF;
+        }
+      }
+      //&:hover {
+      //  .option_modal {
+      //    display: flex;
+      //  }
+      //}
+    }
+
+    .use {
+      cursor: pointer;
+      font-size: 16px;
+      width: 30px;
+      &:hover {
+        color: #1593ff;
+      }
+    }
+    .useButton {
+      width: 40px;
+      height: 24px;
+      background: #1593ff;
+      border-radius: 3px;
+      line-height: 24px;
+      margin-left: 6px;
+    }
+  }
+}
+
+.active {
+  background: #F2F5F7;
+
+  .right {
+    display: none;
+  }
+
+  .right2 {
+    display: flex;
+  }
+
+  .playing {
+    display: flex !important;
+  }
+}

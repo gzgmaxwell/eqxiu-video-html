@@ -1,0 +1,140 @@
+@import "../../global";
+
+.useDiv {
+  display: none;
+  height: 58px;
+  text-align: center;
+  padding: 14px 25px;
+  width: 76px;
+  vertical-align: middle;
+}
+
+.useButton {
+  color: #fff;
+  width: 76px;
+  height: 30px;
+  background: rgba(21, 147, 255, 1);
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 0;
+  line-height: 30px;
+}
+
+.useButton a:active {
+  color: #fff;
+}
+
+.Card:hover .title, .Card:hover .info {
+  display: none;
+}
+
+.Card:hover .useDiv {
+  display: block;
+}
+
+.title {
+  color: #333333;
+  height: 25px;
+  border-bottom: #D8D8D8 1px solid;
+  text-align: left;
+  word-break: normal;
+  padding: 0px 9px;
+  line-height: 25px;
+  white-space: normal;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; //这儿的数字代表的就是你所需要实现效果的第N行
+  -webkit-box-orient: vertical;
+}
+
+.info {
+  font-size: 12px;
+  color: #666666;
+  padding: 0px 9px;
+  line-height: 20px;
+  height: 20px;
+  white-space: nowrap;
+}
+
+.priceSpan {
+  color: #333333;
+  position: absolute;
+  top:4px;
+  left: 4px;
+  padding: 0px 5px;
+  display: block;
+  width: 54px;
+  height: 24px;
+  background-color: #fff;
+  border-radius: 3px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.durationSpan {
+  float: right;
+}
+
+.changeTempModal {
+  width: 450px;
+  height: 230px;
+  paddingTop: 30px;
+  font-size: 18px;
+  line-height: 30px;
+  padding-top: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.changeTempModalFoot {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+}
+
+.changeTempModalFoot button {
+  width: 96px;
+  height: 36px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.changeTempModalFoot button:first-child {
+  background: none;
+  color: #ccd5db;
+  border: 1px #ccd5db solid;
+  margin-right: 15px;
+}
+
+
+.video_icon {
+  opacity: 0;
+  z-index: 1;
+  height: 31px;
+  width: 31px;
+}
+
+.Card:hover .video_icon {
+  opacity: 1;
+}
+
+.video_div .video {
+  display: none;
+}
+
+.Card:hover > .video_div .video_shade {
+  display: block;
+}
+
+.Card:hover > .video_div .video {
+  display: inline-block;
+}
+
+.video_shade {
+  display: none;
+  background-color: #fff;
+  opacity: 0.7;
+}

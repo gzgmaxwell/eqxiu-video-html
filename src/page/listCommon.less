@@ -1,0 +1,54 @@
+@cardWidth: 0;
+@marginRight: 0;
+@marginBottom: 30px;
+.cardMarginRightF(@count:0) when (@count=0) {
+  margin-bottom: @marginBottom;
+  @media screen and (max-width: 1290px) {
+    &:not(:nth-child(3n+3)) {
+      margin-right: calc((100% - @cardWidth * 3) / 2);
+    }
+  }
+  @media screen and (min-width: 1291px) and (max-width: 1600px) {
+    &:not(:nth-child(4n+4)) {
+      margin-right: calc((100% - @cardWidth * 4) / 3);
+    }
+  }
+  @media screen and (min-width: 1601px) and (max-width: 1820px) {
+    &:not(:nth-child(5n+5)) {
+      margin-right: calc((100% - @cardWidth * 5) / 4);
+    }
+  }
+  @media screen and (min-width: 1821px) {
+    &:not(:nth-child(6n+6)) {
+      margin-right: calc((100% - @cardWidth * 6) / 5);
+    }
+  }
+}
+
+.cardMarginRightF(@count:0) when (@count=-1) {
+  @media screen and (max-width: 1290px) {
+    &:not(:nth-child(3n+3)) {
+      margin-right: calc((100% - @cardWidth * 3) / 2);
+    }
+  }
+  @media screen and (min-width: 1291px) and (max-width: 1600px) {
+    &:not(:nth-child(3n+3)) {
+      margin-right: calc((100% - @cardWidth * 3) / 2);
+    }
+  }
+  @media screen and (min-width: 1601px) and (max-width: 1820px) {
+    &:not(:nth-child(4n+4)) {
+      margin-right: calc((100% - @cardWidth * 4) / 3);
+    }
+  }
+
+  @media screen and (min-width: 1821px) {
+    &:not(:nth-child(5n+5)) {
+      margin-right: calc((100% - @cardWidth * 5) / 4);
+    }
+  }
+}
+
+
+
+

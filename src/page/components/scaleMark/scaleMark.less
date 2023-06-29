@@ -1,0 +1,50 @@
+.scaleMark {
+  height: 6px;
+  width: 100%;
+  position: relative;
+  margin: 0 0 18px;
+  border-top: 1px solid #D8D8D8;
+  > li {
+    position: absolute;
+    border-left: 1px solid #6a7584;
+    box-sizing: border-box;
+    height: 100%;
+    color: #666;
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    user-select: none;
+    &:first-child {
+    }
+    > span {
+      position: absolute;
+      top: 10px;
+      left: 0;
+      color: #8f8ba9;
+      width: 100%;
+      text-align: center;
+      transform: translateX(-50%);
+      font-size: 12px;
+    }
+    .longTerm {
+      width: 1px;
+      height: 6px;
+      background: rgba(153, 153, 153, 1);
+      border-radius: 1px;
+    }
+    .sortTerm {
+      display: inline-block;
+      border-left: 1px solid #6a7584;
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 1px;
+      height: 6px;
+      margin-left: -1px;
+    }
+    .sortTermMinllisecond {
+      height: 4px;
+      border-color: rgba(106, 117, 132, .5)
+    }
+  }
+}

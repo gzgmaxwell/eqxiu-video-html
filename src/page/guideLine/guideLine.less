@@ -1,0 +1,29 @@
+.eqc_guide {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.line {
+  position: absolute;
+  background: #fff000;
+}
+
+.h { // 水平方向
+  left: 0;
+  width: calc(100vw - 580px);
+  height: 1px;
+  display: none;
+}
+
+.v { // 垂直方向
+  top: 0;
+  width: 1px;
+  height: calc(100vh - 300px);
+  display: none;
+}

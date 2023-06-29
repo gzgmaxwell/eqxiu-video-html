@@ -1,0 +1,47 @@
+
+.active {
+  color: #1593FF;
+}
+
+.pen {
+  cursor: pointer;
+  &:hover {
+    color: #1593FF;
+  }
+  &.disabled {
+    color: #999999;
+    cursor: not-allowed;
+    &:hover {
+      color: #999999;
+    }
+  }
+}
+
+.body {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  cursor: not-allowed;
+  > canvas {
+    position: absolute;
+    opacity: 0;
+    cursor: url('../../static/icon/sucker.png') 0 32, default;
+  }
+  .mask {
+    position: absolute;
+    outline: 10000px solid rgba(89, 89, 89, 0.94);
+  }
+  .suckerPreview {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.16);
+    pointer-events: none;
+    z-index: 95; // 吸管的小圆圈预览色的层级不能超过颜色选择器
+  }
+}

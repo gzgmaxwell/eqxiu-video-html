@@ -1,0 +1,181 @@
+.shareDiv {
+  padding: 1px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 632px;
+  height: 256px;
+  margin-top: 12px;
+  .left {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 194px;
+    height: 256px;
+    border-radius:3px;
+    border:1px solid rgba(204,213,219,1);
+    .title {
+      margin-top: 20px;
+      color: #333;
+      font-size: 14px;
+      height: 20px;
+      line-height: 20px;
+      font-weight: 600;
+    }
+    .qrcode {
+      margin-top: 8px;
+      width: 150px;
+      height: 150px;
+    }
+    .wrapBtn{
+      margin-top: 12px;
+      width: 150px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      .downloadQrcode {
+        cursor: pointer;
+        width:102px;
+        height:30px;
+        line-height: 30px;
+        font-size: 12px;
+        border: 1px solid #1BC7B1 !important;
+        color: #1BC7B1 !important;
+        margin-right: 20px;
+        &:hover{
+          background: #1BC7B1 !important;
+          color: #fff !important;
+        }
+      }
+      .downIcon{
+        width:30px;
+        height:30px;
+        background:rgba(255,255,255,1);
+        border-radius:3px;
+        color: #666;
+        border:1px solid #CCD5DB;
+        font-size: 20px;
+        text-align: center;
+        line-height: 28px;
+        &:hover{
+          color: rgba(21,147,255,1);
+          border:1px solid rgba(21,147,255,1);
+        }
+      }
+    }
+  }
+  .right{
+    width: 422px;
+    height: 256px;
+    margin-left: 16px;
+    .shareItem{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      width: 100%;
+      height: 36px;
+      .name {
+        width: 86px;
+        height: 20px;
+        color: #333;
+        font-size: 14px;
+        line-height: 20px;
+        padding-right: 16px;
+      }
+    }
+  }
+  .copyBlock {
+    height: 32px;
+    display: flex;
+    > input {
+      width: 215px;
+      border-radius: 3px 0 0 3px;
+      border: 1px solid rgba(204, 213, 219, 1);
+      background-color: #fff;
+      color: #666;
+      font-size: 12px
+    }
+    .copy {
+      width: 52px;
+      height: 32px;
+      line-height: 32px;
+      vertical-align: bottom;
+      text-align: center;
+      background-color: #fff;
+      display: inline-block;
+      border-radius: 0 3px 3px 0;
+      border-left: none;
+      cursor: pointer;
+      background-color: #1593FF;
+      color: #eee;
+    }
+  }
+}
+
+.qrcodeTitle {
+  font-size: 20px;
+  font-family: PingFangSC-Medium;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 20px;
+  margin-bottom: 8px;
+}
+
+.showAvatar {
+  margin: 8px auto;
+  > span {
+    height: 12px;
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+    line-height: 12px;
+    padding-left: 4px;
+  }
+
+}
+
+
+
+
+.shareButtonGroup {
+  display: flex;
+}
+
+.iconSpan {
+  cursor: pointer;
+  width: 26px;
+  height: 26px;
+  color: #ffffff;
+  border-radius: 26px;
+  background-color: #1396DB;
+  display: block;
+  text-align: center;
+  line-height: 27px;
+  font-size: 18px;
+  margin-right: 16px;
+}
+
+.douyin {
+  background-color: transparent;
+  > img {
+    width: 24px;
+    height: 24px;
+    vertical-align: sub;
+  }
+}
+
+.weibo {
+  background-color: #FF2D2C;
+}
+
+.QQ {
+  background-color: #15ACFC;
+}
+
+.QQZone {
+  background-color: #FAB61A;
+}
+
+

@@ -1,0 +1,38 @@
+@handler-border-color: #9FA7C4;
+.body {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 16px;
+  > i {
+    width: 16px;
+    height: 16px;
+    background: rgba(159, 167, 196, 1);
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 2px;
+  }
+  :global {
+    .ant-slider {
+      width: 96px;
+      margin: 2px;
+      .ant-slider-rail {
+        background-color: #D4D6E6;
+      }
+      .ant-slider-track {
+        background-color: transparent;
+      }
+      .ant-slider-handle {
+        border-color: @handler-border-color;
+        &:focus {
+          box-shadow: none;
+          border-color: @handler-border-color;
+        }
+      }
+      &:hover .ant-slider-handle:not(.ant-tooltip-open) {
+        border-color: @handler-border-color;
+      }
+    }
+  }
+}

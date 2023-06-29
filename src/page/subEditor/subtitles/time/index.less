@@ -1,0 +1,532 @@
+.videoBox {
+  margin-top: 9px;
+  width: 100%;
+  height: 410px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.foot {
+  width: 100%;
+  height: 207px;
+  background: #FAFAFA;
+  border-top: 1px solid #CCD5DB;
+  position: relative;
+}
+.eqf_play_l{
+  position: absolute;
+  font-size: 40px;
+  color: #1593ff;
+  cursor: pointer;
+  top: 91px;
+  left: 24px;
+}
+
+.eqf_play_l{
+  position: absolute;
+  font-size: 40px;
+  color: #1593ff;
+  cursor: pointer;
+  top: 91px;
+  left: 24px;
+}
+
+.container {
+  margin: 15px 32px 16px 88px;
+  position: relative;
+  & * {
+    user-select: none;
+  }
+}
+
+.sumTime {
+  position: absolute;
+  top: -25px;
+  right: 0px;
+  width: 35px;
+  height: 13px;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 1);
+  line-height: 14px;;
+}
+
+.wrap {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 96px;
+  background: rgba(238, 238, 238, .4);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16) inset;
+  border-radius: 3px;
+}
+
+.distinguish {
+  background: rgba(255, 41, 106, 1);
+  color: #fff !important;
+  padding: 5px 36px 5px 16px;
+  position: relative;
+}
+
+.closeDistinguish {
+  font-size: 16px;
+  cursor: pointer;
+  position: absolute;
+  right: 16px;
+  top: 3px
+}
+
+.operate {
+  display: flex;
+  position: relative;
+  width: 100vw;
+  justify-items: center;
+  align-items: center;
+  margin: 17px 0 0;
+  .leftWrap {
+    display: flex;
+    position: absolute;
+    left: 88px;
+    flex: 0;
+  }
+  .addSubtitles {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+  }
+  .rightWarp {
+    flex-basis: 300px;
+    height: 32px;
+    align-self: end;
+  }
+}
+
+.distinguishBtn {
+  margin-left: 16px;
+  width: 96px;
+  height: 32px;
+  background: #fff;
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1593FF;
+  cursor: pointer;
+  background: #fff;
+  border: 1px solid #1593FF;
+  position: relative;
+  &:hover {
+    background: #1593FF;
+    color: #fff;
+  }
+}
+.distinguishBtnHover{
+  background: #1593FF;
+  color: #fff;
+}
+.limitTimeFree{
+  position: absolute;
+  width: 52px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  border-radius: 3px;
+  font-size: 12px;
+  background: linear-gradient(#e2aa62,#ffe0b8);
+  top: -10px;
+  right: -15px;
+  color: #673416;
+}
+
+.eqf_mic_l {
+  font-size: 14px;
+  margin-left: 4px;
+}
+.eqf_mic_l_hover {
+  -webkit-animation:rotateImg .8s linear infinite;
+}
+@-webkit-keyframes rotateImg{
+
+  0%{-webkit-transform:rotate(0deg);}
+
+  25%{-webkit-transform:rotate(90deg);}
+
+  50%{-webkit-transform:rotate(180deg);}
+
+  75%{-webkit-transform:rotate(270deg);}
+
+  100%{-webkit-transform:rotate(360deg);}
+
+}
+
+.eqf_mic_l_btn {
+  margin-left: 7px;
+}
+
+.distinguish_ing {
+  margin-left: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1593FF;
+}
+.distinguishSubtitles{
+  width: 104px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #eeeeee;
+  border-radius: 3px;
+  color: #999;
+  cursor: pointer;
+  border: 1px solid #CCD5DB;
+}
+.distinguishCancel {
+  width: 66px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #CCD5DB;
+  color: #666666;
+  cursor: pointer;
+  margin-left: 12px;
+  &:hover{
+    color: #FF296A;
+    border: 1px solid #FF296A;
+  }
+}
+
+.editSubtitles {
+  width: 104px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1593FF;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background: #198ae7;
+  }
+}
+
+.eqf_delete_f {
+  margin-left: 16px;
+  font-size: 18px;
+  width: 39px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  background: #fff;
+  border-radius: 3px;
+  color: #FF296A;
+  cursor: pointer;
+  border: 1px solid #FF296A;
+  &:hover{
+    background: #FF296A;
+    color: #fff;
+  }
+}
+.eqf_plus{
+  font-size: 15px;
+}
+
+.editSubtitlesBtn {
+  margin-left: 9px;
+}
+
+.revoke {
+  width: 96px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid rgba(21, 147, 255, 1);
+  color: #1593FF;
+  background: #fff;
+  cursor: pointer;
+  &:hover {
+    background: #1593FF;
+    color: #fff;
+  }
+}
+.revokeHover{
+  width: 96px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid #CCD5DB;
+  color: #999;
+  background: #eee;
+  cursor: pointer;
+}
+
+.revokeBtn {
+  margin-left: 8px;
+}
+
+// 拖动区域
+.time {
+  width: 100%;
+  height: 96px;
+  position: relative;
+  overflow: hidden;
+}
+
+.ul {
+  height: 22px;
+  width: 100%;
+  position: relative;
+  margin-top: 2px;
+  border-top: 2px solid #CCD5DB;
+}
+
+.ul li {
+  width: 2px;
+  height: 6px;
+  background: #CCD5DB;
+  position: absolute;
+  top: 0;
+}
+
+.time_flag {
+  position: absolute;
+  bottom: -13px;
+  font-size: 12px;
+  color: #fff;
+  width: 32px;
+  left: -15px;
+  color: #333;
+  text-align: center;
+}
+
+.main {
+  position: relative;
+  height: 72px;
+  left: 22px;
+}
+
+.bar {
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  z-index: 10;
+  border-left: 2px solid #fff;
+  cursor: ew-resize;
+}
+
+.bar_range {
+  position: absolute;
+  height: 100%;
+  width: 0px;
+  background: rgba(255, 41, 106, 0.6);
+  cursor: pointer;
+}
+
+.previewDiv {
+  width: auto;
+  height: 64px;
+  background-color: #fff;
+  position: absolute;
+  text-align: left;
+  vertical-align: center;
+  overflow: hidden;
+}
+
+.ImgTrackWrap {
+  position: absolute;
+  height: 64px;
+  left: 0;
+}
+
+.current {
+  border-color: #1593ff;
+  z-index: 9;
+  left: 100px;
+}
+
+.playProgressBottom {
+  position: absolute;
+  width: 16px;
+  height: 8px;
+  bottom: 0px;
+  left: -9px;
+  background: #1593ff;
+  border-radius: 1.5px;
+}
+
+.playProgressBottom:after {
+  content: "|||";
+  color: #fff;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 1px;
+  position: absolute;
+  width: 16px;
+  overflow: hidden;
+  margin-top: 1px;
+  height: 6px;
+}
+.triangleBottom{
+  background: #1593ff;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  transform: rotate(45deg);
+  top: -3px;
+  z-index: -1;
+  left: 4px;
+}
+
+.slide_circle {
+  position: absolute;
+  width: 52px;
+  height: 20px;
+  left: -26px;
+  top: -24px;
+  border-radius: 3px;
+  background: #1593ff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+.triangleTop{
+  background: #1593ff;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  transform: rotate(45deg);
+  bottom: -3px;
+  left: 20px;
+  z-index: -1;
+}
+
+// 单个字幕-----------
+.singleSubtitles {
+  position: absolute;
+  height: 64px;
+  width: 10px;
+}
+
+.left {
+  left: 6px;
+}
+
+.slide_rect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 20px;
+  left: -7px;
+  width: 12px;
+  height: 24px;
+  background: #fff;
+  color: #cccccc;
+  border-radius: 6px;
+}
+
+.slide_rect:after {
+  content: "";
+  width: 6px;
+  height: 18px;
+  border-radius: 1px;
+  border-left: 2px solid #ccc;
+  border-right: 2px solid #ccc;
+}
+
+// 滚动
+.scrollBox {
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
+  overflow: hidden;
+  height: 24px;
+  background: rgba(238, 238, 238, .4);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16) inset;
+  border-radius: 1px;
+}
+
+.scroll {
+  width: 100%;
+  height: 24px;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.scroll_move {
+  width: 0px;
+  height: 18px;
+  line-height: 18px;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 2px;
+  position: absolute;
+  left: 22px;
+  cursor: pointer;
+}
+
+.scroll_move:after {
+  content: '||||';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+// 提示说明
+.changeVideo {
+  height: 14px;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+  line-height: 14px;
+  padding-top: 2px;
+}
+
+.changeVideoCon {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(153, 153, 153, 1);
+  line-height: 18px;
+}
+
+:global {
+  .distinguish {
+    z-index: 9;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .distinguish .ant-popover-arrow {
+    background: #FF296A;
+  }
+  .distinguish .ant-popover-inner {
+    background: #FF296A;
+    border-radius: 3px;
+    overflow: overlay;
+  }
+  .distinguish .ant-popover-inner-content {
+    padding: 0px;
+  }
+  // 我的视频
+  .Popconfirm .ant-popover-message{
+    display: flex;
+  }
+  .Popconfirm .ant-popover-message-title {
+    padding-left: 12px;
+  }
+  .Popconfirm .ant-btn-primary {
+    background-color: #1593ff;
+    border-color: #1593ff;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,632 @@
+@import "../listCommon";
+
+@cardWidth: 250px;
+.Card {
+  width: 250px;
+  height: 340px;
+  position: relative;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+  &:hover {
+    .titleCover {
+      // display: none;
+    }
+    .titleCover.noHover {
+      display: block;
+    }
+    .edit {
+      display: block;
+    }
+    .durationSpan {
+      opacity: 0;
+    }
+  }
+}
+
+.CardF {
+  width: 250px;
+  height: 340px;
+  position: relative;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  overflow: hidden;
+  &:hover {
+    .titleCover {
+      display: block;
+    }
+    .edit {
+      display: block;
+    }
+    .durationSpan {
+      opacity: 0;
+    }
+  }
+}
+
+.videoDiv {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phoneTag {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  text-align: center;
+  width: 80px;
+  height: 30px;
+  background: #1bc7b1;
+  border-radius: 3px 0 12px 0;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #fff;
+  line-height: 30px;
+}
+
+.eqf_arrow_bigger {
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  z-index: 9;
+  cursor: pointer;
+  width: 25px;
+  height: 24px;
+  background: #666666;
+  line-height: 26px;
+  border-radius: 3px;
+  i {
+    margin-left: 6px;
+  }
+  &:hover {
+    background: #1593ff;
+  }
+}
+
+/*高斯模糊*/
+.coverBackground {
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.eqf_play_f {
+  position: absolute;
+  width: 48px;
+  z-index: 9;
+  cursor: pointer;
+}
+
+.coverBackgroundBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.video {
+  width: 250px;
+  height: 166px;
+}
+
+// 标题----------
+.titleBox {
+  width: 100%;
+  height: 51px;
+  position: relative;
+  padding: 8px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #E6EBED;
+}
+
+.titleCover {
+  width: 100%;
+  .compSpan {
+    color: #999;
+    font-size: 12px
+  }
+  .pvSpan {
+    color: #666;
+  }
+}
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  height: 14px;
+  font-size: 14px;
+  color: rgba(51, 51, 51, 1);
+  line-height: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-right: 20px;
+}
+
+.info {
+  margin-top: 8px;
+  height: 13px;
+  font-size: 12px;
+  color: rgba(102, 102, 102, 1);
+  line-height: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.durationSpan {
+  color: #999;
+  width: 40px;
+  height: 16px;
+  // background: #333333;
+  border-radius: 8px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.bottom {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+
+.bottomCover {
+  position: relative;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.wrapDH {
+  position: absolute;
+  right: 16px;
+  display: flex;
+  top: 12px;
+}
+
+.download {
+  margin-left: 66px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  path {
+    color: rgba(0, 0, 0, .65)
+  }
+  &:hover {
+    color: #1593FF;
+    path {
+      color: #1593FF;
+      fill: #1593FF !important;
+    }
+  }
+
+}
+
+.downloading {
+  width: 13px;
+  margin-right: 4px;
+}
+
+.redDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #FF2A6A;
+  position: absolute;
+  right: -5px;
+  top: -4px;
+}
+
+.share {
+  margin-left: 16px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  &:hover {
+    color: #1593FF;
+  }
+}
+
+.operation {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  left: 16px;
+  cursor: pointer;
+  z-index: 99;
+  &:hover + .operate {
+    display: block;
+  }
+  &:hover {
+    .eqf_menu_p {
+      color: #333333;
+      background: #E6EBED;
+    }
+  }
+}
+
+.eqf_share_l, .eqf_menu_l {
+  font-size: 14px;
+}
+
+.eqf_menu_p {
+  font-size: 24px;
+  border-radius: 2px;
+  &:hover {
+    color: #333333;
+    background: #E6EBED;
+  }
+}
+
+.edit {
+  /*width: 76px;
+  height: 30px;
+  line-height: 30px;
+  border: 1px solid #1593FF;
+  // display: none;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #1593FF;*/
+  //border: 3px #FFFFFF solid;;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  font-size: 20px;
+  position: absolute;
+  right: 20px;
+  top: -20px;
+  display: none;
+  background-color: #FFFFFF;
+  color: #333333;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, .16);
+  &.disbaled, &.disbaled:hover {
+    color: #999999;
+    background-color: #EEEEEE;
+    cursor: not-allowed;
+  }
+  &:hover {
+    background-color: #FFFFFF;
+    color: #1593FF;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .16);
+  }
+}
+
+.editBox {
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  .cancelRender:hover {
+    color: #FF296A;
+  }
+  > span {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    padding: 0px 7px;
+    cursor: pointer;
+    &:hover {
+      color: #1593FF;
+    }
+  }
+  .iconcancel {
+    font-size: 14px;
+  }
+}
+
+// 下载蒙版
+.downModel {
+  width: 100%;
+  height: 100%;
+  background: #FAFAFA;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.closeModal {
+  text-align: right;
+  font-size: 18px;
+  padding-top: 14px;
+  margin-right: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.standard {
+  width: 160px;
+  height: 123px;
+  margin: 11px auto;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #00B49D;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .10);
+  > .iconSD {
+    margin-top: 23px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #00B49D;
+  }
+  > span {
+    margin-top: 8px;
+    height: 12px;
+    font-size: 12px;
+    color: #00B49D;
+    line-height: 12px;
+  }
+  > div {
+    margin-top: 16px;
+    width: 120px;
+    height: 32px;
+    border-radius: 16px;
+    background: #00B49D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    cursor: pointer;
+  }
+}
+
+.super {
+  width: 160px;
+  height: 123px;
+  position: relative;
+  overflow: hidden;
+  margin: 16px auto 0 auto;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 3px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #1593FF;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .10);
+  > .iconHD {
+    margin-top: 23px;
+    font-size: 24px;
+    line-height: 24px;
+    color: #1593FF;
+  }
+  > span {
+    margin-top: 8px;
+    height: 12px;
+    font-size: 12px;
+    color: rgba(21, 147, 255, 1);
+    line-height: 12px;
+  }
+  > div {
+    margin-top: 16px;
+    width: 120px;
+    height: 32px;
+    border-radius: 16px;
+    background: #1593ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    > span {
+      width: 100%;
+    }
+  }
+  .HDprogress {
+    width: 0;
+    height: 32px;
+    border-radius: 16px;
+    left: 0;
+    background: #198AE7;
+  }
+  .HDdescri {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    height: 32px;
+    line-height: 32px;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    > span {
+      z-index: 3;
+      position: absolute;
+      left: 0;
+      width: 100%;
+    }
+  }
+  .giveUpHD {
+    position: absolute;
+    z-index: 100;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    border-radius: 16px;
+    background: #FF296A;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+  }
+}
+
+.downloadDescription {
+  margin-top: 8px;
+  height: 12px;
+  font-size: 12px;
+  color: rgba(153, 153, 153, 1);
+  line-height: 12px;
+}
+
+// opratate ----
+.operate {
+  list-style: none;
+  position: absolute;
+  left: 16px;
+  bottom: 33px;
+  background-color: #fff;
+  display: block;
+  width: 144px;
+  padding: 0 0 2px 0;
+  z-index: 15;
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+  display: none;
+  &:hover {
+    display: block;
+  }
+}
+
+.operate li {
+  height: 51px;
+  vertical-align: middle;
+  padding: 8px 0;
+  // border-bottom: #E6EBED 1px solid;
+}
+
+.border {
+  border-bottom: #E6EBED 1px solid;
+}
+
+.operate li:last-child {
+  border-bottom: none;
+}
+
+.operate li span {
+  height: 36px;
+  width: 144px;
+  display: block;
+  vertical-align: middle;
+  padding: 0 12px;
+  line-height: 36px;
+  cursor: pointer;
+}
+
+.a_copy:hover {
+  background-color: #1593FF;
+  color: #ffffff;
+}
+
+.a_delete:hover {
+  background-color: #FF296A;
+  color: #ffffff;
+}
+
+.noCommit {
+  color: #FF5448;
+}
+
+.renderFail {
+  color: #FF5448;
+}
+
+// 渲染进度
+.renderShade {
+  display: flex;
+  background: rgba(0, 0, 0, 0.56);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 11;
+}
+
+.renderDiv {
+  position: absolute;
+  z-index: 13;
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  left: 0;
+  top: 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.renderDiv {
+  .progress {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+.progressInfo {
+  color: #FFFFFF;
+  font: 12px/400 PingFangSC-Regular;
+  line-height: 14px;
+  text-align: center;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.CardF {
+  .cancelRenderButton {
+    margin-top: 20px;
+    width: 116px;
+    height: 32px;
+    line-height: 32px;
+    color: #FFFFFF;
+    border-color: #FFFFFF;
+    background: none;
+    // display: none;
+  }
+  .cancelRenderButton:hover {
+    background-color: #FF296A;
+    color: #FFFFFF;
+    border-color: #FF296A;
+  }
+}
+
+.rendering {
+  color: #1BC7B1;
+}
+
+.downloadingIcon {
+  animation: fadeInDownBig 1000ms infinite both
+}
+
+@keyframes fadeInDownBig {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -2000px, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}

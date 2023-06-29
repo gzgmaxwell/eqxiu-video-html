@@ -1,0 +1,86 @@
+.leftBox{
+  width: 480px;
+  height: 480px;
+  position: relative;
+  background:#fff;
+  color: #333;
+  line-height:20px;
+  text-align: center;
+  .notice{
+    font-size:18px;
+    line-height:25px;
+    margin-top: 23px;
+    margin-bottom: 7px;
+    font-weight: bold
+  }
+  .tip{
+    text-align: center;
+    font-size:14px;
+  }
+  .progress{
+    font-size:32px;
+    font-weight:600;
+    line-height:45px;
+  }
+  .rendering{
+    font-size:14px;
+    font-weight:400;
+
+  }
+  .timeInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    height: 17px;
+    width: 100%;
+    left: 0;
+    bottom: -29px;
+    span{
+      font-size:12px;
+      font-weight:400;
+      color:rgba(153,153,153,1);
+    }
+  }
+  .preBox{
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    left: 0;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .renderBox {
+    height: 325px;
+    width: 100%;
+    margin-bottom: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,.08);
+    border-radius: 3px;
+    padding-top: 71px;
+    z-index: 999;
+    position: absolute;
+    background: #fff;
+    img {
+      height: 31px;
+    }
+    .cancelCoverImageUpdating{
+      width:144px;
+      height:32px;
+      line-height: 32px;
+      text-align: center;
+      border-radius:3px;
+      border:1px solid rgba(204,213,219,1);
+      font-size:14px;
+      color:rgba(102,102,102,1);
+      margin: 8px auto;
+      cursor: pointer;
+      &:hover{
+        background:rgba(255,41,106,1);
+        color: #fff;
+        border-width: 0;
+      }
+    }
+  }
+}

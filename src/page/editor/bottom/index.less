@@ -1,0 +1,130 @@
+.verticalInline {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.bottom {
+    position: absolute;
+    bottom: 0;
+    height: 134px;
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+    pointer-events: none;
+    background-color: #fff;
+    display: flex;
+    justify-content: end;
+    .top {
+        flex-basis: 53px;
+        display: flex;
+        padding: 22px 0 0 4px;
+        justify-content: flex-end;
+        flex-direction: column-reverse;
+        align-items: center;
+        pointer-events: none;
+        background-color: #fff;
+        z-index: 2;
+        * {
+            pointer-events: auto;
+        }
+        // 修复开关需要点击两次的BUG
+        :global {
+            .ant-switch:after,
+            .ant-switch,
+            .ant-switch * {
+                box-shadow: none !important;
+                -webkit-box-shadow: none !important;
+                overflow: hidden;
+            }
+            .ant-click-animating-node {
+                pointer-events: none;
+            }
+        }
+        > div {
+            &:first-child {
+                flex-basis: 20px;
+                margin-top: 8px;
+            }
+        }
+        .howUse {
+            font-size: 14px;
+            font-family: PingFangSC-Regular, PingFang SC;
+            font-weight: 400;
+            color: #666666;
+            line-height: 20px;
+            cursor: pointer;
+        }
+        .centre {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+            .previewBox {
+                .playBtn {
+                    position: relative;
+                    cursor: pointer;
+                    font-size: 44px;
+                    width: 40px;
+                    height: 40px;
+                    color: #333;
+                    &:hover {
+                        > g {
+                            fill: #000000;
+                        }
+                    }
+                }
+                .pauseBtn {
+                    position: relative;
+                    cursor: pointer;
+                }
+            }
+            > span {
+                position: absolute;
+                left: 52px;
+            }
+        }
+        .right {
+            padding-right: 49px;
+            position: absolute;
+            right: 0;
+            width: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .spacer {
+                color: #ccd5db;
+            }
+            .soundSet {
+                width: 56px;
+                color: #666666;
+                &:hover {
+                    color: #1593ff;
+                }
+            }
+        }
+    }
+    .middle {
+        flex: 1;
+        pointer-events: none;
+        z-index: 1;
+        .middleContent {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            .help {
+                color: rgb(102, 102, 102);
+                display: block;
+                width: 26px;
+                text-align: end;
+                line-height: 80px;
+                font-size: 16px;
+                > a {
+                    color: #666666;
+                    &:hover {
+                        color: #333333;
+                    }
+                }
+            }
+        }
+    }
+}

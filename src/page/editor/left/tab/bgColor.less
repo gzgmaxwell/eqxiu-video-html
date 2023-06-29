@@ -1,0 +1,37 @@
+@left-width: 92px;
+@center-width: 70px;
+@right-width: 72px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.bgColor {
+  margin-top: 16px;
+  padding: 0 20px 100px;
+  overflow: auto;
+  height: 100%;
+
+  .top {
+    display: flex;
+    margin-bottom: 16px;
+    input {
+      margin-left: 10px;
+      width: 80px;
+      border: 1px solid #d9d9d9;
+      padding: 0 5px;
+      border-radius: 3px;
+      color: #333333;
+    }
+  }
+  .colors {
+    display: flex;
+    margin-bottom: 8px;
+    &>div {
+      width:43px;
+      height:24px;
+      cursor: pointer;
+    }
+  }
+}
+

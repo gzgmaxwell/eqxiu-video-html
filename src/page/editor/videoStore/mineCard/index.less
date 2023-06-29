@@ -1,0 +1,248 @@
+.singleAll {
+  width: 170px;
+  height: 260px;
+  margin-top: 18px;
+  margin-left: 13px;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  .showRename {
+  }
+  &:hover, &:global(.hover) {
+    .noneHoverBox:not(.showRename) {
+      display: none;
+    }
+    .onHoverBox:not(.showRename) {
+      display: block;
+    }
+  }
+  .shade {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    color: #FFFFFF;
+    background-color: #000000;
+    opacity: .56;
+    cursor: not-allowed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    > div {
+      margin-top: 12px;
+    }
+  }
+}
+
+.topBox {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  > .noCover {
+    width: 100%;
+    height: 200px;
+  }
+}
+
+.eqf_bigger {
+  position: absolute;
+  padding: 2px;
+  z-index: 9;
+  border-radius: 2px;
+  font-size: 20px;
+  background: #3e3f44;
+  color: #fff;
+  top: 6px;
+  right: 6px;
+  &:hover {
+    background: #1593FF !important;
+  }
+}
+
+.videoBgBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.videoBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+  z-index: 0
+}
+
+.VideoPlayButton {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.bottomBox {
+  width: 100%;
+  height: 60px;
+  border-top: none;
+}
+
+.noneHoverBox {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  padding: 10px 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid #D8D8D8;
+  font-size: 12px;
+  color: #333333;
+  font-family:PingFangSC-Regular;
+}
+
+.title.showRename {
+  padding: 5px 4px;
+  .renameInput {
+    width: 162px;
+    height: 26px;
+    padding: 7px 2px;
+    border-radius: 3px;
+    border: 1px solid rgba(204, 213, 219, 1);
+    margin: auto;
+    display: block;
+  }
+}
+
+.screen {
+  width: 100%;
+  height: 23px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 23px;
+  padding: 0 8px;
+  > .uploading {
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(27, 199, 177, 1);
+  }
+  > .failText {
+    font-size: 12px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: #ff2a6a;
+  }
+}
+
+.screenNumber {
+  font-size: 12px;
+  //line-height: 17px;
+  color: #666;
+}
+
+.screenDetailTime {
+  height: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  //line-height:17px;
+}
+
+.onHoverBox {
+  display: none;
+  padding: 13px 10px 17px;
+}
+
+.eqf_delete_f {
+  float: left;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #EEEEEE;
+  border-radius: 3px;
+  font-size: 15px;
+  &:hover {
+    background: #FF296A;
+    color: #fff;
+  }
+}
+
+.useBtn {
+  line-height: 30px;
+  width: 91px;
+  height: 30px;
+}
+
+.option {
+  width: 49px;
+  height: 30px;
+  background: #FFFFFF;
+  border-radius: 3px;
+  border: 1px solid #CCD5DB;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: #666666;
+  line-height: 30px;
+  margin-left: 10px;
+  cursor: pointer;
+  &:hover, &.hover {
+    background-color: #FFFFFF;
+    color: #1593FF;
+    border-color: #1593FF;
+  }
+}
+
+.menu {
+  position: absolute;
+  top: 63px;
+  left: 16px;
+  width: 144px !important;
+  height: 142px !important;
+  padding: 8px 0 !important;
+  z-index: 21;
+  > ul {
+    > li {
+      height: 36px !important;
+      line-height: 36px !important;
+      font-size: 14px !important;
+      font-family: PingFangSC-Regular !important;
+      font-weight: 400 !important;
+    }
+  }
+}
+
+.uploadingDeleteBtn {
+  width: 90px;
+  margin: auto;
+  display: block;
+  background: #FF296A;
+  color: #fff;
+  cursor: pointer;
+  &:hover {
+    background-color: #ff004d;
+  }
+}
+
+.index_Card:hover {
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, .16);
+  -webkit-transform: translate3d(0, -2px, 0) !important;;
+  -moz-transform: translate3d(0, -2px, 0) !important;;
+  transform: translate3d(0, -2px, 0) !important;
+}
+
+:global {
+  .deletePopover .ant-popover-content {
+    width: 130%;
+  }
+}

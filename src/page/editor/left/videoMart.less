@@ -1,0 +1,200 @@
+@import "../leftCommon";
+
+.container {
+  max-height: 100vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-right: -7px;
+  width: 293px !important;
+  // background: #f6f6f6 !important;
+}
+
+.backgroundImage {
+  background-position: center !important;
+  background-size: contain !important;
+  background-repeat: no-repeat !important;
+}
+
+.content {
+  width: 288px;
+  overflow: hidden;
+  border-right: 1px #ccd5db solid;
+  .titleWrap{
+    width: 288px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 40px;
+    background: #fff;
+    > div {
+      width: 80px;
+      height: 36px;
+      line-height: 36px;
+      text-align: center;
+      font-family: PingFangSC-Regular;
+      background: #F7F8F9;
+      font-weight: 400;
+      color: #333333;
+      cursor: pointer;
+      border-radius: 3px;
+      margin-top: 16px;
+    }
+    div:nth-child(1){
+      font-size:20px;
+      font-weight:600;
+    }
+    div:nth-child(2){
+      font-size:16px;
+      font-weight:600;
+    }
+    div:nth-child(3){
+      font-size:14px;
+      font-weight:400;
+    }
+  }
+  .menus {
+    margin-top: 8px;
+    width: 288px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    line-height: 40px;
+    margin-bottom: 16px;
+    > div {
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      font-size: 14px;
+      font-family: PingFangSC-Regular;
+      font-weight: 400;
+      color: #333333;
+      cursor: pointer;
+      position: relative;
+    }
+    .activeMenu {
+      color: #1593FF;
+      span{
+        position: absolute;
+        bottom: 0px;
+        left:8px;
+        width: 26px;
+        height: 3px;
+        background: #1593ff;
+      }
+    }
+  }
+  .list {
+    // padding: 0 1px 0 13px;
+    height: calc(100vh - 120px);
+    width: 287px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    > div:last-child {
+      flex: 1;
+      overflow-y: auto;
+    }
+    .wrap{
+      padding: 0 1px 0 13px;
+    }
+  }
+  .emptyBox {
+    width: 160px;
+    height: 160px;
+    margin: 67px auto 0 auto;
+    background: url("../../static/emptybox.svg");
+  }
+
+  .emptyBoxText {
+    font-size: 16px;
+    font-family: PingFangSC-Medium;
+    font-weight: 500;
+    color: rgba(153, 153, 153, 1);
+    line-height: 16px;
+    text-align: center;
+  }
+
+  .horizontal {
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 259px;
+    height: 72px;
+    background: #000;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    line-height: 72px;
+    text-align: center;
+    &:hover {
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    }
+    > video, > img {
+      max-width: 100%;
+      max-height: 100%;
+      cursor: pointer;
+    }
+  }
+
+  .vertical {
+    display: inline-flex;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    width: 80px;
+    height: 259px;
+    background: #000;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    border-radius: 3px;
+    line-height: 259px;
+    text-align: center;
+    &:hover {
+      box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.15);
+    }
+    > video, > img {
+      max-width: 100%;
+      max-height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+.tagBox {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+  .wrap {
+    display: flex;
+    justify-content: flex-start;
+    color: rgba(51, 51, 51, 1);
+    .tagType {
+      height: 30px;
+      width: 68px;
+      position: relative;
+      overflow: hidden;
+      line-height: 30px;
+    }
+    .tagNameBox {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      width: 371px;
+      .tagName {
+        height: 30px;
+        line-height: 30px;
+        cursor: pointer;
+        span{
+          margin-left: 9px;
+          margin-right: 9px;
+        }
+        &:hover {
+          color: #1593FF;
+        }
+      }
+      .activeName {
+        color: #1593FF;
+        border-bottom: 1px solid #1593FF;
+      }
+    }
+  }
+}

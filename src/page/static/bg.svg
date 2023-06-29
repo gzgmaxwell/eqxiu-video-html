@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="254px" height="106px" viewBox="0 0 254 106" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>bg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
+            <stop stop-color="#F87D6A" offset="0%"></stop>
+            <stop stop-color="#FF296A" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="-2.48949813e-15%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#00E5FF" offset="0%"></stop>
+            <stop stop-color="#1593FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-3">
+            <stop stop-color="#FFB243" offset="0%"></stop>
+            <stop stop-color="#FDE05B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-4">
+            <stop stop-color="#69F1DA" offset="0%"></stop>
+            <stop stop-color="#60E793" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="短视频商城首页9:16" transform="translate(-1026.000000, -37.000000)" fill-rule="nonzero">
+            <g id="bg" transform="translate(1021.000000, 17.000000)">
+                <path d="M189.823684,14 L192,109.051975 C192,122.830389 180.807119,134 167,134 C153.192881,134 142,122.830389 142,109.051975 L142.421053,53.7829084 C155.923684,42.5589233 189.823684,14 189.823684,14 Z" id="Path_2529" fill="url(#linearGradient-1)" transform="translate(167.000000, 74.000000) rotate(40.000000) translate(-167.000000, -74.000000) "></path>
+                <path d="M49.6506842,13 L51,72.4074844 C51,81.018993 44.0604136,88 35.5,88 C26.9395864,88 20,81.018993 20,72.4074844 L20.2610526,37.8643178 C28.6326842,30.8493271 49.6506842,13 49.6506842,13 Z" id="Path_2529" fill="url(#linearGradient-2)" transform="translate(35.500000, 50.500000) rotate(40.000000) translate(-35.500000, -50.500000) "></path>
+                <path d="M243.8496,21.5765326 L244,84.982564 C244,98.2470277 233.254834,109 220,109 C206.745166,109 196,98.2470277 196,84.982564 L196.0416,29.9986469 C201.767215,25.1896534 212.508282,16.1901044 228.264801,3.00000007 C238.654667,15.3843551 243.8496,21.5765326 243.8496,21.5765326 Z" id="Path_2530" fill="url(#linearGradient-3)" transform="translate(220.000000, 56.000000) rotate(40.000000) translate(-220.000000, -56.000000) "></path>
+                <path d="M115.2629,20 L117,96.0426489 C117,107.06479 108.045695,116 97,116 C85.954305,116 77,107.06479 77,96.0426489 L77.3362129,51.8286278 C88.1417231,42.8478975 115.2629,20 115.2629,20 Z" id="Path_2534" fill="url(#linearGradient-4)" transform="translate(97.000000, 68.000000) rotate(40.000000) translate(-97.000000, -68.000000) "></path>
+            </g>
+        </g>
+    </g>
+</svg>

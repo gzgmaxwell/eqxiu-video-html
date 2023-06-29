@@ -1,0 +1,385 @@
+.body {
+  width: 1200px;
+  height: 600px;
+  background: rgba(255, 255, 255, 1);
+  padding: 0px 28px;
+  .head {
+    height: 60px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    .shareTitle {
+      font-size: 18px;
+      font-weight: 500;
+      color: rgba(51, 51, 51, 1);
+      line-height: 25px;
+    }
+    .close {
+      position: absolute;
+      right: -2px;
+      font-size: 26px;
+      cursor: pointer;
+    }
+  }
+  .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .rightBox{
+      width: 632px;
+      height: 480px;
+      margin-left: 32px;
+      .main {
+        width: 648px;
+        margin-top: 28px;
+        .navBox{
+          margin-top: 12px;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height: 26px;
+          width: 100%;
+          .nav{
+            height:26px;
+            font-size:16px;
+            font-weight:500;
+            color:rgba(51,51,51,1);
+            line-height:24px;
+            cursor: pointer;
+            padding-bottom: 2px;
+            margin-right: 20px;
+            &:hover{
+              color: #1593FF;
+            }
+          }
+          .navActive{
+            color: #1593FF;
+            border-bottom: 2px solid #1593ff;
+          }
+          .shareTip{
+            color: #999;
+            &:hover{
+              color: #999 !important;
+            }
+          }
+        }
+        .tipInfoWrap{
+          margin-top: 12px;
+          width:632px;
+          height:26px;
+          background:rgba(239,248,255,1);
+          border-radius:3px;
+          display: flex;
+          align-items: center;
+          padding-left: 5px;
+          p{
+            font-size:12px;
+            line-height: 18px;
+            font-weight:400;
+            color:rgba(102,102,102,1);
+            .SD{
+              font-weight:500;
+              color:rgba(255,42,106,1);
+            }
+            .clickTips{
+              cursor: pointer;
+              font-weight:500;
+              color:rgba(21,147,255,1);
+            }
+          }
+        }
+        .durationTime {
+          margin-top: 12px;
+          height: 20px;
+          font-size: 14px;
+          font-weight: 400;
+          color: rgba(102, 102, 102, 1);
+          line-height: 20px;
+          .videoSet{
+            font-weight:600;
+            font-size: 14px;
+            color: #333;
+            display: inline-block;
+            padding-right: 12px;
+          }
+        }
+        .cardBox {
+          margin-top: 8px;
+          margin-left: -16px;
+          height: 221px;
+          width: 648px;
+          position: relative;
+          display: flex;
+          justify-content: center;
+          .card {
+            width: 200px;
+            height: 221px;
+            border-radius: 3px;
+            position: relative;
+            border: 1px solid rgba(230, 235, 237, 1);
+            margin-left: 16px;
+            cursor: pointer;
+            &:hover:not(.active) {
+              box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.1);
+              border: 1px solid rgba(230, 235, 237, 1);
+            }
+            .priceSD {
+              width: 82px;
+              height: 17px;
+              background: rgba(255, 255, 255, 1);
+              border-radius: 12px;
+              border: 1px solid rgba(55, 180, 157, 1);
+              color: #37B49D;
+              position: absolute;
+              line-height: 15px;
+              text-align: center;
+              font-size: 12px;
+              top: 88px;
+              left: 57px;
+            }
+            .priceHD {
+              width: 82px;
+              height: 17px;
+              background: rgba(255, 255, 255, 1);
+              border-radius: 12px;
+              border: 1px solid #3793FF;
+              color: #3793FF;
+              position: absolute;
+              line-height: 15px;
+              text-align: center;
+              font-size: 12px;
+              top: 88px;
+              left: 57px;
+            }
+            .vip {
+              position: absolute;
+              right: 0;
+              top: 0;
+              width: 56px;
+              height: 23px;
+              line-height: 23px;
+              text-align: center;
+              background: linear-gradient(90deg, rgba(255, 224, 184, 1) 0%, rgba(226, 170, 98, 1) 100%);
+              border-radius: 10px 0px 10px 0px;
+              font-size: 12px;
+              font-weight: 400;
+              color: rgba(103, 52, 22, 1);
+            }
+            .fail {
+              position: absolute;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              flex-direction: column;
+              z-index: 9;
+              background:rgba(255,255,255,0.9);
+              .title{
+                margin-top: 18px;
+              }
+              .reGen{
+                margin-top: 16px;
+                width:84px;
+                height:30px;
+                line-height: 30px;
+                background:rgba(21,147,255,1);
+                border-radius:3px;
+              }
+            }
+
+            .title {
+              margin-top: 17px;
+              text-align: center;
+              height: 22px;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 22px;
+            }
+            .titleColor1 {
+              color: rgba(102, 102, 102, 1);
+            }
+            .titleColor2 {
+              color: #37B49D;
+              i {
+                height: 2px;
+                background: #37B49D;
+                display: inline-block;
+                position: absolute;
+                width: 67px;
+                left: 50%;
+                top: 50%;
+                margin-left: -34px;
+                margin-top: 1px;
+              }
+            }
+            .titleColor3 {
+              color: #3793FF;
+              i {
+                height: 2px;
+                background: #3793FF;
+                display: inline-block;
+                position: absolute;
+                width: 67px;
+                left: 50%;
+                top: 50%;
+                margin-left: -34px;
+                margin-top: 1px;
+              }
+            }
+            .xiuDot {
+              margin-top: 2px;
+              text-align: center;
+              height: 35px;
+              font-size: 30px;
+              font-weight: 600;
+              line-height: 35px;
+              position: relative;
+              .bigTitle{
+                font-size: 36px;
+              }
+              .smTitle {
+                font-size: 14px;
+              }
+            }
+            .infoWrap {
+              width: 180px;
+              margin: 20px auto 0px;
+              border-top: 1px solid #E6EBED;
+              display: flex;
+              justify-content: flex-start;
+              padding: 16px 19px 0px 19px;
+              .left {
+                width: 16px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                flex-direction: column;
+                .yes {
+                  margin-top: 4px;
+                  color: #1593FF;
+                  line-height: 20px;
+                }
+                .no{
+                  margin-top: 4px;
+                  color: #C4C7C8;
+                  line-height: 20px;
+                }
+              }
+              .right {
+                margin-left: 8px;
+                p {
+                  font-size: 14px;
+                  font-weight: 400;
+                  height: 20px;
+                  line-height: 20px;
+                }
+                .give {
+                  margin-top: 4px;
+                  color: rgba(102, 102, 102, 1);
+                }
+                .noGive {
+                  margin-top: 4px;
+                  color: rgba(0, 0, 0, 0.2);
+                }
+              }
+            }
+            .gen {
+              position: absolute;
+              top: 53px;
+              right: 12px;
+            }
+          }
+          .freeBg {
+            background: rgba(255, 255, 255, 1);
+          }
+          .SDBg {
+            background: rgba(246, 249, 250, 1);
+          }
+          .active {
+            border: 2px solid rgba(21, 147, 255, 1);
+          }
+        }
+        .checked {
+          height: 20px;
+          margin-top: 10px;
+          margin-left: 0px;
+        }
+      }
+      .foot {
+        width: 632px;
+        height: 36px;
+        margin:10px auto 0 auto;
+        position: relative;
+        .wrap{
+          width: 316px;
+          height: 36px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin:0 auto;
+          .comBtn {
+            width: 152px;
+            height: 36px;
+            font-size: 14px;
+            margin: 0 6px;
+          }
+          .comBtn2 {
+            width: 96px;
+            height: 36px;
+            font-size: 14px;
+            margin: 0 6px;
+          }
+          .vipBtn {
+            background: linear-gradient(135deg, rgba(255, 224, 184, 1) 0%, rgba(226, 170, 98, 1) 100%);
+            color: #673416;
+          }
+          .btnDisabled {
+            background: rgba(238, 238, 238, 1);
+            color: rgba(153, 153, 153, 1);
+          }
+
+        }
+        .vipTip{
+          position: absolute;
+          width: 181px;
+          height: 17px;
+          font-size: 12px;
+          font-weight: 400;
+          color: #666;
+          line-height: 17px;
+          right: 148px;
+          bottom: -21px;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+// 第四版开发
+:global {
+  // 我的视频
+  .PopconfirmRight .ant-popover-message {
+    display: flex;
+  }
+  .PopconfirmRight .ant-popover-message-title {
+    padding-left: 12px;
+  }
+  .PopconfirmRight .ant-btn-primary {
+    background-color: #1593ff;
+    border-color: #1593ff;
+    font-size: 12px;
+  }
+}
+
+.modalPromote {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #fff;
+}

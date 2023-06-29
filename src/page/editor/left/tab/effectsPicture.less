@@ -1,0 +1,111 @@
+.menus {
+  width: 288px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  line-height: 40px;
+  background: rgba(224, 224, 224, 1);
+  margin-bottom: 16px;
+  > div {
+    width: 144px;
+    height: 40px;
+    font-size: 14px;
+    font-family: PingFangSC-Regular;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    cursor: pointer;
+  }
+  .activeMenu {
+    background: #FAFAFA;
+  }
+}
+.body{
+  position: relative;
+  height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  .labelsWrap{
+    position: relative;
+    z-index: 99;
+    padding: 3px 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.preivewOut {
+  position: absolute;
+  top: 0;
+  left: 292px;
+  -webkit-perspective: 551px;
+  perspective: 673px;
+  pointer-events: none;
+  z-index: 99;
+  .preivew {
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 1);
+     box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.16);
+    transform-origin: left;
+    transform: rotateY(90deg);
+    transition: all .3s linear;
+    opacity: 0;
+    padding: 20px;
+    .content {
+      width: 300px;
+      height: 170px;
+    }
+  }
+}
+.effectsPicture{
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  overflow-y: auto;
+  // padding-bottom: 200px;
+  margin-top: 2px;
+  >div{
+    >.singleBox:last-child{
+      margin-bottom: 100px;
+    }
+  }
+}
+.singleBox{
+  position: relative;
+  text-align: center;
+  margin-top: 16px;
+  float: left;
+  margin-left: 15px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  .mark{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.05);
+    display: none;
+  }
+  &:hover{
+    .mark{
+      display: block;
+    }
+  }
+
+}
+.videoOuter{
+  background-color: #FFFFFF;
+  width: 124px;
+  height: 70px;
+  cursor: pointer;
+  border-radius:3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video{
+  width: 300px;
+  height: 170px;
+}

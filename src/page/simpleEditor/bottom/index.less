@@ -1,0 +1,83 @@
+.verticalInline {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.topRight {
+
+}
+
+.bottom {
+  position: relative;
+  top: 24px;
+  // height: 160px;
+  height: 65px;
+  z-index: 2;
+  .top {
+    display: flex;
+    align-content: baseline;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    * {
+      pointer-events: auto;
+    }
+    // 修复开关需要点击两次的BUG
+    :global {
+      .ant-switch:after, .ant-switch, .ant-switch * {
+        box-shadow: none !important;
+        -webkit-box-shadow: none !important;
+        overflow: hidden;
+      }
+      .ant-click-animating-node {
+        pointer-events: none;
+      }
+    }
+    .centre {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      > span {
+        position: absolute;
+        left: 52px;
+      }
+      .playBtn {
+        position: relative;
+        cursor: pointer;
+        font-size: 40px;
+        width: 40px;
+        height: 40px;
+        color: #333;
+        &:hover {
+          > g {
+            fill: #000000;
+          }
+        }
+      }
+    }
+    .right {
+      padding-right: 49px;
+      position: absolute;
+      right: 0;
+      width: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .spacer {
+        color: #CCD5DB;
+      }
+      .soundSet {
+        width: 56px;
+        color: #666666;
+        &:hover {
+          color: #1593FF;
+        }
+      }
+    }
+  }
+  .middle {
+    padding: 12px 33px 0 26px;
+    pointer-events: auto;
+  }
+}

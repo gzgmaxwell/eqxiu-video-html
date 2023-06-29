@@ -1,0 +1,57 @@
+@-webkit-keyframes slide {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.mBox .dynamic:nth-child(1) {
+  -webkit-animation: slide 1.2s linear .5s infinite alternate;
+}
+
+.mBox .dynamic:nth-child(2) {
+  -webkit-animation: slide 1.2s linear 1.25s infinite alternate;
+}
+
+.mBox .dynamic:nth-child(3) {
+  -webkit-animation: slide 1.2s linear .75s infinite alternate;
+}
+
+.mBox .dynamic:nth-child(4) {
+  -webkit-animation: slide 1.2s linear .25s infinite alternate;
+}
+
+.mBox .dynamic:nth-child(5) {
+  -webkit-animation: slide 1.2s linear 1s infinite alternate;
+}
+
+.mBox {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: rotate(180deg);
+  flex-direction: row-reverse;
+}
+.line:nth-child(1){
+  height: 10%;
+}
+.line:nth-child(2){
+  height: 60%;
+}
+.line:nth-child(3){
+  height: 30%;
+}
+.line:nth-child(4){
+  height: 40%;
+}
+.line:nth-child(5){
+  height: 70%;
+}
+
+.line {
+  background-color: #1593FF;
+  width: 16%;
+}

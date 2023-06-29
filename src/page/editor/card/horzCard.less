@@ -1,0 +1,67 @@
+@import "common";
+
+@cardWidth: 256px;
+@cardHeight: 189px;
+@infoHeight: 45px;
+@videoHeight: 144px;
+
+.useDiv {
+  display: none;
+  height: 45px;
+  text-align: center;
+  padding: 8px 90px 7px 90px;
+  width: 76px;
+  vertical-align: middle;
+}
+
+.Card {
+  flex-basis: @cardWidth;
+  width: @cardWidth;
+  height: @cardHeight;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px 4px 4px 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.video_div {
+  position: relative;
+  cursor: pointer;
+  width: @cardWidth;
+  height: @videoHeight;
+  background: rgba(216, 216, 216, 1);
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.video_button {
+  height: @videoHeight;
+  width: @cardWidth;
+  z-index: 4;
+  position: absolute;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 52px;
+  padding-top: 38px;
+  left: 0;
+  top: 0;
+}
+
+
+
+
+.video_div img {
+  max-height: @videoHeight;
+  max-width: @cardWidth;
+}
+
+.video video {
+  width: @cardWidth;
+  height: @videoHeight;
+}

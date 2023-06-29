@@ -1,0 +1,78 @@
+@import "common";
+@import "../../listCommon";
+
+@cardWidth: 285px;
+@marginBottom: 24px;
+.Card {
+  flex-basis: 285px;
+  width: 285px;
+  height: 609px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px 4px 4px 4px;
+  position: relative;
+  overflow: hidden;
+  z-index: 2;
+  transition: transfrom ease-in .3s;
+  transform: scale(.95);
+  .cardMarginRightF();
+}
+
+.video_div {
+  cursor: pointer;
+  width: 285px;
+  height: 507px;
+  background: rgba(216, 216, 216, 1);
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video_shade {
+  display: none;
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+.video_button {
+  height: 507px;
+  width: 285px;
+  z-index: 4;
+  position: absolute;
+  vertical-align: middle;
+  text-align: center;
+  padding-top: 210px;
+  font-size: 52px;
+  left: 0;
+  top: 0;
+}
+
+.Card:hover .video_icon {
+  opacity: .9;
+}
+
+.video_div > img {
+  max-height: 507px;
+  max-width: 285px;
+  min-height: 507px;
+}
+
+.video video {
+  width: 285px;
+  height: 507px;
+}
+
+.video_div .video {
+  display: none;
+}
+
+.Card:hover > .video_div .video_shade {
+  display: block;
+}
+
+.Card:hover > .video_div .video {
+  display: inline-block;
+}
+

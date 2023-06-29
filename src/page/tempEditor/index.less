@@ -1,0 +1,92 @@
+.tab {
+  display: flex;
+  margin-bottom: 24px;
+  div {
+    margin-right: 4px;
+    width:100px;
+    height:40px;
+    background:rgba(255,255,255,1);
+    font-size:14px;
+    font-family:PingFangSC-Regular;
+    font-weight:400;
+    color:rgba(0,0,0,1);
+    line-height:40px;
+    text-align: center;
+    cursor: pointer;
+  }
+  .active {
+    background: #1593FF;
+    color: #fff;
+  }
+}
+
+.parties{
+  background-color: #FFFFFF;
+  padding: 40px 0 40px 0;
+  width: 1160px;
+  position: relative;
+}
+.tabBar{
+  height: 44px;
+  width: 100%;
+  border-bottom: 1px #D8D8D8 solid;
+  margin-bottom: 30px;
+  padding-left: 41px;
+  position: relative;
+}
+.tabBar .titleUl li{
+  height: 43px;
+  float: left; //向左排列
+  text-align: center;
+  padding: 0 10px 0 10px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 43px;
+  cursor: pointer;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.tabBar .titleUl li.active{
+  border: 1px #D8D8D8 solid;
+  border-radius: 7px 7px 0 0;
+  margin: 0 -4px;
+  height: 44px;
+  background-color: #fff;
+  border-bottom: none;
+  width: 74px;
+  color: #0093FF;
+  transition: width ease 5s;
+}
+.tabBar .titleUl li:hover{
+  color: #0093FF;
+}
+.partesButton{
+  position: absolute;
+  width: 104px;
+  height: 36px;
+  color: #1593FF;
+  border: 1px #1593FF solid;
+  background-color: #FFFFFF;
+  font-family: PingFangSC-Medium;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 36px;
+  bottom: 14px;
+  right: 41px;
+  padding: 0;
+}
+.sortList{
+  width: 499px;
+  position: absolute;
+  z-index: 2;
+  right: 0;
+  top: 43px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 16px 0 rgba(0,0,0, .16);
+}
+.table_row_sorting{
+  z-index: 5;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 16px 0 rgba(0,0,0, 0.16);
+  cursor: ns-resize!important;
+}

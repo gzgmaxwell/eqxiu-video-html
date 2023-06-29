@@ -1,0 +1,77 @@
+@import "./artFont";
+
+@left-width: 89px;
+@center-width: 80px;
+@right-width: 66px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.angle {
+  display: flex;
+  height: @height;
+  margin-top: 12px;
+  .left {
+    padding: 10px 16px;
+    width: @left-width;
+  }
+  .center {
+    width: @center-width;
+    height: @height;
+  }
+  .right {
+    width: 75px;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 9px;
+  }
+  :global {
+    .ant-slider-rail {
+      background-color: @border-color;
+    }
+    .ant-input-number {
+      width: @right-width;
+    }
+    .ant-slider {
+      margin: 12px 0;
+    }
+  }
+}
+.subTitle {
+  padding: 0 16px;
+  height: @height;
+  line-height: @height;
+  color: #666;
+  margin-top: -12px;
+}
+
+.colors {
+  display: flex;
+  height: 27px;
+  margin-top: 8px;
+  justify-content: space-between;
+  .left, .right {
+    width: 27px;
+    height: 27px;
+  }
+  .center {
+    width: 94px;
+    height: 27px;
+  }
+}
+
+.gradientColors {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  .gradientColor {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+  }
+
+  .gradientColor:hover {
+    border: 1px solid #1593ff;
+  }
+}

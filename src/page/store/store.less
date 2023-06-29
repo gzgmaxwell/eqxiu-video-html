@@ -1,0 +1,148 @@
+.store {
+  //height: calc(100vh);
+  //overflow-y: auto;
+}
+
+:global {
+  .eqx-header {
+    width: calc(100% + 7px);
+  }
+  html {
+    overflow-y: auto;
+    overflow-y: overlay;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb { /*滚动条里面小方块*/
+    box-sizing: border-box;
+    position: absolute;
+    border: 1px solid rgba(255, 255, 255, 0.9);
+    border-radius: 3px;
+    width: 100%;
+    transition-duration: 0ms;
+    display: block;
+    height: 89px;
+    transform: translate(0px, 3px) translateZ(0px);
+    transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+    background: rgba(0, 0, 0, .2) !important;
+  }
+
+  ::-webkit-scrollbar-track { /*滚动条里面轨道*/
+    width: 7px;
+    bottom: 2px;
+    top: 2px;
+    right: 1px;
+  }
+}
+
+.store__container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-top: 24px;
+  .container__header {
+    background: #fff;
+    padding: 16px 24px;
+  }
+
+  .cardBox {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .blankCard {
+      justify-content: center;
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      .newCardIcon {
+        display: block;
+        margin-bottom: 17px;
+        font-size: 26px;
+        color: #4F5D69;
+      }
+    }
+  }
+
+  .HorzCard {
+    :global {
+      .index-Card:not(:nth-child(4n+4)) {
+        margin-right: 20px !important;
+      }
+
+      .index-Card:nth-child(4n+4) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+
+  .VertCard {
+    :global {
+      .index-Card:not(:nth-child(5n+5)) {
+        margin-right: 20px !important;
+      }
+
+      .index-Card:nth-child(5n+5) {
+        margin-right: 0 !important;
+      }
+    }
+  }
+}
+
+.top__search {
+  background-color: #fff;
+  margin-top: 44px;
+  min-width: 1200px;
+  background-image: url('../static/storeTop.png');
+  background-repeat: no-repeat;
+  background-position: 100% -24px;
+  background-size: 226px 113px;
+
+  .search__container {
+    height: 120px;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .search__title {
+      width: 232px;
+      height: 60px;
+      font-size: 44px;
+      font-family: PingFangSC-Semibold;
+      font-weight: 600;
+      color: rgba(0, 0, 0, 1);
+      line-height: 62px;
+      img {
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .navigation {
+    height: 48px;
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    & > a {
+      position: relative;
+      color: #333;
+      font-size: 16px;
+      line-height: 48px;
+      margin-right: 24px;
+      & > em {
+        color: #ff5448;
+        font-size: 12px;
+        position: absolute;
+        right: -15px;
+        top: -14px;
+      }
+    }
+  }
+}

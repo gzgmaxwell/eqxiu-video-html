@@ -1,0 +1,165 @@
+@left-width: 89px;
+@center-width: 80px;
+@right-width: 66px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.borderSetTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    span {
+        height:22px;
+        color:#333;
+        line-height:22px;
+        font-size:12px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(153,153,153,1);
+    }
+}
+
+.right__border__set {
+    /*共同的样式*/
+    .borderStyle, .borderColor, .borderWidth, .borderRadius {
+        display: flex;
+        padding-top: 8px;
+        color: #666;
+        .left {
+            width: @left-width;
+            padding: 10px 16px 10px 16px;
+            font-size: 14px;
+            font-family: @font-family;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .center {
+            width: @center-width;
+            border-radius: @border-radius;
+        }
+    }
+    .borderColor {
+        .other {
+            //width: 120px!important;
+            //margin-right: 8px!important;
+        }
+        :global {
+            .ant-dropdown {
+                height: auto;
+                max-height: 300px;
+                overflow: hidden;
+                box-shadow: 0 0 16px 0 rgba(0, 0, 0, .16);
+
+                li:hover {
+                    color: #FFFFFF;
+                    background-color: #1593FF;
+                }
+            }
+        }
+    }
+
+    /*行高、字距选择部分*/
+
+    .borderWidth, .borderRadius {
+        display: flex;
+
+        .center {
+            height: @height;
+        }
+
+        :global {
+            .ant-slider-rail {
+                background-color: @border-color;
+            }
+
+            .ant-input-number {
+                width: @right-width;
+            }
+
+            .ant-slider {
+                margin: 12px 0;
+            }
+
+            .ant-slider-handle:focus {
+                 border-color: #fff;
+                 -webkit-box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);;
+                 box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.08);
+                 outline: none;
+            }
+            .ant-slider:hover .ant-slider-handle:not(.ant-tooltip-open) {
+                border-color: #fff;
+            }
+        }
+
+        .right {
+            width: 75px;
+            text-align: right;
+            padding-left: 9px;
+        }
+    }
+
+    .borderData {
+        display: flex;
+        margin-top: 12px;
+        margin-bottom: 20px;
+        .left {
+            display: flex;
+            border-radius:3px;
+            border:1px solid #CCD5DB;
+            img {
+                width: 16px;
+            }
+            &>div {
+                width:44px;
+                height:30px;
+                border-radius:3px;
+                text-align: center;
+                line-height: 30px;
+                position: relative;
+                .hideNode {
+                    top: 30px;
+                    position: absolute;
+                    color: #666666;
+                    display: none;
+                    width: 160px;
+
+                    & > div {
+                        display: flex;
+                        width: 100%;
+                        background: transparent;
+                        height: 56px;
+                        align-items: center;
+                        box-shadow: 0 0 16px 0 rgba(0, 0, 0, 0.16);
+                        padding-left: 12px;
+                    }
+                    .title {
+                        width: 50px;
+                        height:32px;
+                        font-size:14px;
+                        font-weight:400;
+                        line-height:32px;
+                        text-align: left;
+                    }
+                }
+                .active {
+                    color: #333333;
+                    display: flex;
+                }
+                &:hover {
+                    background:#CCD5DB;
+                }
+            }
+        }
+        .right {
+            margin-left: 6px;
+        }
+    }
+    .addHeightDiv {
+        height: 44px;
+        width: 100%;
+    }
+}

@@ -1,0 +1,133 @@
+/**
+    旋转
+   */
+:global(.spin_icon) {
+  animation: loadingCircle 1s infinite linear;
+}
+:global * {
+  font-family: PingFangSC-Regular;
+}
+:global video::-internal-media-controls-download-button {
+  display: none;
+}
+:global video::-webkit-media-controls-enclosure {
+  overflow: hidden;
+}
+:global video::-webkit-media-controls-panel {
+  width: calc(130%);
+}
+:global .ant-input-affix-wrapper .ant-input:not(:last-child) {
+  padding-right: 5.2em;
+}
+.useDiv {
+  display: none;
+  height: 76px;
+  text-align: center;
+  padding: 5px;
+  padding-top: 22px;
+  vertical-align: middle;
+}
+.useButton {
+  color: #fff;
+  width: 95px;
+  height: 32px;
+  background: #1593ff;
+  border-radius: 3px;
+  cursor: pointer;
+  line-height: 20px;
+}
+.useButton a:active {
+  color: #fff;
+}
+.Card:hover .title,
+.Card:hover .info {
+  display: none;
+}
+.Card:hover .useDiv {
+  display: block;
+}
+.title {
+  color: #333333;
+  height: 42px;
+  vertical-align: middle;
+  padding: 14px 12px 14px 12px;
+  border-bottom: #D8D8D8 2px solid;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.info {
+  font-size: 12px;
+  color: #666666;
+  padding: 10px 12px 8px 12px;
+  white-space: nowrap;
+}
+.priceSpan {
+  color: #1593FF;
+  float: left;
+}
+.durationSpan {
+  float: right;
+}
+.Card {
+  flex-basis: 285px;
+  width: 285px;
+  height: 236px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px 4px 4px 4px;
+}
+.video_div {
+  cursor: pointer;
+  width: 285px;
+  height: 160px;
+  background: #d8d8d8;
+  border-radius: 4px 4px 0 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.video_shade {
+  display: none;
+  background-color: #fff;
+  opacity: 0.7;
+}
+.video_button {
+  height: 160px;
+  width: 285px;
+  position: absolute;
+  vertical-align: middle;
+  z-index: 2;
+  text-align: center;
+  padding-top: 48px;
+  font-size: 52px;
+}
+.video_icon {
+  opacity: 0;
+  z-index: 1;
+}
+.Card:hover .video_icon {
+  opacity: .7;
+}
+.video_div img {
+  max-height: 160px;
+  max-width: 285px;
+}
+.video video {
+  width: 285px;
+  height: 160px;
+}
+.video_div .video {
+  display: none;
+}
+.Card:hover > .video_div .video_shade {
+  display: block;
+}
+.Card:hover > .video_div .video {
+  display: inline-block;
+}
+.Card:hover > .video_div > img {
+  display: none;
+}

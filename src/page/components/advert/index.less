@@ -1,0 +1,190 @@
+.bottomButton {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+  padding-top: 8px;
+  bottom: 0px;
+  left: 0px;
+  color: #333;
+  .eqfWhy{
+    font-size: 22px;
+    position: absolute;
+    bottom: 17px;
+    left: 50%;
+    margin-left: -11px;
+    &:hover + .container{
+      display: block;
+    }
+  }
+  .container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background: #fff;
+    border-top: 1px solid #CCD5DB;
+    &:hover + .eqfWhy{
+      display: none;
+    }
+    &:hover{
+      display: block;
+    }
+    .imgWrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 12px 0 0;
+      cursor: pointer;
+
+      .welfareImg {
+        animation-name: swing;
+        animation-duration: .2s;
+        animation-iteration-count: 10;
+        animation-direction: alternate;
+        animation-delay: 2s;
+        animation-timing-function: ease-in-out;
+      }
+
+      @keyframes swing {
+        from {
+          transform: rotate(15deg);
+          transform-origin: 50% 90% 0;
+        }
+        to {
+          transform: rotate(-15deg);
+          transform-origin: 50% 90% 0;
+        }
+      }
+    }
+
+    .comButton {
+      margin-top: 4px;
+      height: 24px;
+      width: 68px;
+      text-align: center;
+      line-height: 24px;
+      font-size: 12px;
+      cursor: pointer;
+      .box{
+        position: absolute;
+      }
+
+      &:hover {
+        background: #1593FF;
+        color: #FFFFFF !important;
+      }
+
+      div {
+        text-align: center;
+        line-height: 24px;
+      }
+    }
+
+    .noneAd {
+      color: #999;
+      cursor: not-allowed;
+    }
+
+    .feedbackBtn {
+      width: 69px;
+
+      &:hover ~ .feedback {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .feedback {
+      position: absolute;
+      padding: 16px 24px;
+      overflow: hidden;
+      // box-shadow:0px 0px 8px 0px rgba(0,0,0,0.15);
+      box-shadow: 0 -2px 8px -1px rgba(0, 0, 0, 0.15); //顶部阴影
+      box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.15); //底部阴影
+      // box-shadow:2px 0 8px -1px rgba(0,0,0,0.15); //右边阴影
+      box-shadow: 3px -3px 9px -1px rgba(0, 0, 0, .15); //右边阴影
+      left: 69px;
+      top: -304px;
+      background: #fff;
+      visibility: hidden;
+      opacity: 0;
+      transition: all linear .2s;
+      z-index: 11;
+
+      &:hover {
+        // display: block;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .welfareBtn {
+      width: 69px;
+
+      &:hover ~ .welfare {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    .welfare {
+      position: absolute;
+      padding: 30px 56px;
+      overflow: hidden;
+      // box-shadow:0px 0px 8px 0px rgba(0,0,0,0.15);
+      box-shadow: 0 -2px 8px -1px rgba(0, 0, 0, 0.15); //顶部阴影
+      box-shadow: 0 2px 8px -1px rgba(0, 0, 0, 0.15); //底部阴影
+      // box-shadow:5px 0 8px -1px rgba(0,0,0,0.15); //右边阴影
+      box-shadow: 3px -3px 9px -1px rgba(0, 0, 0, .15); //右边阴影
+      left: 69px;
+      top: -145px;
+      background: #fff;
+      visibility: hidden;
+      opacity: 0;
+      transition: all linear .2s;
+      z-index: 3;
+
+      &:hover {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+  .active {
+    background: #1593FF;
+    color: #FFFFFF !important;
+  }
+}
+
+.wrap {
+  width: 500px;
+  height: 600px;
+  position: relative;
+
+  .closeWrap {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    cursor: pointer;
+    z-index: 99;
+
+    .close {
+      color: #fff;
+      font-size: 20px;
+    }
+  }
+
+  .adBox {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+}
+

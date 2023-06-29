@@ -1,0 +1,37 @@
+.tag{
+  padding: 0 8px;
+  height: 24px;
+  line-height: 24px;
+  background-color: #EEEEEE;
+  border-radius: 12px;
+  margin-right: 8px;
+  position: relative;
+  display: inline-block;
+  font-size: 14px;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  cursor: default;
+}
+.canChecked{
+  cursor: pointer;
+}
+.canChecked.active{
+  background-color: #1593FF;
+  color: #FFFFFF;
+}
+.closeIcon{
+  position: absolute;
+  top: -2px;
+  right: -6px;
+  font-size: 14px;
+  line-height: 14px;
+  padding: 0;
+  color: #FF296A;
+  text-align: center;
+  border-radius: 7px;
+  display: none;
+  cursor: pointer;
+}
+.tag:hover .closeIcon{
+  display: block;
+}

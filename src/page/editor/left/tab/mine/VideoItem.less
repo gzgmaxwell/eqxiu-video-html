@@ -1,0 +1,271 @@
+.singleAll {
+  width: 124px;
+  height: 188px;
+  border-radius: 3px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+
+  .showRename {
+  }
+
+  .hoverBtn {
+    display: none;
+  }
+
+  &:hover, &:global(.hover) {
+    .noneHoverBox:not(.showRename) {
+      display: none;
+    }
+
+    .onHoverBox:not(.showRename) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .hoverBtn {
+      display: flex;
+      z-index: 2;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 36px;
+      flex-direction: column;
+      align-items: center;
+      padding: 8px;
+      justify-content: space-between;
+      color: #fff;
+
+      i {
+        width: 20px;
+        height: 20px;
+        background: rgba(0, 0, 0, .7);
+        box-shadow: 0 0 4px 0 rgba(0, 0, 0, .1);
+        border-radius: 2px;
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 8px;
+      }
+
+      .deleteIcon {
+        &:hover {
+          background-color: #FF0000;
+        }
+      }
+
+      .renameIcon {
+        &:hover {
+          background-color: #1593ff;
+        }
+      }
+    }
+  }
+}
+
+.topBox {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 146px;
+
+  > .noCover {
+    width: 100%;
+    height: 146px;
+  }
+}
+
+.eqf_bigger {
+  position: absolute;
+  padding: 2px;
+  z-index: 9;
+  border-radius: 2px;
+  font-size: 20px;
+  background: #3e3f44;
+  color: #fff;
+  top: 6px;
+  right: 6px;
+
+  &:hover {
+    background: #1593FF !important;
+  }
+}
+
+.videoBgBox {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+  display: flex;
+  background-color: #F0F1F8;
+}
+
+.videoBg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  filter: blur(2px);
+  z-index: 0
+}
+
+.VideoPlayButton {
+  position: absolute;
+  z-index: 1;
+  font-size: 24px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.bottomBox {
+  width: 100%;
+  height: 34px;
+  border-top: none;
+  margin-top: 8px;
+}
+
+.noneHoverBox {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  line-height: 18px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 12px;
+  color: #333333;
+  text-align: left;
+  font-family: PingFangSC-Regular;
+}
+
+.title.showRename {
+  .renameInput {
+    width: 100%;
+    height: 18px;
+    padding: 1px 5px;
+    border-radius: 3px;
+    display: block;
+    background: #F0F1F8;
+    text-align: left;
+  }
+}
+
+.screen {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 16px;
+  line-height: 16px;
+
+  > .uploading {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(27, 199, 177, 1);
+  }
+
+  > .failText {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ff2a6a;
+  }
+}
+
+.screenNumber {
+  font-size: 12px;
+  //line-height: 17px;
+  color: #666;
+}
+
+.screenDetailTime {
+  height: 14px;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  //line-height:17px;
+}
+
+.onHoverBox {
+  display: none;
+}
+
+.eqf_delete_f {
+  float: left;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  background: #EEEEEE;
+  border-radius: 3px;
+  font-size: 15px;
+
+  &:hover {
+    background: #FF296A;
+    color: #fff;
+  }
+}
+
+.leftBtn {
+  width: 48px;
+  height: 34px;
+}
+
+.rightBtn {
+  width: 72px;
+  height: 34px;
+}
+
+.menu {
+  position: absolute;
+  bottom: 34px;
+  right: 0;
+  width: 124px !important;
+  height: 106px !important;
+  z-index: 21;
+
+  > ul {
+    > li {
+      height: 30px !important;
+      line-height: 30px !important;
+      font-size: 14px !important;
+      color: #333333;
+      font-weight: 400 !important;
+      padding: 0 12px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0.05) !important;
+        color: #333333 !important;
+      }
+    }
+  }
+}
+
+.uploadingDeleteBtn {
+  width: 90px;
+  margin: auto;
+  display: block;
+  background: #FF296A;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 3px;
+  height: 34px;
+  line-height: 34px;
+
+  &:hover {
+    background-color: #ff004d;
+  }
+}
+
+.index_Card:hover {
+  box-shadow: 0 0 16px 0 rgba(0, 0, 0, .16);
+  -webkit-transform: translate3d(0, -2px, 0) !important;;
+  -moz-transform: translate3d(0, -2px, 0) !important;;
+  transform: translate3d(0, -2px, 0) !important;
+}
+
+:global {
+  .deletePopover .ant-popover-content {
+    width: 130%;
+  }
+}

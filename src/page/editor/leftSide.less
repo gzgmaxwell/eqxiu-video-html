@@ -1,0 +1,197 @@
+@import "userEditor";
+@import "leftCommon";
+
+.leftSideLi {
+  position: relative;
+  width: 68px;
+  height: 68px;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 12px;
+  z-index: 2;
+  transition: all ease-in .2s;
+  cursor: pointer;
+}
+
+.leftSideLi.active, .leftSideLi:hover {
+  background-color: @baseColor;
+  color: #fff;
+}
+
+.leftSideLiSpan {
+  cursor: pointer;
+  text-wrap: normal;
+
+  div {
+    font-size: 14px;
+    margin-top: 4px;
+  }
+}
+
+.newMark {
+  position: absolute;
+  width: 50%;
+  top: 0;
+  left: 28px;
+  z-index: 2;
+}
+
+.litleMark {
+  position: absolute;
+  right: -1px;
+  top: 30px;
+  border-right: 6px solid #fafafa;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  width: 0;
+  height: 0;
+}
+
+.leftSideOut {
+  width: auto;
+  flex: 0;
+  transition: flex-basis ease-in 300ms;
+  z-index: 30;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .05);
+
+  :global {
+    .slider-enter {
+      transform: translateX(-288px);
+      opacity: 0;
+    }
+
+    .slider-enter-active, .slider-enter-done {
+      transform: none;
+      opacity: 1;
+    }
+
+    .slider-exit {
+      z-index: 0;
+      transform: translateX(-288px);
+      opacity: 0;
+    }
+
+    .slider-exit-done {
+      transform: translateX(-288px);
+      opacity: 0;
+      z-index: 0;
+    }
+  }
+}
+
+.leftSide {
+  position: fixed;
+  box-sizing: border-box;
+  top: 56px;
+  width: 68px;
+  height: calc(100vh - 56px);
+  z-index: 48;
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  font-size: 14px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 18px 0;
+  cursor: auto;
+}
+
+.filterDiv {
+  display: flex;
+  padding: 2px 15px 10px 15px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.buttonGroup {
+  box-sizing: border-box;
+  flex-basis: 106px;
+}
+
+.buttonGroup .button {
+  width: 52px;
+  height: 36px;
+  background-color: rgba(238, 238, 238, 1);
+  color: #333;
+  font-size: 14px;
+  border-radius: 0;
+  border-top: @border;
+  border-bottom: @border;
+}
+
+.buttonGroup .button:first-child {
+  border-radius: 3px 0px 0px 3px;
+  border-left: @border;
+}
+
+.buttonGroup .button:last-child {
+  border-radius: 0px 3px 3px 0px;
+  border-right: @border;
+}
+
+.buttonGroup .active {
+  background-color: @baseColor;
+  color: #fff;
+}
+
+.searchDiv {
+  flex-basis: 129px;
+}
+
+.searchInput {
+  width: 129px;
+  height: 36px;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 3px;
+}
+
+.searchInput :global(.ant-input) {
+  border-radius: 0;
+  padding-right: 4.2em !important;
+}
+
+.tagsDiv {
+  margin-top: 8px;
+}
+
+.tag {
+  line-height: 30px;
+  width: 60px;
+  height: 24px;
+  display: block;
+  float: left;
+  font-size: 12px;
+  color: #333333;
+  text-align: center;
+  overflow: hidden;
+}
+
+.tag.active, .tag:hover {
+  color: #1a89e7;
+  border-bottom: #1a89e7 1px solid;
+}
+
+.tempListDiv {
+  padding-bottom: 60px;
+  overflow-x: hidden;
+}
+
+.tempListDiv > div {
+  display: flex;
+  margin-right: -7px;
+  padding: 4px 0 6px 15px;
+  flex-wrap: wrap;
+}
+
+.tempListDiv > div > div:nth-child(2n+1) {
+  margin-right: 6px;
+}
+
+.active {
+  background: #1593FF;
+  color: #FFFFFF !important;
+}
+

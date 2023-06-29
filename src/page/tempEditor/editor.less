@@ -1,0 +1,315 @@
+@import "../global";
+
+.content {
+  //background-color: #f9f9f9;
+  min-height: 50vh;
+  position: relative;
+}
+
+.left {
+  float: left;
+  margin-right: 24px;
+}
+
+.right {
+  float: right;
+}
+
+.img_div {
+  box-sizing: content-box;
+  width: 239px;
+  height: 247px;
+  border: #9e9e9e 1px dashed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.img_div img {
+  vertical-align: middle;
+  max-width: 239px;
+  max-height: 247px;
+}
+
+.video_div {
+  box-sizing: content-box;
+  width: 239px;
+  height: 252px;
+  border: none;
+  text-align: center;
+  background-color: #EEEEEE;
+}
+
+.video_div.fixedVideoDiv {
+  position: fixed;
+  top: 100px;
+}
+
+.sticky {
+  position: absolute;
+  width: 92px;
+  height: 34px;
+  line-height: 34px;
+  background: rgba(21, 147, 255, 1);
+  border-radius: 0 0 12px 0;
+  opacity: .6;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  align-self: baseline;
+  left: 0;
+}
+
+.info_span {
+  width: 810px;
+  padding: 2px;
+  padding-left: 27px;
+  float: right;
+}
+
+.one_info > label {
+  font-family: 'PingFangSC-Medium';
+  font-weight: 500;
+  color: #333333;
+  font-size: 18px;
+  line-height: 16px;
+  padding-left: 16px;
+}
+
+.one_info {
+  margin-bottom: 28px;
+}
+
+.labelNextDiv {
+  margin-top: 20px;
+}
+
+.errorInput input {
+  border-color: red;
+}
+
+.info_span input {
+  border-radius: 0;
+  background-color: @baseBackgroundColor;
+}
+
+.info_span :global(.ant-tag) {
+  color: #333333;
+  background-color: #EEEEEE;
+  border-radius: 12px;
+}
+
+.info_span :global(.ant-tag-checkable-checked) {
+  color: #fff;
+  background-color: #1593FF;
+}
+
+.tags_checked_div {
+  padding: 0 12px 0 0;
+  line-height: 32px;
+  width: 807px;
+  background: rgba(238, 238, 238, 1);
+  border-radius: 3px;
+  margin-bottom: 22px;
+}
+
+.infoRow {
+  margin-top: 20px;
+}
+
+.rowTitle {
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  padding-left: 16px;
+}
+
+.oneCheckbox {
+  margin-right: 30px;
+}
+
+.tags_checked_div :global(.ant-tag) {
+  background-color: #FFF;
+  border-radius: 12px;
+}
+
+.recommendTags :global(.ant-tag) {
+  background-color: #EEEEEE;
+  border-radius: 12px;
+}
+
+.recommendTags :global(.ant-tag-checkable-checked) {
+  background-color: #1593FF;
+  border-radius: 12px;
+}
+
+.tableDiv {
+  display: table;
+  width: 807px;
+  vertical-align: middle;
+}
+
+.table_row img {
+  margin: 0;
+}
+
+.table_row {
+  width: 807px;
+  height: 74px;
+  font-size: 18px;
+  line-height: 14px;
+  padding: 0 18px;
+  display: table-row;
+}
+
+.table_row .td_check {
+  width: 30px;
+  display: table-cell;
+  height: 74px;
+  padding-left: 12px;
+}
+
+.table_row .td_title {
+  height: 74px;
+  padding-left: 12px;
+  width: 60px;
+  font-size: 14px;
+  display: table-cell;
+}
+
+.table_row .td_limit {
+  width: 80px;
+  padding-right: 20px;
+}
+
+.table_row .td_content {
+  height: 74px;
+  padding-left: 12px;
+  width: 500px;
+  display: table-cell;
+}
+
+.td_content .text_span {
+  width: 459px;
+  height: 54px;
+  border: 1px dashed #CCD5DB;
+  display: inline-block;
+  padding: 11px 9px;
+}
+
+.td_content img {
+  max-height: 66px;
+}
+
+.table_row .td_icon {
+  height: 74px;
+  padding-left: 12px;
+  width: 30px;
+  font-size: 20px;
+  display: table-cell;
+  cursor: pointer;
+}
+
+.table_row .td_icon:hover {
+  color: #1593ff;
+}
+
+body > tr.table_row:last-child .td_icon {
+  color: #1593ff;
+}
+
+body > tr.table_row:last-child td:last-child {
+  color: #000000 !important;
+}
+
+.checkbox {
+  zoom: 1.2;
+}
+
+.odd {
+  background-color: #F6F9FA;
+}
+
+.errorSpan {
+  padding-left: 20px;
+  font-size: 12px;
+  color: red;
+}
+
+.saveBtn {
+  width: 124px;
+  height: 40px;
+  line-height: 40px;
+  margin-left: 16px;
+}
+
+.backButton {
+  width: 124px;
+  height: 40px;
+  color: #666666;
+  margin-left: 16px;
+  background-color: #FFFFFF;
+  border-radius: 3px;
+  border: 1px solid #ccd5db;
+  padding: 0;
+  line-height: 40px;
+}
+
+.submitButton {
+  margin-left: 16px;
+  width: 124px;
+  height: 40px;
+  background-color: #1593FF;
+  color: #FFFFFF;
+  border-radius: 3px;
+  padding: 0;
+  line-height: 40px;
+}
+
+.submitButton.disabled {
+  background-color: #EEEEEE;
+  cursor: not-allowed;
+}
+
+.changeCover {
+  position: absolute;
+  background-color: #000;
+  width: 72px;
+  height: 24px;
+  line-height: 24px;
+  color: #fff;
+  opacity: .5968;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: 400;
+  display: block;
+  top: 163px;
+  left: 82px;
+}
+
+.tagLabel {
+  padding-left: 45px;
+  float: left;
+  line-height: 24px;
+}
+
+.TagsUl {
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  line-height: 24px;
+}
+
+.TagsUl > li {
+  display: inline-block;
+  margin-right: 8px;
+  margin-bottom: 10px;
+}
+
+.bottomBtnGroup {
+  float: right;
+  margin-top: 50px;
+}

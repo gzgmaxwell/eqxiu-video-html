@@ -1,0 +1,51 @@
+@import "../global";
+
+.container {
+  position: fixed;
+  top: 44px;
+  left: 200px;
+  width: calc(100% - 200px);
+  height: calc(100% - 44px);
+}
+.container{
+  a{
+    color: #000000;
+  }
+}
+.containerOther {
+  background-color: #fff;
+}
+
+.header {
+  background-color: @diffBackgroundColor;
+  height: 60px;
+  width: 100%;
+  line-height: 60px;
+}
+
+.header .right {
+  float: right;
+  padding-right: 20px;
+}
+.content{
+  min-width: 720px;
+  max-width: calc(100% - 80px);
+  margin: 0 auto 40px;
+}
+
+:global {
+  .fade-enter {
+    opacity: 0.01;
+  }
+  .fade-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+  }
+  .fade-exit {
+    opacity: 1;
+  }
+  .fade-exit-active {
+    opacity: 0.01;
+    transition: opacity 500ms ease-in;
+  }
+}

@@ -1,0 +1,337 @@
+@charset "UTF-8";
+@keyframes rotate-right {
+    to {
+        transform: rotate(-90deg) scale(0.01) rotateZ(0deg);
+        /*height: 0;*/
+        /*transform-origin: right top;*/
+    }
+}
+
+@keyframes rotate-left {
+    to {
+        transform: rotate(90deg) scale(0.01) rotateZ(0deg);
+        /*height: 0;*/
+        /*transform-origin: left top;*/
+    }
+}
+
+.rotate-right-end {
+    transform: rotate(-90deg) scale(0.01) rotateZ(0deg);
+    /*height: 0;*/
+    transform-origin: right top;
+}
+
+.rotate-left-end {
+    transform: rotate(90deg) scale(0.01) rotateZ(0deg);
+    /*height: 0 !important;*/
+    transform-origin: left top;
+}
+
+@keyframes zoom-entry {
+    to {
+        transform: scale(1) rotateZ(0deg);
+    }
+}
+
+.zoom-entry-end {
+    transform: scale(1) rotateZ(0deg) !important;;
+}
+
+@keyframes visual-zoom-entry {
+    to {
+        transform: rotate(0deg) scale(1) rotateZ(0deg);
+    }
+}
+
+.visual-zoom-entry-end {
+    transform: rotate(0deg) scale(1) rotateZ(0deg) !important;
+}
+
+@keyframes rotate-left2 {
+    to {
+        transform: rotate(-90deg) rotateZ(0deg);
+        transform-origin: left bottom;
+    }
+}
+
+.rotate-left2-end {
+    transform: rotate(-90deg) rotateZ(0deg) !important;
+    transform-origin: left bottom !important;
+}
+
+.rotate-right2-end {
+    transform: rotate(90deg) rotate(0deg) !important;
+    transform-origin: right bottom !important;
+}
+
+@keyframes rotate-right2 {
+    to {
+        transform: rotate(90deg) rotateZ(0deg);
+        transform-origin: right bottom;
+    }
+}
+
+.speech-rcg {
+    height: 100%;
+    position: relative;
+}
+
+.speech-rcg .speech-bg-img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.speech-rcg .speech-bg-video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.speech-rcg .speech-bg-video video {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.speech-rcg .speech-play {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.speech-rcg .speech-play .speech-play-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 36px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #FFFFFA;
+    opacity: 0.5;
+}
+
+.speech-rcg .speech-lrc-content {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base {
+    position: absolute;
+    width: 188px;
+    bottom: calc(50% - 12px);
+    left: calc(50% - 99px);
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-p {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    transition-duration: 0.3s;
+    transition-property: transform, height, margin-left;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-p .speech-lrc-p-visual {
+    transition-duration: 0.3s;
+    transition-property: transform;
+    transform-origin: left bottom;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-p.rotate-left2 {
+    animation: .3s rotate-left2 forwards;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-p.rotate-right2 {
+    animation: .3s rotate-right2 forwards;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line {
+    position: relative;
+    font-size: 16px;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    height: auto;
+    transition-property: transform, height;
+    transition-duration: 0.3s;
+    transform: rotate(0deg) scale(1) rotateZ(0deg);
+    color: #FFFFFF;
+    white-space: nowrap;
+    padding-top: 4px;
+    /* 这个值跟随js代码中的行间距手动调整，手动。。 */
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line.entry {
+    position: absolute;
+    width: 100%;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line.zoom-center {
+    transform: scale(0.01) rotateZ(0deg);
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line.zoom-left {
+    transform: scale(0.01) rotateZ(0deg);
+    height: 0;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line.zoom-left.zoom-entry {
+    animation: .3s zoom-entry forwards;
+    transform-origin: left bottom;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line.zoom-right {
+    transform: scale(0.01) rotateZ(0deg);
+    height: 0;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line.zoom-right.zoom-entry {
+    animation: .3s zoom-entry forwards;
+    transform-origin: right bottom;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line.zoom-rotate {
+    height: 0;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line .speech-lrc-line-visual {
+    transition-duration: 0.3s;
+    transition-property: transform, height;
+    transform-origin: left top;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line .speech-lrc-line-visual.rotate-left {
+    animation: .3s rotate-left forwards;
+    transform-origin: left top;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line .speech-lrc-line-visual.rotate-left.zoom-entry {
+    height: 1em;
+    animation: .3s visual-zoom-entry forwards;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line .speech-lrc-line-visual.rotate-right {
+    animation: .3s rotate-right forwards;
+    transform-origin: right top;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base .speech-lrc-line .speech-lrc-line-visual.rotate-right.zoom-entry {
+    animation: .3s visual-zoom-entry forwards;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base.lrc-position-base-style2 {
+    top: 40%;
+    bottom: 0;
+    margin: auto;
+    font-size: 26px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base.lrc-position-base-style3 {
+    top: 10%;
+    left: 10%;
+    width: 20px;
+    text-align: center;
+    font-size: 26px;
+    word-break: break-word;
+    line-height: 1.2em;
+}
+
+.speech-rcg .speech-lrc-content .lrc-position-base.lrc-position-base-style4 {
+    top: 0;
+    left: 0;
+    font-size: 26px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+
+.speech-rcg .speech-add-view .speech-add-editor {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.speech-rcg .speech-add-view .speech-add-editor .speech-no-lrc {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.speech-rcg .speech-add-view .speech-add-editor .speech-no-lrc .speech-add-icon {
+    margin: auto;
+    font-size: 40px;
+    height: 84px;
+    width: 84px;
+    border: 12px solid rgba(219, 219, 219, 0.1);
+    border-radius: 42px;
+    background-color: #DBDBDB3F;
+    background-clip: padding-box;
+    -webkit-background-clip: padding-box;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 66px;
+}
+
+.speech-rcg .speech-add-view .speech-add-editor .speech-no-lrc .speech-add-desc {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+.speech-rcg .speech-add-view .speech-add-editor .speech-line-text-set-style1 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    font-size: 16px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+
+.speech-rcg .speech-add-view .speech-add-editor .speech-line-text-set-style2 {
+    position: absolute;
+    top: 40%;
+    bottom: 0;
+    margin: auto;
+    font-size: 16px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}
+
+.speech-rcg .speech-add-view .speech-add-editor .speech-line-text-set-style3 {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    width: 20px;
+    text-align: center;
+    font-size: 16px;
+    word-break: break-word;
+    line-height: 1.2em;
+}
+
+.speech-rcg .speech-add-view .speech-add-editor .speech-line-text-set-style4 {
+    position: absolute;
+    top: 0;
+    font-size: 16px;
+    height: fit-content;
+    width: 100%;
+    text-align: center;
+}

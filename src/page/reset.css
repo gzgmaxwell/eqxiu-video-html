@@ -1,0 +1,158 @@
+/**
+** Prevent iOS and IE text size adjust after device orientation change,
+** without disabling user zoom.
+**/
+
+html {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font: 14px/1.2 'Helvetica Neue',"Microsoft YaHei",Tahoma,Helvetica,Arial,"\5b8b\4f53",sans-serif;
+}
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+blockquote,
+th,
+td{
+    margin: 0;
+    padding: 0;
+}
+
+button{
+    outline:none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing:0;
+}
+
+em,
+i{
+    font-weight: normal;
+    font-style: normal;
+}
+
+fieldset,
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+input,
+button,
+textarea,
+select {
+    font-size:100%;
+    outline: none;
+    vertical-align: middle;
+}
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/** HTML5 display definitions
+** ==========================================================================
+**
+** Correct `block` display not defined for any HTML5 element in IE 8/9.
+** Correct `block` display not defined for `details` or `summary` in IE 10/11
+** and Firefox.
+** Correct `block` display not defined for `main` in IE 11.
+**/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+    display: block;
+}
+
+/**
+** 1. Correct `inline-block` display not defined in IE 8/9.
+** 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+**/
+
+audio,
+canvas,
+progress,
+video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/**
+** 1. Correct color not being inherited.
+** Known issue: affects color of disabled elements.
+** 2. Correct font properties not being inherited.
+** 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+**/
+
+button,
+input,
+optgroup,
+select,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+.fl{ float: left;}
+.fr{ float: right;}
+.clearfix{
+    clear: both;
+}
+a:focus{
+    text-decoration:none;
+}
+a:active{
+    text-decoration:none;
+}
+a:visited{
+    text-decoration:none;
+}
+*{
+    font-family: "PingFang SC";
+}
+
+
+

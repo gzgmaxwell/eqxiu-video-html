@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="301" height="100" viewBox="0 0 301 100">
+  <defs>
+    <filter id="点击抽奖-copy-a" width="108.2%" height="126.1%" x="-4.1%" y="-13%" filterUnits="objectBoundingBox">
+      <feOffset dy="2" in="SourceAlpha" result="shadowOffsetOuter1"/>
+      <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="2"/>
+      <feColorMatrix in="shadowBlurOuter1" result="shadowMatrixOuter1" values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0"/>
+      <feMerge>
+        <feMergeNode in="shadowMatrixOuter1"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <g fill="none" fill-rule="evenodd" filter="url(#点击抽奖-copy-a)" transform="translate(4 2)">
+    <rect width="293" height="92" fill="#FFF"/>
+    <circle cx="48" cy="46" r="30" fill="#50D5E2"/>
+    <path fill="#FFF" fill-rule="nonzero" d="M2.2,24.2 C0.99,24.2 7.99360578e-16,23.21 7.99360578e-16,22 L7.99360578e-16,5.61 L6.6,8.47 L6.6,8.8 C6.6,11.22 8.58,13.2 11,13.2 C13.42,13.2 15.4,11.22 15.4,8.8 L15.4,8.36 L22,5.5 L22,22 C22,23.21 21.01,24.2 19.8,24.2 L2.2,24.2 Z M8.8,8.8 C8.8,7.59 9.79,6.6 11,6.6 C12.21,6.6 13.2,7.59 13.2,8.8 C13.2,10.01 12.21,11 11,11 C9.79,11 8.8,10.01 8.8,8.8 Z M7.37,6.38 L-9.76996262e-16,3.3 L-9.76996262e-16,2.2 C-9.76996262e-16,0.99 0.99,0 2.2,0 L19.8,0 C21.01,0 22,0.99 22,2.2 L22,3.19 L14.63,6.27 C13.86,5.06 12.43,4.4 11,4.4 C9.57,4.4 8.14,5.17 7.37,6.38 Z" transform="translate(37 34)"/>
+    <text fill="#333" font-family="PingFangSC-Semibold, PingFang SC" font-size="14" font-weight="500">
+      <tspan x="91" y="31">点击抽奖</tspan>
+    </text>
+    <text fill="#777" font-family="PingFangSC-Regular, PingFang SC" font-size="12">
+      <tspan x="91" y="55">点击按钮进入抽奖页面，互动营销</tspan> <tspan x="91" y="72">一步到位</tspan>
+    </text>
+  </g>
+</svg>

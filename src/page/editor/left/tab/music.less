@@ -1,0 +1,380 @@
+.decorate {
+  flex: 1;
+  overflow-y: auto;
+  padding: 10px 0 10px;
+  width: 100%;
+  height: calc(100% - 180px);
+  display: flex;
+  flex-direction: column;
+}
+
+.tags, .moreTags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 16px 0;
+  .left {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    height: 100%;
+
+    .item {
+      height: 20px;
+      line-height: 20px;
+      white-space: nowrap;
+      padding: 0 4px;
+      cursor: pointer;
+
+      &:hover {
+        color: #1593ff;
+      }
+    }
+
+    .more {
+      width: 20px;
+      white-space: nowrap;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-size: 16px;
+      }
+
+      &:hover {
+        color: #1593ff;
+      }
+    }
+  }
+
+  .right {
+    width: 90px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .top {
+      text-align: right;
+      height: 20px;
+      line-height: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      .item {
+        cursor: pointer;
+
+        &:hover {
+          color: #1593ff;
+        }
+      }
+    }
+
+    .bottom {
+      text-align: right;
+      height: 20px;
+      line-height: 20px;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+
+      &:hover {
+        color: #1593ff;
+      }
+
+      .item {
+        cursor: pointer;
+      }
+
+      i {
+        font-size: 16px;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+.hover {
+  color: #1593ff;
+}
+
+.moreTags {
+  //position: fixed;
+  background: #fff;
+  //top: 172px;
+  width: 291px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, .1);
+}
+
+.singleBox {
+  text-align: center;
+  overflow: hidden;
+  float: left;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 7px;
+  height: 36px;
+  position: relative;
+  .line {
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    width: calc(100% - 28px);
+    background: #f6f9fa;
+  }
+
+  &:hover {
+    background: #F2F5F7;
+
+    .right {
+      display: none;
+    }
+
+    .right2 {
+      display: flex;
+    }
+  }
+
+  .left {
+    display: flex;
+    align-items: center;
+
+    .playing {
+      display: none;
+      margin-right: 8px;
+      width: 14px;
+      height: 12px;
+    }
+
+    .title {
+      height: 18px;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(51, 51, 51, 1);
+      line-height: 17px;
+      white-space: nowrap;
+      max-width: 130px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .logo {
+      margin-left: 8px;
+
+      img {
+        width: 14px;
+        height: 14px;
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .price {
+      height: 18px;
+      font-size: 12px;
+      font-weight: 400;
+      color: #1593ff;
+      line-height: 17px;
+      text-decoration: line-through;
+    }
+
+    .vipFree, .free {
+      margin-left: 8px;
+      height: 18px;
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(191, 138, 94, 1);
+      line-height: 17px;
+    }
+
+    .free {
+      color: #1593ff;
+    }
+  }
+
+  .right2 {
+    display: none;
+    justify-content: space-between;
+    align-items: center;
+
+    .play, .pause {
+      cursor: pointer;
+      font-size: 14px;
+
+      &:hover {
+        color: #1593ff;
+      }
+    }
+    .pause {
+      font-size: 18px;
+    }
+
+    .collection {
+      cursor: pointer;
+      font-size: 14px;
+
+      &:hover {
+        color: #FF296A;
+      }
+    }
+
+    .use {
+      cursor: pointer;
+      width: 30px;
+      font-size: 14px;
+
+      &:hover {
+        color: #1593ff;
+      }
+    }
+    .useButton {
+      width: 40px;
+      height: 24px;
+      background: #1593ff;
+      border-radius: 3px;
+      line-height: 24px;
+      margin-left: 9px;
+    }
+  }
+}
+
+.active {
+  background: #F2F5F7;
+
+  .right {
+    display: none;
+  }
+
+  .right2 {
+    display: flex;
+  }
+
+  .playing, .pause {
+    display: flex !important;
+  }
+}
+
+.bgMusicFooter {
+  position: fixed;
+  bottom: 0;
+  width: 292px;
+  height: 48px;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+
+  .footerLeft, .footerLeft > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+
+    .VolumeSlider {
+      width: 14px;
+      height: 12px;
+    }
+    .playing {
+      font-size: 14px;
+      cursor: pointer;
+      &:hover {
+        color: #1593ff;
+      }
+    }
+    .pause {
+      font-size: 18px;
+      cursor: pointer;
+      &:hover {
+        color: #1593ff;
+      }
+    }
+
+    .title {
+      margin-left: 8px;
+      font-weight: 600;
+      color: rgba(51, 51, 51, 1);
+    }
+  }
+
+  .options {
+    position: relative;
+
+    .menu {
+      font-size: 16px;
+      border: 1px solid #666666;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .option_modal {
+      display: none;
+      position: absolute;
+      bottom: 33px;
+      right: -16px;
+      width: 160px;
+      height: 136px;
+      background: rgba(255, 255, 255, 1);
+      box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  .opened {
+    .option_modal {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 0;
+      z-index: 2;
+      > div {
+        padding: 0 12px;
+        height: 30px;
+        font-size: 14px;
+        font-weight: 400;
+        color: rgba(51, 51, 51, 1);
+        line-height: 30px;
+        cursor: pointer;
+      }
+
+      > div:hover {
+        background: rgba(0, 0, 0, 0.05);
+      }
+    }
+  }
+}
+
+.musicSearch {
+  margin: 7px;
+  width: calc(100% - 14px);
+  height: 36px !important;
+  line-height: 36px !important;
+  svg {
+    font-size: 16px;
+    &:hover {
+      color: rgba(21, 147, 255, 1);
+    }
+  }
+  input:focus, input:hover, input:enabled {
+    border: 1px solid rgba(204,213,219,1) !important;
+    box-shadow: none
+  }
+  .icon {
+    color: #76838E;
+    cursor: pointer;
+    &:hover {
+      color: rgba(21, 147, 255, 1);
+    }
+  }
+}

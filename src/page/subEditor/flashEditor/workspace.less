@@ -1,0 +1,210 @@
+.workspace {
+  width: calc(100% - 600px);
+  overflow: auto;
+  > div {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    height: fit-content;
+  }
+}
+
+.item, .addItem {
+  width: 171px;
+  height: 217px;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 3px;
+  padding: 16px;
+  margin: 24px 4px 0 24px;
+  position: relative;
+  .addImg, .addText {
+    width: 139px;
+    height: 85px;
+    border-radius: 3px;
+    border: 1px dashed rgba(204, 213, 219, 1);
+    color: #666666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    padding: 16px;
+    cursor: pointer;
+    i {
+      font-size: 16px;
+    }
+
+    .addTitle {
+      margin-top: 13px;
+    }
+
+    &:hover {
+      border: 1px dashed #1593ff !important;
+      color: #1593ff !important;
+    }
+  }
+
+  .addText {
+    margin-top: 15px;
+  }
+
+  .img_top, .text_top {
+    width: 139px;
+    height: 149px;
+    background: rgba(240, 241, 248, 1);
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    .text_mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: transparent;
+    }
+    .text_mask_active {
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+
+    textarea {
+      height: calc(100% + 20px);
+      width: 100%;
+      padding-bottom: 20px;
+    }
+  }
+
+  .img_top {
+    align-items: center;
+    user-select: none;
+  }
+
+  .img_bottom, .text_bottom {
+
+    align-items: center;
+    margin-top: 12px;
+    display: none;
+    justify-content: space-between;
+    font-size: 12px;
+    .length {
+      width: 3rem;
+    }
+    .editorBtn, .replaceBtn, .deleteBtn, .cutBtn {
+      cursor: pointer;
+      width: 40px;
+      height: 24px;
+      line-height: 24px;
+      border-radius: 3px;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    .deleteBtn {
+      border: 1px solid #CCD5DB;
+      &:hover {
+        color: #FF296A;
+        border: 1px solid #FF296A;
+      }
+    }
+
+    .editorBtn, .replaceBtn {
+      background: #1593ff;
+      color: #ffffff;
+      &:hover {
+        background: #198AE7;
+      }
+    }
+
+    .cutBtn {
+      border: 1px solid #1593ff;
+      color: #1593ff;
+      &:hover {
+        background: #1593FF;
+        color: #ffffff;
+        border: 1px solid #1593FF;
+      }
+    }
+    .error {
+      color: #ff296a;
+    }
+  }
+}
+.dragAddImg {
+  .addImg {
+    height: 148px;
+    border-color: #1593ff;
+    color: #1593ff;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent
+  }
+}
+
+.item {
+  cursor: move;
+  &:hover, &:focus {
+    border: 1px solid #1593ff;
+    .img_bottom, .text_bottom {
+      display: flex;
+    }
+  }
+}
+
+.activeItem {
+  border: 1px solid #1593ff;
+  .img_bottom, .text_bottom {
+    display: flex;
+    .deleteBtn, .editorBtn {
+      visibility: hidden;
+    }
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent
+  }
+}
+
+.active {
+  border: 1px solid #1593ff;
+  .img_bottom, .text_bottom {
+    display: flex;
+    .deleteBtn, .editorBtn {
+      visibility: visible;
+    }
+  }
+}
+.flasCheckbox {
+  position: absolute;
+  bottom: 31px;
+}
+.addImgPopover {
+  position: absolute;
+  right: 570px;
+  top: 150px;
+  opacity: 0;
+}
+.guideCard .ant-popover-inner-content {
+  padding: 24px !important;
+}

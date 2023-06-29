@@ -1,0 +1,261 @@
+.detailBody{
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  .tipWrap{
+    border-radius: 3px;
+    position: absolute;
+    right: -240px;
+    top: 72px;
+    width:240px;
+    height:110px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 2px 8px 0px rgba(0,0,0,0.15);
+    z-index: 99;
+    padding: 24px 16px 16px 16px;
+    transition: all linear .4s;
+    .info{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .icon{
+        font-size: 16px;
+        color: #FFB243;
+      }
+      span{
+        font-size:12px;
+        color:rgba(51,51,51,1);
+        margin-left: 12px;
+      }
+    }
+    .btn{
+      display: flex;
+      margin-top: 31px;
+      justify-content: flex-end;
+      .tipsBtn{
+        width:64px;
+        height:24px;
+        text-align: center;
+        line-height: 24px;
+        background:rgba(255,255,255,1);
+        border-radius:3px;
+        border:1px solid rgba(204,213,219,1);
+        font-size: 12px !important;
+        color:rgba(102,102,102,1);
+        margin-right: 10px;
+        cursor: pointer;
+        &:hover{
+          border-color: #1593ff;
+          color: #1593ff;
+        }
+      }
+      .tipsKnow{
+        width: 64px;
+        height: 24px;
+        line-height: 24px;
+        text-align: center;
+        font-size: 12px;
+      }
+    }
+  }
+  .tipWrapPosition{
+    right: 16px !important;
+  }
+  .header{
+    position: relative;
+    z-index: 3;
+    height: 56px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 0px 4px 0px rgba(0,0,0,0.15);
+    display: flex;
+    align-items: center;
+    .left{
+      width: 240px;
+      height: 36px;
+      display: flex;
+      justify-content: left;
+      align-content: center;
+      margin: auto 16px;
+      cursor: pointer;
+      .ant-input{
+        border-color:#D8DEE9;
+      }
+      .title{
+        // width:224px;
+        padding: 0px 8px;
+        font-size:14px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(51,51,51,1);
+        line-height:36px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        width: 100%;
+        &:hover{
+          padding: 0px 8px;
+          height:36px;
+          background:rgba(247,248,251,1);
+          border-radius:3px;
+        }
+      }
+    }
+    .center{
+      width: 138px;
+      position: absolute;
+      left: calc(50% - 80px);
+      display: flex;
+      cursor: pointer;
+      img{
+        margin-top: -1px;
+      }
+      .title{
+        color: #333;
+        font-size: 14px;
+        margin-left: 8px;
+        &:hover{
+          color: #1593ff;
+        }
+      }
+    }
+    .right{
+      position: absolute;
+      height: 36px;
+      right: 12px;
+      display: flex;
+      align-items: center;
+
+      .works{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 22px !important;
+        input{
+          width: 16px;
+          height: 16px;
+        }
+        label{
+          color: #333 !important;
+          margin-left: 8px !important;
+        }
+      }
+      .btnWrap{
+
+        .produce{
+          width: 80px;
+          margin-right: 12px;
+        }
+        .close{
+          width: 42px;
+          color: #666;
+          border: 1px solid #CCD5DB;
+          &:hover{
+            background: #F5286B;
+            color: #fff;
+            border: #F5286B;
+          }
+        }
+      }
+    }
+  }
+  .rowBody{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    height: calc(100% - 56px);
+    .leftWrap{
+      position: relative;
+      z-index: 2;
+      width: 176px;
+      height: 100%;
+      background:#fff;
+      box-shadow:0px 0px 8px 0px rgba(0,0,0,0.08);
+    }
+    .centerWrap{
+      width: calc(100% - 376px);
+      height: 100%;
+      background: #F0F1F8;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      .main{
+        position: relative;
+      }
+    }
+    .rightWrap{
+      position: relative;
+      z-index: 2;
+      width: 200px;
+      height: 100%;
+      background:rgba(255,255,255,1);
+      box-shadow:0px 0px 8px 0px rgba(0,0,0,0.08);
+    }
+  }
+}
+// 视频上线新功能提示
+.functionTips {
+  width: 500px;
+  height: 500px;
+  background: rgba(240, 243, 244, 1);
+  text-align: center;
+  overflow: hidden;
+  .title {
+    margin-top: 50px;
+    text-align: center;
+    height: 32px;
+    font-size: 32px;
+    font-family: PingFangSC-Semibold;
+    font-weight: 600;
+    color: rgba(51, 51, 51, 1);
+    line-height: 32px;
+    letter-spacing: 10px;
+  }
+  .titleS {
+    margin-top: 16px;
+    height: 18px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgba(153, 153, 153, 1);
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+  .picBox {
+    margin: 24px auto 40px;
+    width: 417px;
+    height: 249px;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    padding: 17px;
+    > img {
+      width: 383px;
+      height: 215px;
+    }
+  }
+  .TipsBtn {
+    width: 120px;
+    height: 40px;
+    border-radius: 3px;
+  }
+}
+
+.header>.left input::-webkit-input-placeholder {
+  color: #333;
+}
+
+
+
+:global {
+  .ant-input:hover {
+    border-color: #CCD5DB;
+    border-right-width: 1px!important;
+  }
+  .ant-input:focus {
+    box-shadow: none;
+    border-color: #CCD5DB;
+  }
+}

@@ -1,0 +1,125 @@
+.classify {
+  overflow: hidden;
+  margin: 0px 0 26px;
+  background: #fff;
+  padding: 16px 24px 6px 24px;
+  border-radius: 3px;
+  > ul {
+    display: inline-block;
+    width: 100%;
+    > li:not(.sortLi) {
+      display: flex;
+      .classLiHeader {
+        display: flex;
+        flex: 1;
+        justify-content: space-between;
+        align-items: baseline;
+        > div {
+          width: 86px;
+        }
+      }
+      > label {
+        width: 50px;
+        font-size:14px;
+        font-family:PingFangSC-Regular;
+        font-weight:400;
+        color:rgba(102,102,102,1);
+        line-height: 24px;
+        display: inline-block;
+      }
+      a {
+        line-height: 24px;
+        height: 24px;
+        border-radius: 12px;
+        font-size: 14px;
+        font-family: PingFangSC-Regular;
+        font-weight: 400;
+        padding: 0 16px;
+        background: #fff;
+        color: #666;
+        display: inline-block;
+        transition: background-color, color 0s;
+      }
+      a.active, a:hover {
+        color: #FFFFFF;
+        background-color: #1593FF;
+      }
+      ul {
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        //width: 955px;
+        overflow-y: hidden;
+        > li {
+          display: inline-block;
+          margin-bottom: 10px;
+          //width: 86px;
+          margin-right: 8px;
+        }
+      }
+    }
+    .sortLi {
+      height: 49px;
+      display: flex;
+      .sortBtnGroup {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        height: 36px;
+        padding: 0 18px;
+        //border-left: 1px solid #CCD5DB;
+        &:first-child {
+          padding-left: 0;
+          border-left: none;
+        }
+        > a {
+          button {
+            width: auto;
+            padding: 0 12px;
+            height: 28px;
+            line-height: 28px;
+            background-color: #FFFFFF;
+            border-radius: 0;
+            border: 1px solid rgba(204, 213, 219, 1);
+            font-size: 14px;
+            color: rgba(102, 102, 102, 1);
+            color: #666666;
+            &:hover {
+              //border: 1px solid #1593FF!important;
+              color: #1593FF;
+            }
+            &.active {
+              background-color: #1593FF;
+              border-color: #1593FF;
+              color: #ffffff;
+            }
+          }
+          &:first-child button {
+            border-radius: 3px 0px 0px 3px;
+            border-right: none;
+          }
+          &:last-child button {
+            border-radius: 0px 3px 3px 0px;
+            border-left: none;
+          }
+        }
+      }
+    }
+  }
+  .more {
+    cursor: pointer;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    em {
+      margin-right: 10px;
+    }
+    &:hover {
+      color: #1593FF;
+    }
+  }
+  .divider {
+    margin: 0 0 10px 0;
+  }
+}

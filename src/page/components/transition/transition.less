@@ -1,0 +1,19 @@
+:global {
+  .rotate-y-left-hidden {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  .rotate-y-left-show {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+  .rotate-y-left-enter {
+    .rotate-y-left-hidden();
+  }
+  .rotate-y-left-enter-active{
+    .rotate-y-left-show();
+  }
+  .rotate-y-left-exit {
+    .rotate-y-left-show();
+  }
+}

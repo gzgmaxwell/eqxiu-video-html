@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=renderer content=webkit/>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <meta name="keyword" content="视频编辑、在线剪辑、易企秀、视频工具、宣传视频、免费视频、视频制作、易视频">
+    <meta name="description" content="易企秀视频，一款操作简单的在线视频编辑工具。高端企业宣传视频、炫酷视频风格，轻松在线编辑，良好播放体验，帮助企业快速有效视频宣传推广。">
+    <link rel="shortcut icon" href="//lib.eqh5.com/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="//lib.eqh5.com/iconfonts/4.0.5/iconfonts.min.css"/>
+    <link rel="stylesheet" href="//lib.eqh5.com/eqx.layout/1.4.6/eqx.layout.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <% if (htmlWebpackPlugin.options.env === 'pro') { %>
+    <script>
+        window._hmt = window._hmt || [];
+        _hmt.push(['_setAutoPageview', false]);
+        (function () {
+            var hm = document.createElement('script');
+            hm.src = 'https://hm.baidu.com/hm.js?33f172e966b3322832f24bebc3a89269';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+    <%}%>
+    <script>
+        window.__storePrev = 'store';
+    </script>
+</head>
+<body>
+<div id="container">
+    <div class="content">
+        <div id="root"></div>
+    </div>
+</div>
+<% for (lib of htmlWebpackPlugin.options.libs) { %>
+<% if (lib.isAsync) { %>
+<script src="<%= lib.url %>" async></script>
+<% } else { %>
+<script src="<%= lib.url %>"></script>
+<% } %>
+<% } %>
+</body>
+</html>

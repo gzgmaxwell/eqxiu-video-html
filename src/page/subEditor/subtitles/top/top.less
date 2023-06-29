@@ -1,0 +1,66 @@
+@baseBackgroundColor: #FAFAFA;
+@baseColor: #1593FF;
+@solidColor: #CCD5DB;
+@border: @solidColor 1px solid;
+
+.header {
+    overflow: hidden;
+    box-sizing: border-box;
+    height: 57px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 31;
+    background-color: @baseBackgroundColor;
+    border-bottom: @border;
+}
+
+.logo {
+    height: 56px;
+    width: 130px;
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    font-size: 48px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 0 14px;
+    line-height: 61px;
+    color: @baseColor;
+    cursor: pointer;
+
+    > img {
+        height: 46px;
+        margin-top: 5px;
+    }
+}
+
+.quiteBtn {
+    background-color: #666666;
+}
+
+.quiteBtn:hover {
+    background-color: #FF296A;
+}
+
+.headerButtonGroup {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+}
+
+.headerButtonGroup button {
+    height: 32px;
+    margin-left: 12px;
+    font-size: 12px;
+    line-height: 32px;
+    padding: 0 7px;
+}
+
+.displayButton {
+    background-color: #cccccc !important;
+    cursor: not-allowed !important;
+}

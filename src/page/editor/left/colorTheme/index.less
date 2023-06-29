@@ -1,0 +1,55 @@
+.bgBox{
+  height: 40px;
+  width: 20px;
+  position: relative;
+  margin-left: 16px;
+  .colorTitle{
+    position: relative;
+    top: 50%;
+    margin-top: -10px;
+    border-radius: 3px;
+    width:20px;
+    height:20px;
+    background:linear-gradient(147deg,rgba(255,41,106,1) 0%,rgba(253,224,91,1) 23%,rgba(96,231,147,1) 52%,rgba(0,190,255,1) 80%,rgba(92,97,255,1) 100%);
+    display: flex;
+  }
+  //色系选择css
+  .colorWrap{
+    position: absolute;
+    width:292px;
+    height: 50px;
+    z-index: 999;
+    bottom:-50px;
+    right: -16px;
+    background: #fff;
+    box-shadow:0px 0px 20px 0px rgba(0,0,0,0.1);
+    display: flex;
+    visibility: hidden;
+    opacity: 0;
+    justify-content: flex-start;
+    padding: 16px;
+    transition: all linear .2s;
+    .colorListElse{
+      background:linear-gradient(147deg,rgba(255,41,106,1) 0%,rgba(253,224,91,1) 23%,rgba(96,231,147,1) 52%,rgba(0,190,255,1) 80%,rgba(92,97,255,1) 100%);
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .popOverMainListColor{
+      width: 18px;
+      height: 18px;
+      border-radius: 2px;
+      cursor: pointer;
+    }
+    .borderStyle{
+      border: 1px solid #1593ff;
+    }
+  }
+  &:hover{
+    .colorWrap{
+      visibility:visible;
+      opacity: 1;
+    }
+  }
+}

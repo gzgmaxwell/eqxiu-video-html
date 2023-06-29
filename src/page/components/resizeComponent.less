@@ -1,0 +1,235 @@
+@dotWidth: 12px;
+
+.body {
+    margin: 20px 60px 30px 15px;
+    padding: 30vh 30vw;
+    background-color: #96d8f4;
+    position: relative;
+}
+
+.positionLine {
+    position: absolute;
+
+    > div {
+        width: 100%;
+        height: 100%;
+        position: relative;
+
+        > div {
+            width: 1px;
+            height: 100%;
+            left: calc(50% - 1px);
+            position: absolute;
+            background-color: #ffe300;
+        }
+
+        .NSLine {
+        }
+
+        .EWLine {
+            transform: rotate(90deg);
+        }
+
+        .NW-SE-Line {
+            transform: rotate(45deg);
+        }
+
+        .NE-SW-Line {
+            transform: rotate(135deg);
+        }
+    }
+}
+
+.compBox {
+    position: absolute;
+    border: 1px solid #1593ff;
+    display: block;
+    cursor: move;
+
+    .bar {
+        position: absolute;
+        pointer-events: auto;
+    }
+
+    .barLine {
+        //旋转线
+        width: 1px;
+        height: 18px;
+        top: -18px;
+        background: #1593ff;
+        pointer-events: auto;
+    }
+
+    .barRotate {
+        //旋转图标
+        top: -36px;
+        position: relative;
+        cursor: url(../static/mouserotate.ico) 10 10, default;
+        pointer-events: auto;
+        width: 20px !important;
+        height: 20px !important;
+        left: calc(50% - 10px) !important;
+
+        i {
+            position: absolute;
+            pointer-events: none;
+            top: 3px;
+            font-size: 12px;
+            left: 3px;
+            color: #1593ff;
+        }
+
+        .barRotateText {
+            top: -24px;
+            text-align: center;
+            //width: 2* @dotWidth;
+
+            font-size: 12px;
+            font-stretch: 100%;
+            font-style: normal;
+            font-variant-caps: normal;
+            font-variant-east-asian: normal;
+            font-variant-ligatures: normal;
+            font-variant-numeric: normal;
+            letter-spacing: normal;
+            font-weight: 400;
+            text-align: left;
+            left: -@dotWidth / 2;
+            position: absolute;
+            width: 30px;
+        }
+    }
+
+    .barLine,
+    .barRotate {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .dot {
+        //圆点
+        position: absolute;
+        width: @dotWidth;
+        height: @dotWidth;
+        background: #fff;
+        border: 1px solid #1593ff;
+        border-radius: 50%;
+    }
+
+    .barNS {
+        // 南北轴
+        width: 100%;
+        height: 5px;
+        cursor: ns-resize;
+
+        .dot {
+            left: 50%;
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    .barEW {
+        // 东西轴
+        width: 5px;
+        height: 100%;
+        top: 0;
+        cursor: ew-resize;
+
+        .dot {
+            top: calc(50% - @dotWidth / 2);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+    }
+
+    .barN,
+    .barN .dot {
+        top: -3px;
+    }
+
+    .barS,
+    .barS .dot {
+        bottom: -3px;
+    }
+
+    .barE,
+    .barE .dot {
+        right: -6px;
+    }
+
+    .barW,
+    .barw .dot {
+        left: -1px;
+    }
+
+    .barNE {
+        // 东北角
+        top: -6px;
+        right: -6px;
+        cursor: nesw-resize;
+    }
+
+    .barNW {
+        // 西北角
+        top: -6px;
+        left: -6px;
+        cursor: nwse-resize;
+    }
+
+    .barSE {
+        bottom: -6px;
+        right: -6px;
+        cursor: nwse-resize;
+    }
+
+    .barSW {
+        bottom: -6px;
+        left: -6px;
+        cursor: nesw-resize;
+    }
+}
+
+.eleHover {
+    &:hover::after {
+        position: absolute;
+        left: -1px;
+        top: -1px;
+        width: calc(100% + 2px);
+        height: calc(100% + 2px);
+        background-color: transparent;
+        border: 1px dotted #1593ff !important;
+        opacity: 1 !important;
+        pointer-events: none;
+        content: "";
+    }
+}
+
+.captureBox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.captureLine {
+    border: solid #ff2a6a;
+    position: absolute;
+    transform-origin: left top;
+    pointer-events: none;
+    &.y {
+        top: 0;
+        width: 0;
+        height: 100%;
+        border-right: 1px;
+        transform: translateX(-0.5);
+    }
+    &.x {
+        left: 0;
+        width: 100%;
+        height: 0;
+        border-top: 1px;
+        transform: translateY(-0.5);
+    }
+}

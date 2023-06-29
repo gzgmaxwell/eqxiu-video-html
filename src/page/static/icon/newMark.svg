@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.2 (67145) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="组件" transform="translate(-28.000000, -340.000000)">
+            <g id="Group" transform="translate(28.000000, 331.000000)">
+                <path d="M8.15947016,19.3366538 L-2.58411829,30.0802423 L51.2726133,30.3368915 L40.2884364,19.3527146 L8.15947016,19.3366538 Z" id="Rectangle" stroke="#FF296A" fill="#FF296A" transform="translate(24.350000, 24.839614) rotate(45.000000) translate(-24.350000, -24.839614) "></path>
+                <text id="new" transform="translate(30.253048, 23.253048) rotate(45.000000) translate(-27.253048, -23.253048) " font-family="PingFangSC-Regular, PingFang SC" font-size="12" font-weight="normal" line-spacing="9" letter-spacing="-0.84" fill="#FFFFFF">
+                    <tspan x="15.2530483" y="31.7530483">new</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,51 @@
+@import "./artFont";
+
+@left-width: 89px;
+@center-width: 80px;
+@right-width: 66px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.angle {
+  display: flex;
+  height: @height;
+  margin-top: 12px;
+  .left {
+    padding: 10px 16px;
+    width: @left-width;
+  }
+  .center {
+    width: @center-width;
+    height: @height;
+  }
+  .right {
+    width: 75px;
+    display: flex;
+    justify-content: flex-end;
+    padding-left: 9px;
+  }
+  :global {
+    .ant-slider-rail {
+      background-color: @border-color;
+    }
+    .ant-input-number {
+      width: @right-width;
+    }
+    .ant-slider {
+      margin: 12px 0;
+    }
+  }
+}
+
+.other {
+  display: flex;
+  height: @height;
+  margin-top: 8px;
+  justify-content: space-between;
+  >div {
+    display: flex;
+    align-items: center;
+  }
+}

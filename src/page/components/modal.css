@@ -1,0 +1,42 @@
+.shade {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+  position: fixed;
+  _position: absolute;
+  pointer-events: auto;
+  overflow: auto;
+}
+.layout {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: start;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: auto;
+  pointer-events: auto;
+}
+.layui-layer {
+  animation-name: bounceIn;
+  margin: 0;
+  padding: 0;
+  z-index: 1001;
+  background-color: #fff;
+  -webkit-background-clip: content;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: .3s;
+  animation-duration: .3s;
+  pointer-events: auto;
+}

@@ -1,0 +1,60 @@
+.modalPromote {
+  width: 1200px;
+  height: 600px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 99;
+  .head {
+    height: 59px;
+    display: flex;
+    align-items: center;
+    padding-left: 28px;
+    box-shadow:0 1px 0 0 rgba(0,0,0,0.08);
+    .title {
+      font-size: 18px;
+      font-weight: 500;
+      color: #333;
+    }
+    i {
+      font-size: 26px;
+      position: absolute;
+      right: 26px;
+      top: 17px;
+      cursor: pointer;
+      z-index: 90;
+    }
+    .tabs {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 26px;
+      width: 632px;
+      position: absolute;
+      right: 28px;
+      .tab {
+        height: 26px;
+        font-size: 16px;
+        font-weight: 500;
+        color: #333;
+        line-height: 24px;
+        cursor: pointer;
+        padding-bottom: 2px;
+        margin-right: 20px;
+        &.active {
+          color: #1593ff;
+          border-bottom: 2px solid #1593ff;
+        }
+      }
+  }
+  }
+  iframe {
+      width: 100%;
+      height: 540px;
+      top: 60px;
+      position: absolute;
+  }
+}

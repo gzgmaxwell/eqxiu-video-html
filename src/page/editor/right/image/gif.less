@@ -1,0 +1,146 @@
+@left-width: 92px;
+@center-width: 70px;
+@right-width: 72px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.top__button {
+    display: flex;
+}
+
+
+.previewButton, .replaceButton, .addButton {
+    cursor: pointer;
+    color: #1593FF;
+    border: 1px solid #1593FF;
+    font-size: 12px;
+    height: 36px;
+    width: 104px;
+    margin-left: 16px;
+    border-radius: 3px;
+    line-height: 36px;
+    font-family: @font-family;
+    margin-top: 20px;
+    font-weight: 400;
+}
+
+.replaceButton {
+    margin-left: 10px;
+}
+
+.previewButton:hover, .replaceButton:hover, .addButton:hover {
+    background: #1593FF;
+    color: #fff;
+}
+
+/*共同的样式*/
+.backgroundColor, .opacitySet, .imageReversal {
+    padding-top: 25px;
+    display: flex;
+    align-items: center;
+
+    .left {
+        width: @left-width;
+        padding-left: 20px;
+        font-size: 14px;
+        font-family: @font-family;
+        font-weight: 400;
+        color: #666;
+    }
+
+    .center {
+        width: @center-width;
+        border-radius: @border-radius;
+    }
+
+    :global {
+        .ant-switch {
+            height: 20px;
+        }
+
+        .ant-switch:after {
+            top: 0px;
+        }
+    }
+}
+
+/*颜色选择部分*/
+.backgroundColor {
+    .left {
+        padding-left: 20px;
+
+        i {
+            cursor: pointer;
+        }
+    }
+}
+
+/*背景图选择部分, 视频选择部分*/
+.image {
+    display: flex;
+    padding: 20px 16px 0 16px;
+
+    .left {
+        width: 110px;
+        height: 84px;
+        border-radius: @border-radius;
+        border: 1px dashed @border-color;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            max-width: 108px;
+            /* max-width: 110px; */
+            max-height: 82px;
+        }
+    }
+
+    .right {
+        width: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 12px;
+        height: 84px;
+
+        button {
+            width: 100%;
+            height: 34px;
+            padding: 0;
+            color: rgb(102, 102, 102);
+            border: 1px solid rgb(204, 204, 204);
+            background: #fff;
+            line-height: 30px;
+        }
+
+        button:hover {
+            color: #1593FF;
+            border: 1px solid #1593FF;
+        }
+    }
+}
+
+/*透明度选择部分*/
+.opacitySet {
+    .input {
+        margin-left: 20px;
+    }
+
+    .right {
+        width: 70px;
+        margin-left: 8px;
+    }
+}
+
+/*图片翻转*/
+.imageReversal {
+    .switch {
+        flex: 1;
+        text-align: right;
+        padding-right: 20px;
+    }
+}

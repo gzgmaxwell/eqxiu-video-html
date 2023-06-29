@@ -1,0 +1,142 @@
+@left-width: 92px;
+@center-width: 70px;
+@right-width: 72px;
+@border-radius: 3px;
+@height: 36px;
+@border-color: #CCD5DB;
+@font-family: PingFangSC-Regular;
+
+.right__image__set {
+    >div {
+        padding: 8px 20px;
+    }
+    .top__button {
+        display: flex;
+    }
+    .spaceLine {
+        background: #F0F1F8;
+        width: 300px;
+        height: 4px;
+        padding: 0;
+        margin-left: -50px;
+    }
+
+    .previewButton, .replaceButton, .addButton {
+        cursor: pointer;
+        color: #1593FF;
+        border: 1px solid #1593FF;
+        font-size: 12px;
+        height: 36px;
+        width: 104px;
+        margin-left: 16px;
+        border-radius: 3px;
+        line-height: 36px;
+        font-family: @font-family;
+        margin-top: 20px;
+        font-weight: 400;
+    }
+
+    .replaceButton {
+        margin-left: 10px;
+    }
+
+    .previewButton:hover, .replaceButton:hover, .addButton:hover {
+        background: #1593FF;
+        color: #fff;
+    }
+
+    /*共同的样式*/
+
+    .backgroundColor, .opacitySet, .imageReversal {
+        padding-top: 8px;
+        display: flex;
+        align-items: center;
+
+        .left {
+            width: @left-width;
+            font-size: 14px;
+            font-family: @font-family;
+            font-weight: 400;
+            color: #666;
+        }
+
+        .center {
+            width: @center-width;
+            border-radius: @border-radius;
+        }
+    }
+
+    /*颜色选择部分*/
+
+    .backgroundColor {
+        .left {
+            i {
+                cursor: pointer;
+            }
+        }
+    }
+
+    /*背景图选择部分, 视频选择部分*/
+
+    .image {
+        display: flex;
+        background: #F0F1F8;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        .left {
+            width: 160px;
+            height: 102px;
+            border-radius: @border-radius;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img {
+                max-width: 160px;
+                max-height: 102px;
+            }
+        }
+
+        .right {
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            bottom: 5px;
+            button {
+                width: 100%;
+                height: 24px;
+                background:rgba(0,0,0,0.5);
+                border-radius:3px;
+                font-size:12px;
+                font-weight:400;
+                color:rgba(255,255,255,1);
+                line-height:24px;
+                margin: 0 4px;
+                padding: 0 7px;
+            }
+            button:hover {
+                background:rgba(0,0,0,0.8);
+            }
+        }
+    }
+
+    /*透明度选择部分*/
+
+    .opacitySet {
+        margin-bottom: 20px;
+        .right {
+            width: 70px;
+            margin-left: 8px;
+        }
+    }
+
+    /*图片翻转*/
+
+    .imageReversal {
+        .right {
+            flex: 1;
+        }
+    }
+}

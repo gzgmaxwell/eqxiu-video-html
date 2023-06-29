@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="dns-prefetch" href="//vt-api.eqxiu.com">
+    <link rel="dns-prefetch" href="//vv-api.eqxiu.com">
+    <title>易企秀</title>
+    <link rel="stylesheet" href="//lib.eqh5.com/iconfonts/4.0.12/iconfonts.min.css" data-html2canvas-ignore="true"/>
+</head>
+
+<body>
+<div id="root"></div>
+<script src="//lib.eqh5.com/jquery/3.3.1/jquery.min.js"></script>
+<script src="//lib.eqh5.com/axios/0.17.1/axios.min.js"></script>
+
+<script>
+    var _tracker_ = window._tracker_ || [];
+    // 设置客户端类型（取值见附表）
+    _tracker_.push(['client_type', 'upload']);
+    // 设置客户端版本（取值见附表）
+    _tracker_.push(['client_edition', '0.0.1']);
+</script>
+<% for (lib of htmlWebpackPlugin.options.libs) { %>
+<% if (lib.isAsync) { %>
+<script src="<%= lib.url %>" async></script>
+<% } else { %>
+<script src="<%= lib.url %>"></script>
+<% } %>
+<% } %>
+</body>
+
+</html>
